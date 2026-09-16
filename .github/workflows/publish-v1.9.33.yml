@@ -87,7 +87,9 @@ jobs:
           New-Item -ItemType Directory -Force -Path $clean | Out-Null
           Copy-Item (Join-Path $src 'FFXIII2SaveEditor.sln') $clean -Force
           robocopy (Join-Path $src 'FFXIII2SaveEditor') (Join-Path $clean 'FFXIII2SaveEditor') /E /XD bin obj | Out-Null
-          if ($LASTEXITCODE -gt 7) { throw "robocopy failed with exit code $LASTEXITCODE" }
+          $rc = $LASTEXITCODE
+          if ($rc -gt 7) { throw "robocopy failed with exit code $rc" }
+          $global:LASTEXITCODE = 0
           $sourceZip = Join-Path $env:GITHUB_WORKSPACE 'FFXIII2_PS3_Save_Editor_v1.9.33_SOURCE.zip'
           Compress-Archive -Path (Join-Path $clean '*') -DestinationPath $sourceZip -Force
 
@@ -100,7 +102,9 @@ jobs:
             Copy-Item (Join-Path $src 'FFXIII2SaveEditor.sln') $env:GITHUB_WORKSPACE -Force
             if (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor')) { Remove-Item (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor') -Recurse -Force }
             robocopy (Join-Path $src 'FFXIII2SaveEditor') (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor') /E /XD bin obj | Out-Null
-            if ($LASTEXITCODE -gt 7) { throw "robocopy failed with exit code $LASTEXITCODE" }
+            $rc = $LASTEXITCODE
+            if ($rc -gt 7) { throw "robocopy failed with exit code $rc" }
+            $global:LASTEXITCODE = 0
           }
           if (Test-Path 'payload\v1933') { Remove-Item 'payload\v1933' -Recurse -Force }
           git config user.name 'github-actions[bot]'
@@ -111,6 +115,7 @@ jobs:
             git commit -m 'Publish v1.9.33 source and clean staging payload'
             git push origin main
           }
+          $global:LASTEXITCODE = 0
 
       - name: Upload workflow artifacts
         uses: actions/upload-artifact@v4
