@@ -1,0 +1,912 @@
+id	name	category	bag_index	max_qty	editable
+it_potion	Potion	Consumables	0	99	1
+it_phenxtal	Phoenix Down	Consumables	0	99	1
+it_hpotion	Wound Potion	Consumables	0	99	1
+it_universal	Remedy	Consumables	0	99	1
+it_libra	Librascope	Consumables	0	99	1
+it_antidote	Antidote	Consumables	0	99	1
+it_holywater	Holy Water	Consumables	0	99	1
+it_wax	Wax	Consumables	0	99	1
+it_sedative	Painkiller	Consumables	0	99	1
+it_tonkati	Mallet	Consumables	0	99	1
+it_unico	Unicorn Horn	Consumables	0	99	1
+it_phenxbl	Phoenix Blood	Consumables	0	99	1
+it_elixir	Elixir	Consumables	0	99	1
+wea_ser_001	Starseeker	Weapons	1	1	0
+wea_ser_002	Meteorblaze	Weapons	1	99	0
+wea_ser_003	Lunar Stinger	Weapons	1	99	0
+wea_ser_004	Raging Arc	Weapons	1	99	0
+wea_ser_005	Izanami	Weapons	1	99	0
+wea_ser_006	Amazon Bow	Weapons	1	99	0
+wea_ser_007	Fellowship Arc	Weapons	1	99	0
+wea_ser_008	Trollspike	Weapons	1	99	0
+wea_ser_009	Fatal Barb	Weapons	1	99	0
+wea_ser_010	Gandiva	Weapons	1	99	0
+wea_ser_011	Faerie's Bow	Weapons	1	99	0
+wea_ser_012	Rune Feather	Weapons	1	99	0
+wea_ser_013	Angel's Bow	Weapons	1	99	0
+wea_ser_014	Eurytos's Bow	Weapons	1	99	0
+wea_ser_015	Indrajit	Weapons	1	99	0
+wea_ser_016	Butterfly Bow	Weapons	1	99	0
+wea_ser_017	Wild Chorus	Weapons	1	99	0
+wea_ser_018	Chrysalis Arc	Weapons	1	99	0
+wea_ser_019	Nagaraja	Weapons	1	99	0
+wea_ser_020	Sagittarius	Weapons	1	99	0
+wea_ser_021	Arcus Chronica	Weapons	1	99	0
+wea_ser_022	Odinbolt	Weapons	1	1	0
+wea_ser_023	Seraphic Wing	Weapons	1	99	0
+wea_ser_026	Unused / unnamed Serah weapon 026	Weapons	1	99	0
+wea_ser_027	Unused / unnamed Serah weapon 027	Weapons	1	99	0
+wea_ser_028	Unused / unnamed Serah weapon 028	Weapons	1	99	0
+wea_ser_024	Serah DLC weapon 2	Weapons	1	99	0
+wea_ser_029	Unused / unnamed Serah weapon 029	Weapons	1	99	0
+wea_ser_030	Unused / unnamed Serah weapon 030	Weapons	1	99	0
+wea_ser_031	Unused / unnamed Serah weapon 031	Weapons	1	99	0
+wea_ser_025	Serah DLC weapon 3	Weapons	1	99	0
+wea_ser_032	Unused / unnamed Serah weapon 032	Weapons	1	99	0
+wea_ser_033	Unused / unnamed Serah weapon 033	Weapons	1	99	0
+wea_ser_034	Unused / unnamed Serah weapon 034	Weapons	1	99	0
+wea_noe_001	Flame Fossil	Weapons	1	1	0
+wea_noe_002	Howling Soul	Weapons	1	99	0
+wea_noe_003	Volatile Spark	Weapons	1	99	0
+wea_noe_004	Blazing Spirit	Weapons	1	99	0
+wea_noe_005	Vajradanda	Weapons	1	99	0
+wea_noe_006	Survivor's Edge	Weapons	1	99	0
+wea_noe_007	Avenger's Edge	Weapons	1	99	0
+wea_noe_008	Shellbreaker	Weapons	1	99	0
+wea_noe_009	Fragarach	Weapons	1	99	0
+wea_noe_010	Grasitha	Weapons	1	99	0
+wea_noe_011	Rune Tooth	Weapons	1	99	0
+wea_noe_012	Sargatanas	Weapons	1	99	0
+wea_noe_013	Nomad's Machete	Weapons	1	99	0
+wea_noe_014	Orochi	Weapons	1	99	0
+wea_noe_015	Romulus & Remus	Weapons	1	99	0
+wea_noe_016	Guardian's Edge	Weapons	1	99	0
+wea_noe_017	Blessed Blade	Weapons	1	99	0
+wea_noe_018	Sacred Cross	Weapons	1	99	0
+wea_noe_019	The Tower	Weapons	1	99	0
+wea_noe_020	Mac an Luin	Weapons	1	99	0
+wea_noe_021	In Paradisum	Weapons	1	99	0
+wea_noe_022	Odinblade	Weapons	1	1	0
+wea_noe_024	Catastrophe Blade	Weapons	1	99	0
+xwea_noe_025	Unused / unnamed Noel weapon 025	Weapons	1	99	0
+xwea_noe_026	Unused / unnamed Noel weapon 026	Weapons	1	99	0
+xwea_noe_027	Unused / unnamed Noel weapon 027	Weapons	1	99	0
+wea_noe_023	Noel DLC weapon 2	Weapons	1	99	0
+xwea_noe_028	Unused / unnamed Noel weapon 028	Weapons	1	99	0
+xwea_noe_029	Unused / unnamed Noel weapon 029	Weapons	1	99	0
+xwea_noe_030	Unused / unnamed Noel weapon 030	Weapons	1	99	0
+acc_000_000	Iron Bangle	Accessories	2	99	0
+acc_000_010	Delicate Iron Bangle	Accessories	2	99	0
+acc_000_011	Durable Iron Bangle	Accessories	2	99	0
+acc_000_001	Silver Bangle	Accessories	2	99	0
+acc_000_012	Delicate Silver Bangle	Accessories	2	99	0
+acc_000_013	Durable Silver Bangle	Accessories	2	99	0
+acc_000_004	Gold Bangle	Accessories	2	99	0
+acc_000_014	Delicate Gold Bangle	Accessories	2	99	0
+acc_000_015	Durable Gold Bangle	Accessories	2	99	0
+acc_000_100	Power Wristband	Accessories	2	99	0
+acc_000_105	Delicate Power Wristband	Accessories	2	99	0
+acc_000_106	Durable Power Wristband	Accessories	2	99	0
+acc_000_101	Brawler's Wristband	Accessories	2	99	0
+acc_000_107	Delicate Brawler's Wristband	Accessories	2	99	0
+acc_000_108	Durable Brawler's Wristband	Accessories	2	99	0
+acc_000_104	Kaiser Knuckles	Accessories	2	99	0
+acc_000_109	Durable Kaiser Knuckles	Accessories	2	99	0
+acc_000_200	Magician's Mark	Accessories	2	99	0
+acc_000_205	Delicate Magician's Mark	Accessories	2	99	0
+acc_000_206	Durable Magician's Mark	Accessories	2	99	0
+acc_000_201	Shaman's Mark	Accessories	2	99	0
+acc_000_207	Delicate Shaman's Mark	Accessories	2	99	0
+acc_000_208	Durable Shaman's Mark	Accessories	2	99	0
+acc_000_204	Magistral Crest	Accessories	2	99	0
+acc_000_209	Durable Magistral Crest	Accessories	2	99	0
+acc_000_300	Black Belt	Accessories	2	99	0
+acc_000_303	Delicate Black Belt	Accessories	2	99	0
+acc_000_304	Durable Black Belt	Accessories	2	99	0
+acc_000_301	General's Belt	Accessories	2	99	0
+acc_000_305	Delicate General's Belt	Accessories	2	99	0
+acc_000_306	Durable General's Belt	Accessories	2	99	0
+acc_000_400	Rune Bracelet	Accessories	2	99	0
+acc_000_403	Delicate Rune Bracelet	Accessories	2	99	0
+acc_000_404	Durable Rune Bracelet	Accessories	2	99	0
+acc_000_401	Witch's Bracelet	Accessories	2	99	0
+acc_000_405	Delicate Witch's Bracelet	Accessories	2	99	0
+acc_000_406	Durable Witch's Bracelet	Accessories	2	99	0
+acc_000_500	Royal Armlet	Accessories	2	99	0
+acc_000_502	Delicate Royal Armlet	Accessories	2	99	0
+acc_000_503	Durable Royal Armlet	Accessories	2	99	0
+acc_001_000	Ember Ring	Accessories	2	99	0
+acc_001_003	Delicate Ember Ring	Accessories	2	99	0
+acc_001_004	Durable Ember Ring	Accessories	2	99	0
+acc_001_001	Blaze Ring	Accessories	2	99	0
+acc_001_005	Delicate Blaze Ring	Accessories	2	99	0
+acc_001_006	Durable Blaze Ring	Accessories	2	99	0
+acc_002_000	Frost Ring	Accessories	2	99	0
+acc_002_003	Delicate Frost Ring	Accessories	2	99	0
+acc_002_004	Durable Frost Ring	Accessories	2	99	0
+acc_002_001	Icicle Ring	Accessories	2	99	0
+acc_002_005	Delicate Icicle Ring	Accessories	2	99	0
+acc_002_006	Durable Icicle Ring	Accessories	2	99	0
+acc_003_000	Spark Ring	Accessories	2	99	0
+acc_003_003	Delicate Spark Ring	Accessories	2	99	0
+acc_003_004	Durable Spark Ring	Accessories	2	99	0
+acc_003_001	Fulmen Ring	Accessories	2	99	0
+acc_003_005	Delicate Fulmen Ring	Accessories	2	99	0
+acc_003_006	Durable Fulmen Ring	Accessories	2	99	0
+acc_005_000	Zephyr Ring	Accessories	2	99	0
+acc_005_003	Delicate Zephyr Ring	Accessories	2	99	0
+acc_005_004	Durable Zephyr Ring	Accessories	2	99	0
+acc_005_001	Gale Ring	Accessories	2	99	0
+acc_005_005	Delicate Gale Ring	Accessories	2	99	0
+acc_005_006	Durable Gale Ring	Accessories	2	99	0
+acc_060_000	Fire Aegis	Accessories	2	99	0
+acc_060_001	Delicate Fire Aegis	Accessories	2	99	0
+acc_061_000	Ice Aegis	Accessories	2	99	0
+acc_061_001	Delicate Ice Aegis	Accessories	2	99	0
+acc_062_000	Lightning Aegis	Accessories	2	99	0
+acc_062_001	Delicate Lightning Aegis	Accessories	2	99	0
+acc_063_000	Wind Aegis	Accessories	2	99	0
+acc_063_001	Delicate Wind Aegis	Accessories	2	99	0
+acc_007_000	Entite Ring	Accessories	2	99	0
+acc_007_001	Delicate Entite Ring	Accessories	2	99	0
+acc_007_002	Durable Entite Ring	Accessories	2	99	0
+acc_011_000	Metal Armband	Accessories	2	99	0
+acc_011_002	Delicate Metal Armband	Accessories	2	99	0
+acc_011_003	Durable Metal Armband	Accessories	2	99	0
+acc_012_000	Serenity Sachet	Accessories	2	99	0
+acc_012_002	Delicate Serenity Sachet	Accessories	2	99	0
+acc_012_003	Durable Serenity Sachet	Accessories	2	99	0
+acc_014_000	Star Pendant	Accessories	2	99	0
+acc_014_002	Delicate Star Pendant	Accessories	2	99	0
+acc_014_003	Durable Star Pendant	Accessories	2	99	0
+acc_015_000	Pearl Necklace	Accessories	2	99	0
+acc_015_002	Delicate Pearl Necklace	Accessories	2	99	0
+acc_015_003	Durable Pearl Necklace	Accessories	2	99	0
+acc_016_000	Warding Talisman	Accessories	2	99	0
+acc_016_002	Delicate Warding Talisman	Accessories	2	99	0
+acc_016_003	Durable Warding Talisman	Accessories	2	99	0
+acc_017_000	Pain Dampener	Accessories	2	99	0
+acc_017_002	Delicate Pain Dampener	Accessories	2	99	0
+acc_017_003	Durable Pain Dampener	Accessories	2	99	0
+acc_018_000	White Cape	Accessories	2	99	0
+acc_018_002	Delicate White Cape	Accessories	2	99	0
+acc_018_003	Durable White Cape	Accessories	2	99	0
+acc_021_000	Obsidian Choker	Accessories	2	99	0
+acc_021_002	Delicate Obsidian Choker	Accessories	2	99	0
+acc_021_003	Durable Obsidian Choker	Accessories	2	99	0
+acc_023_000	Ribbon	Accessories	2	99	0
+acc_023_003	Delicate Ribbon	Accessories	2	99	0
+acc_025_000	Guardian Amulet	Accessories	2	99	0
+acc_025_002	Delicate Guardian Amulet	Accessories	2	99	0
+acc_025_003	Durable Guardian Amulet	Accessories	2	99	0
+acc_026_000	Auric Amulet	Accessories	2	99	0
+acc_026_002	Delicate Auric Amulet	Accessories	2	99	0
+acc_026_003	Durable Auric Amulet	Accessories	2	99	0
+acc_027_000	Watchman's Amulet	Accessories	2	99	0
+acc_027_002	Delicate Watchman's Amulet	Accessories	2	99	0
+acc_027_003	Durable Watchman's Amulet	Accessories	2	99	0
+acc_028_000	Hero's Amulet	Accessories	2	99	0
+acc_028_002	Delicate Hero's Amulet	Accessories	2	99	0
+acc_028_003	Durable Hero's Amulet	Accessories	2	99	0
+acc_029_000	Saint's Amulet	Accessories	2	99	0
+acc_029_002	Delicate Saint's Amulet	Accessories	2	99	0
+acc_029_003	Durable Saint's Amulet	Accessories	2	99	0
+acc_035_000	Zealot's Amulet	Accessories	2	99	0
+acc_035_002	Delicate Zealot's Amulet	Accessories	2	99	0
+acc_035_003	Durable Zealot's Amulet	Accessories	2	99	0
+acc_030_000	Hermes Sandals	Accessories	2	99	0
+acc_030_002	Delicate Hermes Sandals	Accessories	2	99	0
+acc_030_003	Durable Hermes Sandals	Accessories	2	99	0
+acc_039_000	Collector Catalog	Accessories	2	99	0
+acc_039_002	Delicate Collector Catalog	Accessories	2	99	0
+acc_039_003	Durable Collector Catalog	Accessories	2	99	0
+acc_055_000	Sniper's Eye	Accessories	2	99	0
+acc_055_001	Delicate Sniper's Eye	Accessories	2	99	0
+acc_055_002	Durable Sniper's Eye	Accessories	2	99	0
+acc_056_000	Twist Headband	Accessories	2	99	0
+acc_056_001	Delicate Twist Headband	Accessories	2	99	0
+acc_056_002	Durable Twist Headband	Accessories	2	99	0
+acc_057_000	Bloodguard	Accessories	2	99	0
+acc_057_001	Delicate Bloodguard	Accessories	2	99	0
+acc_057_002	Durable Bloodguard	Accessories	2	99	0
+acc_058_000	Hypnocrown	Accessories	2	99	0
+acc_058_001	Delicate Hypnocrown	Accessories	2	99	0
+acc_058_002	Durable Hypnocrown	Accessories	2	99	0
+acc_059_000	Grimoire Hat	Accessories	2	99	0
+acc_059_001	Durable Grimoire Hat	Accessories	2	99	0
+acc_064_000	Martyr's Badge	Accessories	2	99	0
+acc_065_000	Martyr's Emblem	Accessories	2	99	0
+acc_066_000	Berserker's Ruby	Accessories	2	99	0
+acc_067_000	Blaster's Sapphire	Accessories	2	99	0
+acc_068_000	Defender's Topaz	Accessories	2	99	0
+acc_069_000	Impeder's Opal	Accessories	2	99	0
+acc_070_000	Supporter's Amethyst	Accessories	2	99	0
+acc_071_000	Healer's Emerald	Accessories	2	99	0
+acc_075_000	Stiltzkin's Diary	Accessories	2	99	0
+acc_075_001	Durable Stiltzkin's Diary	Accessories	2	99	0
+acc_076_000	Diva's Microphone	Accessories	2	99	0
+acc_076_001	Delicate Diva's Microphone	Accessories	2	99	0
+acc_077_000	Diva's Headphones	Accessories	2	99	0
+acc_077_001	Delicate Diva's Headphones	Accessories	2	99	0
+acc_078_000	Goddess's Bangle	Accessories	2	99	0
+acc_078_001	Delicate Goddess's Bangle	Accessories	2	99	0
+acc_079_000	Goddess's Earring	Accessories	2	99	0
+acc_079_001	Delicate Goddess's Earring	Accessories	2	99	0
+acc_080_000	Genji Glove	Accessories	2	99	0
+acc_081_000	Genji Shield	Accessories	2	99	0
+material_m000	Begrimed Claw	Components / materials	3	99	1
+material_m001	Bestial Claw	Components / materials	3	99	1
+material_m002	Gargantuan Claw	Components / materials	3	99	1
+material_m003	Hellish Talon	Components / materials	3	99	1
+material_m004	Shattered Bone	Components / materials	3	99	1
+material_m005	Sturdy Bone	Components / materials	3	99	1
+material_m006	Otherworldly Bone	Components / materials	3	99	1
+material_m007	Ancient Bone	Components / materials	3	99	1
+material_m009	Moistened Scale	Components / materials	3	99	1
+material_m010	Seapetal Scale	Components / materials	3	99	1
+material_m011	Abyssal Scale	Components / materials	3	99	1
+material_m012	Sea King's Beard	Components / materials	3	99	1
+material_m013	Segmented Carapace	Components / materials	3	99	1
+material_m014	Iron Shell	Components / materials	3	99	1
+material_m015	Armored Shell	Components / materials	3	99	1
+material_m016	Regenerating Carapace	Components / materials	3	99	1
+material_m017	Chipped Fang	Components / materials	3	99	1
+material_m018	Wicked Fang	Components / materials	3	99	1
+material_m019	Monstrous Fang	Components / materials	3	99	1
+material_m020	Sinister Fang	Components / materials	3	99	1
+material_m021	Severed Wing	Components / materials	3	99	1
+material_m022	Scaled Wing	Components / materials	3	99	1
+material_m023	Abominable Wing	Components / materials	3	99	1
+material_m024	Menacing Wings	Components / materials	3	99	1
+material_m025	Molted Tail	Components / materials	3	99	1
+material_m026	Barbed Tail	Components / materials	3	99	1
+material_m027	Diabolic Tail	Components / materials	3	99	1
+material_m028	Entrancing Tail	Components / materials	3	99	1
+material_m029	Torn Leather	Components / materials	3	99	1
+material_m030	Thickened Hide	Components / materials	3	99	1
+material_m031	Smooth Hide	Components / materials	3	99	1
+material_m032	Supple Leather	Components / materials	3	99	1
+material_m049	Fractured Horn	Components / materials	3	99	1
+material_m050	Spined Horn	Components / materials	3	99	1
+material_m051	Fiendish Horn	Components / materials	3	99	1
+material_m052	Infernal Horn	Components / materials	3	99	1
+material_m061	Chocobo Plume	Components / materials	3	99	1
+material_m062	Chocobo Tail Feather	Components / materials	3	99	1
+material_m053	Strange Fluid	Components / materials	3	99	1
+material_m054	Enigmatic Fluid	Components / materials	3	99	1
+material_m055	Mysterious Fluid	Components / materials	3	99	1
+material_m056	Ineffable Fluid	Components / materials	3	99	1
+material_m033	Gummy Oil	Components / materials	3	99	1
+material_m034	Fragrant Oil	Components / materials	3	99	1
+material_m035	Medicinal Oil	Components / materials	3	99	1
+material_m036	Esoteric Oil	Components / materials	3	99	1
+material_m045	Murky Ooze	Components / materials	3	99	1
+material_m046	Vibrant Ooze	Components / materials	3	99	1
+material_m047	Transparent Ooze	Components / materials	3	99	1
+material_m048	Wonder Gel	Components / materials	3	99	1
+material_m068	Red Mycelium	Components / materials	3	99	1
+material_m069	Blue Mycelium	Components / materials	3	99	1
+material_m070	White Mycelium	Components / materials	3	99	1
+material_m071	Black Mycelium	Components / materials	3	99	1
+material_m064	Dawnlight Dew	Components / materials	3	99	1
+material_m065	Dusklight Dew	Components / materials	3	99	1
+material_m066	Gloomstalk	Components / materials	3	99	1
+material_m067	Sunpetal	Components / materials	3	99	1
+material_m074	Moonblossom Seed	Components / materials	3	99	1
+material_m075	Starblossom Seed	Components / materials	3	99	1
+material_m072	Succulent Fruit	Components / materials	3	99	1
+material_m073	Malodorous Fruit	Components / materials	3	99	1
+material_m063	Green Needle	Components / materials	3	99	1
+material_m076	Perfume	Components / materials	3	99	1
+material_m077	Pot Shard	Components / materials	3	99	1
+material_m078	Fractal Pot	Components / materials	3	99	1
+material_j000	Insulated Cabling	Components / materials	3	99	1
+material_j001	Fiber-optic Cable	Components / materials	3	99	1
+material_j002	Liquid Crystal Lens	Components / materials	3	99	1
+material_j003	Ring Joint	Components / materials	3	99	1
+material_j004	Epicyclic Gear	Components / materials	3	99	1
+material_j005	Crankshaft	Components / materials	3	99	1
+material_j006	Electrolytic Capacitor	Components / materials	3	99	1
+material_j007	Flywheel	Components / materials	3	99	1
+material_j008	Sprocket	Components / materials	3	99	1
+material_j009	Actuator	Components / materials	3	99	1
+material_j010	Spark Plug	Components / materials	3	99	1
+material_j011	Iridium Plug	Components / materials	3	99	1
+material_j012	Needle Valve	Components / materials	3	99	1
+material_j013	Butterfly Valve	Components / materials	3	99	1
+material_j014	Analog Circuit	Components / materials	3	99	1
+material_j015	Digital Circuit	Components / materials	3	99	1
+material_j016	Gyroscope	Components / materials	3	99	1
+material_j017	Electrode	Components / materials	3	99	1
+material_j018	Ceramic Armor	Components / materials	3	99	1
+material_j019	Chobham Armor	Components / materials	3	99	1
+material_j020	Radial Bearing	Components / materials	3	99	1
+material_j021	Thrust Bearing	Components / materials	3	99	1
+material_j022	Solenoid	Components / materials	3	99	1
+material_j023	Mobius Coil	Components / materials	3	99	1
+material_j024	Tungsten Tube	Components / materials	3	99	1
+material_j025	Titanium Tube	Components / materials	3	99	1
+material_j026	Passive Detector	Components / materials	3	99	1
+material_j027	Active Detector	Components / materials	3	99	1
+material_j028	Transformer	Components / materials	3	99	1
+material_j029	Amplifier	Components / materials	3	99	1
+material_j030	Carburetor	Components / materials	3	99	1
+material_j031	Supercharger	Components / materials	3	99	1
+material_j032	Piezoelectric Element	Components / materials	3	99	1
+material_j033	Crystal Oscillator	Components / materials	3	99	1
+material_j034	Paraffin Oil	Components / materials	3	99	1
+material_j035	Silicone Oil	Components / materials	3	99	1
+material_j036	Synthetic Muscle	Components / materials	3	99	1
+material_j037	Turboprop	Components / materials	3	99	1
+material_j038	Turbojet	Components / materials	3	99	1
+material_j039	Tesla Turbine	Components / materials	3	99	1
+material_j044	Particle Accelerator	Components / materials	3	99	1
+material_j045	Ultracompact Reactor	Components / materials	3	99	1
+material_m057	Cie'th Tear	Components / materials	3	99	1
+material_m058	Tear of Frustration	Components / materials	3	99	1
+material_m059	Tear of Remorse	Components / materials	3	99	1
+material_m060	Tear of Woe	Components / materials	3	99	1
+material_m041	Bomb Ashes	Components / materials	3	99	1
+material_m042	Bomb Fragment	Components / materials	3	99	1
+material_m043	Bomb Shell	Components / materials	3	99	1
+material_m044	Bomb Core	Components / materials	3	99	1
+material_j040	Polymer Emulsion	Components / materials	3	99	1
+material_j041	Ferroelectric Film	Components / materials	3	99	1
+material_j042	Superconductor	Components / materials	3	99	1
+material_j043	Perfect Conductor	Components / materials	3	99	1
+material_o000	Millerite	Components / materials	3	99	1
+material_o001	Rhodochrosite	Components / materials	3	99	1
+material_o002	Cobaltite	Components / materials	3	99	1
+material_o003	Perovskite	Components / materials	3	99	1
+material_o004	Uraninite	Components / materials	3	99	1
+material_o005	Mnar Stone	Components / materials	3	99	1
+material_o006	Scarletite	Components / materials	3	99	1
+material_o007	Adamantite	Components / materials	3	99	1
+material_o008	Dark Matter	Components / materials	3	99	1
+material_o009	Trapezohedron	Components / materials	3	99	1
+material_o010	Gold Dust	Components / materials	3	99	1
+material_o011	Gold Nugget	Components / materials	3	99	1
+material_o012	Platinum Ingot	Components / materials	3	99	1
+material_b000	Gogmagog Nail	Components / materials	3	99	1
+material_b001	Gogmagogite	Components / materials	3	99	1
+material_b002	Chronomist	Components / materials	3	99	1
+material_b003	Giant Knuckle	Components / materials	3	99	1
+material_b004	Crystal Turbine	Components / materials	3	99	1
+material_b005	Mutant Extract	Components / materials	3	99	1
+material_b006	Ripened Flanjuice	Components / materials	3	99	1
+material_b007	Faeryl Fang	Components / materials	3	99	1
+opt_silver	Wild Artefact	Key items / OOPArts	4	10	1
+opt_hmaa01_bj	Giant's Artefact	Key items / OOPArts	4	1	1
+opt_bjaa01_gy	Eclipse Artefact	Key items / OOPArts	4	1	1
+opt_bjaa02_sn	Reunion Artefact	Key items / OOPArts	4	1	1
+opt_gyaa01_gw	Hollow Artefact	Key items / OOPArts	4	1	1
+opt_gwca01_gh	Artefact of Origins	Key items / OOPArts	4	1	1
+opt_snda02_gd	Thundering Artefact	Key items / OOPArts	4	1	1
+opt_snda01_cl	Combat Artefact	Key items / OOPArts	4	1	1
+opt_ghsn01_cs	Illusionary Artefact	Key items / OOPArts	4	1	1
+opt_ghsn02_ac	Restoration Artefact	Key items / OOPArts	4	1	1
+opt_acea01_gt	Tower Artefact	Key items / OOPArts	4	1	1
+opt_gtca01_aa	Artefact of Rebirth	Key items / OOPArts	4	1	1
+opt_hmha01_ac	Artefact of the Ark	Key items / OOPArts	4	1	1
+opt_aaea02_sp	Vagabond Artefact	Key items / OOPArts	4	1	1
+key_unk_y_opt	Mysterious Artefact	Key items / OOPArts	4	1	1
+key_unk_s_opt	Mysterious Artefact	Key items / OOPArts	4	1	1
+tmap_hm	Map of New Bodhum	Key items / OOPArts	4	1	1
+tmap_bj	Map of the Bresha Ruins	Key items / OOPArts	4	1	1
+tmap_gy	Map of the Yaschas Massif	Key items / OOPArts	4	1	1
+tmap_gw	Map of Oerba	Key items / OOPArts	4	1	1
+tmap_sn	Map of Sunleth Waterscape	Key items / OOPArts	4	1	1
+tmap_gd	Map of the Steppe	Key items / OOPArts	4	1	1
+tmap_cl	Map of the Coliseum	Key items / OOPArts	4	1	1
+tmap_cs	Map of Serendipity	Key items / OOPArts	4	1	1
+tmap_ac	Map of Academia	Key items / OOPArts	4	1	1
+tmap_gt	Map of Augusta Tower	Key items / OOPArts	4	1	1
+tmap_vp	Map of the Vile Peaks	Key items / OOPArts	4	1	1
+tmap_dd	Map of a Dying World	Key items / OOPArts	4	1	1
+tmap_hh	Map of New Bodhum 700 AF	Key items / OOPArts	4	1	1
+tmap_af	Map of Academia 500 AF	Key items / OOPArts	4	1	1
+tmap_sp	Map of the Void Beyond	Key items / OOPArts	4	1	1
+key_plsstone	Eternal Crystal	Key items / OOPArts	4	1	1
+key_l_knife	Lightning's Knife	Key items / OOPArts	4	1	1
+key_s_neck	Snow's Necklace	Key items / OOPArts	4	1	1
+key_f_kit	Medical Kit	Key items / OOPArts	4	1	1
+key_acdmycom	Academy Communicator	Key items / OOPArts	4	1	1
+key_c_tab	Capsule	Key items / OOPArts	4	1	1
+key_a_secret	Personal Notes	Key items / OOPArts	4	1	1
+key_lostcom	Army Comm Device	Key items / OOPArts	4	1	1
+key_lockjail	Holding Cell Key	Key items / OOPArts	4	1	1
+key_mon_data	Monster Analysis Report	Key items / OOPArts	4	1	1
+key_wep_sozai	Weapon Material	Key items / OOPArts	4	1	1
+key_kansoku	Old Device	Key items / OOPArts	4	1	1
+key_f_message	My Buddy's Message	Key items / OOPArts	4	1	1
+key_f_kioku	Recording Device	Key items / OOPArts	4	1	1
+key_f_colonel	Commander's Report	Key items / OOPArts	4	1	1
+key_sone_info	Thorne's Information	Key items / OOPArts	4	1	1
+key_yukimi	Silver Petal	Key items / OOPArts	4	1	1
+key_tissue	Toilet Paper Coupon	Key items / OOPArts	4	1	1
+key_behi_fang	Behemoth Fang	Key items / OOPArts	4	1	1
+key_miss_watch	Outdoor Watch	Key items / OOPArts	4	1	1
+key_search_pow	Old Battery	Key items / OOPArts	4	1	1
+key_miss_art	Tablet of Paddra	Key items / OOPArts	4	1	1
+key_black_ystn	Onyx Crystal	Key items / OOPArts	4	1	1
+key_white_ystn	Ivory Crystal	Key items / OOPArts	4	1	1
+key_green_ystn	Emerald Crystal	Key items / OOPArts	4	1	1
+key_fenr_flw	Fruit of Fenrir	Key items / OOPArts	4	1	1
+key_y_baggage	Wedding Jewelry	Key items / OOPArts	4	1	1
+key_black_flw	Terrorists' Mark	Key items / OOPArts	4	1	1
+key_y_diary	Comm Device	Key items / OOPArts	4	1	1
+key_osonae	Picture Frame	Key items / OOPArts	4	1	1
+key_common_art	Bulb of Hope	Key items / OOPArts	4	1	1
+key_rem_ring	Sealed Tablet	Key items / OOPArts	4	1	1
+key_f_manual	Service Manual	Key items / OOPArts	4	1	1
+key_f_proof	Technician's Note	Key items / OOPArts	4	1	1
+key_gowa_wool	Rough Wool	Key items / OOPArts	4	1	1
+key_nuku_wool	Thick Wool	Key items / OOPArts	4	1	1
+key_moko_wool	Fluffy Wool	Key items / OOPArts	4	1	1
+key_access_13	Access Key 13	Key items / OOPArts	4	1	1
+key_access_49	Access Key 49	Key items / OOPArts	4	1	1
+key_access_50	Access Key 50	Key items / OOPArts	4	1	1
+key_access_51	Access Key 51	Key items / OOPArts	4	1	1
+key_access_52	Access Key 52	Key items / OOPArts	4	1	1
+key_access_la	Top Floor Access Key	Key items / OOPArts	4	1	1
+key_para50f	Paradox Agent Type A	Key items / OOPArts	4	1	1
+key_para52f	Paradox Agent Type B	Key items / OOPArts	4	1	1
+key_paraxxf	Paradox Agent Type C	Key items / OOPArts	4	1	1
+key_a_code	Supply Sphere Access Code	Key items / OOPArts	4	1	1
+key_casino_prz	Just 1 gil!	Key items / OOPArts	4	1	1
+key_casino_dice	Setzer's Dice	Key items / OOPArts	4	1	1
+key_chaos_cly	Chaos Crystal	Key items / OOPArts	4	1	1
+opt_hmaa_re	'Leaving' Gate Seal	Key items / OOPArts	4	1	1
+opt_bjaa_re	'Scars' Gate Seal	Key items / OOPArts	4	1	1
+opt_gyaa_re	'Visions' Gate Seal	Key items / OOPArts	4	1	1
+opt_ghaa_re	'The Fall' Gate Seal	Key items / OOPArts	4	1	1
+opt_gwca_re	'Encounters' Gate Seal	Key items / OOPArts	4	1	1
+opt_snda_re	'Farewells' Gate Seal	Key items / OOPArts	4	1	1
+opt_gdza_re	'The Calm' Gate Seal	Key items / OOPArts	4	1	1
+opt_clza_re	'Prediction' Gate Seal	Key items / OOPArts	4	1	1
+opt_acea_re	'Flight' Gate Seal	Key items / OOPArts	4	1	1
+opt_aaea_re	'Promises' Gate Seal	Key items / OOPArts	4	1	1
+opt_gtca_re	'Facts' Gate Seal	Key items / OOPArts	4	1	1
+opt_gtda_re	'Silence' Gate Seal	Key items / OOPArts	4	1	1
+opt_ddha_re	'Determination' Gate Seal	Key items / OOPArts	4	1	1
+opt_spza_re	'Sisters' Gate Seal	Key items / OOPArts	4	1	1
+opt_bjba_re	'Disaster' Gate Seal	Key items / OOPArts	4	1	1
+opt_bjda_re	'Labyrinth' Gate Seal	Key items / OOPArts	4	1	1
+opt_gyba_re	'Reminiscence' Gate Seal	Key items / OOPArts	4	1	1
+opt_gyca_re	'Maleficence' Gate Seal	Key items / OOPArts	4	1	1
+opt_gwda_re	'How Things Were' Gate Seal	Key items / OOPArts	4	1	1
+opt_gwea_re	'Hometown' Gate Seal	Key items / OOPArts	4	1	1
+opt_snea_re	'Thunderstruck' Gate Seal	Key items / OOPArts	4	1	1
+opt_vpba_re	'Afterimage' Gate Seal	Key items / OOPArts	4	1	1
+opt_vpca_re	'Return' Gate Seal	Key items / OOPArts	4	1	1
+opt_csza_re	'Eternity' Gate Seal	Key items / OOPArts	4	1	1
+opt_acfa_re	'Final Battle' Gate Seal	Key items / OOPArts	4	1	1
+opt_vaza_re	'Hope' Gate Seal	Key items / OOPArts	4	1	1
+mcr_k002	Silver Lobo	Monster crystals	5	99	0
+mcr_k003	Gorgonopsid	Monster crystals	5	99	0
+mcr_k005	Mánagarmr	Monster crystals	5	99	0
+mcr_k150	Thexteron	Monster crystals	5	99	0
+mcr_k400	Uridimmu	Monster crystals	5	99	0
+mcr_k430	Luminous Puma	Monster crystals	5	99	0
+mcr_k433	Albino Lobo	Monster crystals	5	99	0
+mcr_k123	Bloodfang Bass	Monster crystals	5	99	0
+mcr_k124	Breshan Bass	Monster crystals	5	99	0
+mcr_k125	Hedge Frog	Monster crystals	5	99	0
+mcr_k126	Mud Frog	Monster crystals	5	99	0
+mcr_k127	Ceratosaur	Monster crystals	5	99	0
+mcr_k128	Ceratoraptor	Monster crystals	5	99	0
+mcr_k665	Spiceacilian	Monster crystals	5	99	0
+mcr_k666	Tabasco Toad	Monster crystals	5	99	0
+mcr_k667	Pitterpatter	Monster crystals	5	99	0
+mcr_k668	Chunerpeton	Monster crystals	5	99	0
+mcr_k018	Orion	Monster crystals	5	99	0
+mcr_k152	Viking	Monster crystals	5	99	0
+mcr_k437	Fencer	Monster crystals	5	99	0
+mcr_k438	Yeoman	Monster crystals	5	99	0
+mcr_k664	Dragoon	Monster crystals	5	99	0
+mcr_k856	Lancer	Monster crystals	5	99	0
+mcr_k099	Crawler	Monster crystals	5	99	0
+mcr_k102	Frag Leech	Monster crystals	5	99	0
+mcr_k660	Sarracenia	Monster crystals	5	99	0
+mcr_k661	Spiranthes	Monster crystals	5	99	0
+mcr_k662	Caterchipillar	Monster crystals	5	99	0
+mcr_k663	Exoray	Monster crystals	5	99	0
+mcr_k048	Garuda	Monster crystals	5	99	0
+mcr_k213	Svarog	Monster crystals	5	99	0
+mcr_k646	Vouivre	Monster crystals	5	99	0
+mcr_k647	Kanna Kamuy	Monster crystals	5	99	0
+mcr_k649	Deathgaze	Monster crystals	5	99	0
+mcr_k852	Illuyankas	Monster crystals	5	99	0
+mcr_k182	Hoplite	Monster crystals	5	99	0
+mcr_k673	Scutari	Monster crystals	5	99	0
+mcr_k190	Microchu	Monster crystals	5	99	0
+mcr_k423	Nanochu	Monster crystals	5	99	0
+mcr_k677	Chichu	Monster crystals	5	99	0
+mcr_k015	Feral Behemoth	Monster crystals	5	99	0
+mcr_k075	Greater Behemoth	Monster crystals	5	99	0
+mcr_k077	Proto-behemoth	Monster crystals	5	99	0
+mcr_k455	Reaver	Monster crystals	5	99	0
+mcr_k456	Zaghnal	Monster crystals	5	99	0
+mcr_k457	Narasimha	Monster crystals	5	99	0
+mcr_k008	Flanbanero	Monster crystals	5	99	0
+mcr_k010	Flanborg	Monster crystals	5	99	0
+mcr_k079	Flanitor	Monster crystals	5	99	0
+mcr_k172	Phosphoric Ooze	Monster crystals	5	99	0
+mcr_k275	Miniflan	Monster crystals	5	99	0
+mcr_k432	Seeping Brie	Monster crystals	5	99	0
+mcr_k434	Flandit	Monster crystals	5	99	0
+mcr_k435	Garganzola	Monster crystals	5	99	0
+mcr_k436	Flangonzola	Monster crystals	5	99	0
+mcr_k063	Pulsework Soldier	Monster crystals	5	99	0
+mcr_k064	Pulsework Knight	Monster crystals	5	99	0
+mcr_k065	Pulsework Gladiator	Monster crystals	5	99	0
+mcr_k273	Cait Sith	Monster crystals	5	99	0
+mcr_k490	Mewmao	Monster crystals	5	99	0
+mcr_k491	Schrodinger	Monster crystals	5	99	0
+mcr_k492	Forked Cat	Monster crystals	5	99	0
+mcr_k270	Nekton	Monster crystals	5	99	0
+mcr_k271	Meonekton	Monster crystals	5	99	0
+mcr_k493	Clione	Monster crystals	5	99	0
+mcr_k495	Chelicerata	Monster crystals	5	99	0
+mcr_k494	Pleuston	Monster crystals	5	99	0
+mcr_k496	Pantopoda	Monster crystals	5	99	0
+mcr_k254	Tonberry	Monster crystals	5	99	0
+mcr_k686	Don Tonberry	Monster crystals	5	99	0
+mcr_k037	Triffid	Monster crystals	5	99	0
+mcr_k038	Vespid	Monster crystals	5	99	0
+mcr_k039	Barbed Specter	Monster crystals	5	99	0
+mcr_k040	Vespid Soldier	Monster crystals	5	99	0
+mcr_k443	Clematis	Monster crystals	5	99	0
+mcr_k444	Necrosis	Monster crystals	5	99	0
+mcr_k462	Dendrobium	Monster crystals	5	99	0
+mcr_k463	Mandrake	Monster crystals	5	99	0
+mcr_k882	Chocobo	Monster crystals	5	99	0
+mcr_k865	Golden Chocobo	Monster crystals	5	99	0
+mcr_k866	Silver Chocobo	Monster crystals	5	99	0
+mcr_k867	White Chocobo	Monster crystals	5	99	0
+mcr_k868	Black Chocobo	Monster crystals	5	99	0
+mcr_k869	Blue Chocobo	Monster crystals	5	99	0
+mcr_k870	Red Chocobo	Monster crystals	5	99	0
+mcr_k871	Green Chocobo	Monster crystals	5	99	0
+mcr_k872	Purple Chocobo	Monster crystals	5	99	0
+mcr_k185	Yakshini	Monster crystals	5	99	0
+mcr_k442	Gahongas	Monster crystals	5	99	0
+mcr_k459	Samovira	Monster crystals	5	99	0
+mcr_k461	Haguma	Monster crystals	5	99	0
+mcr_k036	Yaksha	Monster crystals	5	99	0
+mcr_k441	Gandayaks	Monster crystals	5	99	0
+mcr_k458	Vodianoi	Monster crystals	5	99	0
+mcr_k460	Shaguma	Monster crystals	5	99	0
+mcr_k069	Navidon	Monster crystals	5	99	0
+mcr_k071	Lucidon	Monster crystals	5	99	0
+mcr_k072	Thermadon	Monster crystals	5	99	0
+mcr_k655	Glyptodon	Monster crystals	5	99	0
+mcr_k656	Bunkerbeast	Monster crystals	5	99	0
+mcr_k657	Calautidon	Monster crystals	5	99	0
+mcr_k066	Bomb	Monster crystals	5	99	0
+mcr_k214	Circuitron	Monster crystals	5	99	0
+mcr_k215	Cryohedron	Monster crystals	5	99	0
+mcr_k452	Cloudburst	Monster crystals	5	99	0
+mcr_k453	Tempest	Monster crystals	5	99	0
+mcr_k454	Debris	Monster crystals	5	99	0
+mcr_k853	Grenade	Monster crystals	5	99	0
+mcr_k678	Xolotl	Monster crystals	5	99	0
+mcr_k679	Miquiztli	Monster crystals	5	99	0
+mcr_k681	Tezcatlipoca	Monster crystals	5	99	0
+mcr_k041	Gremlin	Monster crystals	5	99	0
+mcr_k042	Imp	Monster crystals	5	99	0
+mcr_k043	Zwerg Scandroid	Monster crystals	5	99	0
+mcr_k045	Leyak	Monster crystals	5	99	0
+mcr_k173	Garchimacera	Monster crystals	5	99	0
+mcr_k174	Rangda	Monster crystals	5	99	0
+mcr_k206	Ahriman	Monster crystals	5	99	0
+mcr_k211	Zwerg Metrodroid	Monster crystals	5	99	0
+mcr_k445	Koboldroid Yin	Monster crystals	5	99	0
+mcr_k446	Koboldroid Yang	Monster crystals	5	99	0
+mcr_k640	Bamapama	Monster crystals	5	99	0
+mcr_k641	Mimi	Monster crystals	5	99	0
+mcr_k642	Fachan	Monster crystals	5	99	0
+mcr_k643	Unsaganashi	Monster crystals	5	99	0
+mcr_k644	Amanojaku	Monster crystals	5	99	0
+mcr_k645	Notsugo	Monster crystals	5	99	0
+mcr_k851	Apotamkin	Monster crystals	5	99	0
+mcr_k253	Cactuar	Monster crystals	5	99	0
+mcr_k255	Metal Gigantuar	Monster crystals	5	99	0
+mcr_k256	Flowering Cactuar	Monster crystals	5	99	0
+mcr_k257	Gigantuar	Monster crystals	5	99	0
+mcr_k682	Metallicactuar	Monster crystals	5	99	0
+mcr_k683	Cactuaroni	Monster crystals	5	99	0
+mcr_k684	Cactuarama	Monster crystals	5	99	0
+mcr_k685	Cactuarina	Monster crystals	5	99	0
+mcr_k451	Sahagin Prince	Monster crystals	5	99	0
+mcr_k652	Swampmonk	Monster crystals	5	99	0
+mcr_k653	Apkallu	Monster crystals	5	99	0
+mcr_k654	Oannes	Monster crystals	5	99	0
+mcr_k056	Goblin Chieftain	Monster crystals	5	99	0
+mcr_k057	Munchkin Maestro	Monster crystals	5	99	0
+mcr_k449	Buccaboo Ace	Monster crystals	5	99	0
+mcr_k450	Gancanagh Ace	Monster crystals	5	99	0
+mcr_k651	Major Moblin	Monster crystals	5	99	0
+mcr_k054	Munchkin	Monster crystals	5	99	0
+mcr_k094	Monster Crystal	Monster crystals	5	99	0
+mcr_k447	Buccaboo	Monster crystals	5	99	0
+mcr_k448	Gancanagh	Monster crystals	5	99	0
+mcr_k650	Moblin	Monster crystals	5	99	0
+mcr_k012	Dreadnought	Monster crystals	5	99	0
+mcr_k861	Pink Lily	Monster crystals	5	99	0
+mcr_k672	Testudo	Monster crystals	5	99	0
+mcr_k895	Twilight Odin	Monster crystals	5	99	0
+mcr_k950	Unused / unnamed monster crystal 950	Monster crystals	5	99	0
+mcr_k951	Unused / unnamed monster crystal 951	Monster crystals	5	99	0
+mcr_k952	Unused / unnamed monster crystal 952	Monster crystals	5	99	0
+mcr_k953	Unused / unnamed monster crystal 953	Monster crystals	5	99	0
+mcr_k954	Unused / unnamed monster crystal 954	Monster crystals	5	99	0
+mcr_k959	Unused / unnamed monster crystal 959	Monster crystals	5	99	0
+mcr_k961	Unused / unnamed monster crystal 961	Monster crystals	5	99	0
+mcr_k962	Unused / unnamed monster crystal 962	Monster crystals	5	99	0
+mcr_k969	Unused / unnamed monster crystal 969	Monster crystals	5	99	0
+mcr_k971	Unused / unnamed monster crystal 971	Monster crystals	5	99	0
+mcr_k973	Unused / unnamed monster crystal 973	Monster crystals	5	99	0
+mcr_k974	Unused / unnamed monster crystal 974	Monster crystals	5	99	0
+e200	Blue Flower	Internal / special	6	1	0
+e201	Pink Flower	Internal / special	6	1	0
+e301	Golden Flower	Internal / special	6	1	0
+e202	White Flower	Internal / special	6	1	0
+e203	Purple Flower	Internal / special	6	1	0
+e302	Crimson Flower	Internal / special	6	1	0
+e210	Aqua Ribbon	Internal / special	6	1	0
+e211	Pink Ribbon	Internal / special	6	1	0
+e307	Yellow Ribbon	Internal / special	6	1	0
+e239	Yellow Bow Tie	Internal / special	6	1	0
+e240	Orange Bow Tie	Internal / special	6	1	0
+e320	Red Bow Tie	Internal / special	6	1	0
+e241	Yellow-Rimmed Glasses	Internal / special	6	1	0
+e242	Pink-Rimmed Glasses	Internal / special	6	1	0
+e321	Black-Rimmed Glasses	Internal / special	6	1	0
+e243	Gold Shades	Internal / special	6	1	0
+e244	Violet Shades	Internal / special	6	1	0
+e322	Vacationer's Shades	Internal / special	6	1	0
+e027	Crown	Internal / special	6	1	0
+e026	Coronet	Internal / special	6	1	0
+e228	Orange Newsboy Cap	Internal / special	6	1	0
+e229	Pink Newsboy Cap	Internal / special	6	1	0
+e314	Sky Blue Newsboy Cap	Internal / special	6	1	0
+e230	Red Silk Hat	Internal / special	6	1	0
+e231	Sky Blue Silk Hat	Internal / special	6	1	0
+e315	Silk Hat	Internal / special	6	1	0
+e031	Train Conductor Beret	Internal / special	6	1	0
+e030	Train Conductor Cap	Internal / special	6	1	0
+e034	Chef's Hat	Internal / special	6	1	0
+e038	Onion Knight's Helm	Internal / special	6	1	0
+e033	Academic's Hat	Internal / special	6	1	0
+e032	Wizard's Hat	Internal / special	6	1	0
+e232	Blue Mage's Chapeau	Internal / special	6	1	0
+e316	Red Mage's Chapeau	Internal / special	6	1	0
+e233	Pink Party Hat	Internal / special	6	1	0
+e234	Blue Party Hat	Internal / special	6	1	0
+e317	Party Hat	Internal / special	6	1	0
+e235	Tranquil Headdress	Internal / special	6	1	0
+e236	Whimsical Headdress	Internal / special	6	1	0
+e318	Headdress of Courage	Internal / special	6	1	0
+e224	Blue Moogle Bobble	Internal / special	6	1	0
+e312	Pink Moogle Bobble	Internal / special	6	1	0
+e259	Blue Feather Hairpin	Internal / special	6	1	0
+e260	Dusk Feather Hairpin	Internal / special	6	1	0
+e330	Chocobo Feather Pin	Internal / special	6	1	0
+e019	Light Bulb	Internal / special	6	1	0
+e263	Blue Beacon	Internal / special	6	1	0
+e264	Red Beacon	Internal / special	6	1	0
+e332	Orange Beacon	Internal / special	6	1	0
+e220	Youthful Parasol	Internal / special	6	1	0
+e221	Sentimental Parasol	Internal / special	6	1	0
+e310	Summery Parasol	Internal / special	6	1	0
+e222	Blue Propeller	Internal / special	6	1	0
+e223	Red Propeller	Internal / special	6	1	0
+e311	Yellow Propeller	Internal / special	6	1	0
+e209	Gold Windup Key	Internal / special	6	1	0
+e306	Silver Windup Key	Internal / special	6	1	0
+e098	Afro	Internal / special	6	1	0
+e015	Halo	Internal / special	6	1	0
+e016	Zwerg Ring	Internal / special	6	1	0
+e083	Fragment Crystal	Internal / special	6	1	0
+e212	Gold Gear	Internal / special	6	1	0
+e308	Silver Gear	Internal / special	6	1	0
+e013	Shooting Star	Internal / special	6	1	0
+e014	Cute Heart	Internal / special	6	1	0
+e039	Gold Anchor	Internal / special	6	1	0
+e053	Musical Bell	Internal / special	6	1	0
+e103	Bandaid	Internal / special	6	1	0
+e037	Bunny Ears	Internal / special	6	1	0
+e041	Tonberry's Lantern	Internal / special	6	1	0
+e043	Ripe Apple	Internal / special	6	1	0
+e044	Pumpkin Head	Internal / special	6	1	0
+e003	Lucky Clover	Internal / special	6	1	0
+e205	Suspicious Mushroom	Internal / special	6	1	0
+e206	Toxic Mushroom	Internal / special	6	1	0
+e304	Delicious Mushroom	Internal / special	6	1	0
+e204	White Tree	Internal / special	6	1	0
+e303	Festive Tree	Internal / special	6	1	0
+e004	Tropical Tree	Internal / special	6	1	0
+e207	Blue Butterfly	Internal / special	6	1	0
+e208	Yellow Butterfly	Internal / special	6	1	0
+e305	Orange Butterfly	Internal / special	6	1	0
+e237	Strawberry Ice Cream	Internal / special	6	1	0
+e238	Rum Raisin Ice Cream	Internal / special	6	1	0
+e319	Mint Chip Ice Cream	Internal / special	6	1	0
+e010	Single Horn	Internal / special	6	1	0
+e011	Antler	Internal / special	6	1	0
+e247	White Bushy Mustache	Internal / special	6	1	0
+e248	Brown Bushy Mustache	Internal / special	6	1	0
+e324	Bushy Mustache	Internal / special	6	1	0
+e245	Masquerade Mask	Internal / special	6	1	0
+e323	Queen's Mask	Internal / special	6	1	0
+e246	Carnival Mask	Internal / special	6	1	0
+e042	Summoner's Mask	Internal / special	6	1	0
+e108	Serah Mask	Internal / special	6	1	0
+e110	Mog Mask	Internal / special	6	1	0
+e109	Lightning Mask	Internal / special	6	1	0
+e111	Retro Serah Mask	Internal / special	6	1	0
+e113	Retro Mog Mask	Internal / special	6	1	0
+e112	Retro Lightning Mask	Internal / special	6	1	0
+e046	Crystal Rose	Internal / special	6	1	0
+e051	Crystal Apple	Internal / special	6	1	0
+e050	Crystal Petal	Internal / special	6	1	0
+e049	Crystal Feather	Internal / special	6	1	0
+e048	Crystal Heart	Internal / special	6	1	0
+e047	Crystal Tear	Internal / special	6	1	0
+e052	Crystal Star	Internal / special	6	1	0
+e093	Mog Figurine	Internal / special	6	1	0
+e092	Carbuncle Figurine	Internal / special	6	1	0
+e090	Cactuar Figurine	Internal / special	6	1	0
+e091	Cute Cactuar Figurine	Internal / special	6	1	0
+e094	Mini Flan Figurine	Internal / special	6	1	0
+e096	Tonberry Figurine	Internal / special	6	1	0
+e097	Woolly Sheep Figurine	Internal / special	6	1	0
+e309	Chocobo Figurine	Internal / special	6	1	0
+e213	Red Chocobo Figurine	Internal / special	6	1	0
+e214	Blue Chocobo Figurine	Internal / special	6	1	0
+e215	Purple Chocobo Figurine	Internal / special	6	1	0
+e216	White Chocobo Figurine	Internal / special	6	1	0
+e217	Black Chocobo Figurine	Internal / special	6	1	0
+e219	Gold Chocobo Figurine	Internal / special	6	1	0
+e218	Silver Chocobo Figurine	Internal / special	6	1	0
+e338	Chocobo Chick	Internal / special	6	1	0
+e278	Red Chocobo Chick	Internal / special	6	1	0
+e279	Blue Chocobo Chick	Internal / special	6	1	0
+e280	Purple Chocobo Chick	Internal / special	6	1	0
+e281	White Chocobo Chick	Internal / special	6	1	0
+e282	Black Chocobo Chick	Internal / special	6	1	0
+e284	Gold Chocobo Chick	Internal / special	6	1	0
+e283	Silver Chocobo Chick	Internal / special	6	1	0
+e339	Yellow Chick in Afro	Internal / special	6	1	0
+e285	Afro & Red Chick	Internal / special	6	1	0
+e286	Afro & Blue Chick	Internal / special	6	1	0
+e287	Afro & Purple Chick	Internal / special	6	1	0
+e288	Afro & White Chick	Internal / special	6	1	0
+e289	Afro & Black Chick	Internal / special	6	1	0
+e291	Afro & Gold Chick	Internal / special	6	1	0
+e290	Afro & Silver Chick	Internal / special	6	1	0
+e081	Mog's Clock	Internal / special	6	1	0
+e080	Staff of Judgment	Internal / special	6	1	0
+e079	Grudge Knife	Internal / special	6	1	0
+e107	Caius's Sword	Internal / special	6	1	0
+e078	Frying Pan	Internal / special	6	1	0
+e294	White Guitar	Internal / special	6	1	0
+e295	Blue Guitar	Internal / special	6	1	0
+e342	Electric Guitar	Internal / special	6	1	0
+e293	Long Gui's Shell	Internal / special	6	1	0
+e341	Adamantoise Shell	Internal / special	6	1	0
+e331	Dragon Hide Backpack	Internal / special	6	1	0
+e261	Long Gui Backpack	Internal / special	6	1	0
+e262	Sahagin Hide Backpack	Internal / special	6	1	0
+e024	Moogle Wing	Internal / special	6	1	0
+e023	Cie'th Wing	Internal / special	6	1	0
+e226	Aqua Fairy Wings	Internal / special	6	1	0
+e227	Snowy Fairy Wings	Internal / special	6	1	0
+e313	Fairy Wings	Internal / special	6	1	0
+e336	Gold Medal	Internal / special	6	1	0
+e274	Silver Medal	Internal / special	6	1	0
+e275	Bronze Medal	Internal / special	6	1	0
+e060	Mark of the l'Cie	Internal / special	6	1	0
+e062	Mark of Etro	Internal / special	6	1	0
+e061	Mark of Lindzei	Internal / special	6	1	0
+e067	Behemoth Crest	Internal / special	6	1	0
+e066	Leyak Crest	Internal / special	6	1	0
+e065	Rangda Crest	Internal / special	6	1	0
+e074	Flower Pattern	Internal / special	6	1	0
+e255	Black Tattoo	Internal / special	6	1	0
+e256	Pink Tattoo	Internal / special	6	1	0
+e328	Tattoo	Internal / special	6	1	0
+e072	Unicorn Mart Logo	Internal / special	6	1	0
+e073	Stormy Motors Logo	Internal / special	6	1	0
+e257	Sky Blue NORA Symbol	Internal / special	6	1	0
+e258	Green NORA Symbol	Internal / special	6	1	0
+e329	NORA Symbol	Internal / special	6	1	0
+e068	Canned Sheep Logo	Internal / special	6	1	0
+e069	Canned Coyo Logo	Internal / special	6	1	0
+e251	Lebreau's Black Tattoo	Internal / special	6	1	0
+e252	Lebreau's Olive Tattoo	Internal / special	6	1	0
+e326	Lebreau's Violet Tattoo	Internal / special	6	1	0
+e253	Gadot's Black Emblem	Internal / special	6	1	0
+e254	Gadot's Blue Emblem	Internal / special	6	1	0
+e327	Gadot's Red Emblem	Internal / special	6	1	0
+e333	Guardian Corps Badge	Internal / special	6	1	0
+e265	Guard's Ravager Badge	Internal / special	6	1	0
+e266	Red Commando Badge	Internal / special	6	1	0
+e267	Guard's Medic Badge	Internal / special	6	1	0
+e334	Pilot's Badge	Internal / special	6	1	0
+e270	Green Pilot's Badge	Internal / special	6	1	0
+e268	Blue Pilot's Badge	Internal / special	6	1	0
+e269	Orange Pilot's Badge	Internal / special	6	1	0
+e335	Silver PSICOM Spaulders	Internal / special	6	1	0
+e271	Blue PSICOM Spaulders	Internal / special	6	1	0
+e272	Red PSICOM Spaulders	Internal / special	6	1	0
+e273	Green PSICOM Spaulders	Internal / special	6	1	0
+e297	PSICOM Lapel Pin	Internal / special	6	1	0
+e344	PSICOM Officer Pin	Internal / special	6	1	0
+e343	Upper Rank Insignia	Internal / special	6	1	0
+e296	Lower Rank Insignia	Internal / special	6	1	0
+e340	Gold Padlock	Internal / special	6	1	0
+e292	Silver Padlock	Internal / special	6	1	0
+e070	Dajh's Patch	Internal / special	6	1	0
+e298	Gold Brooch	Internal / special	6	1	0
+e345	Silver Brooch	Internal / special	6	1	0
+cc_gysahl	Gysahl Greens	Casino / specialty	7	99	1
+cs_chip_00	Casino Ticket	Casino / specialty	7	99	1
+cs_chip_01	Gold Casino Ticket	Casino / specialty	7	99	1
+cs_chip_02	Platinum Casino Ticket	Casino / specialty	7	99	1
+cs_race_00	Shuffle	Casino / specialty	7	99	1
+cs_race_01	Shuffle (Common)	Casino / specialty	7	99	1
+cs_race_02	Shuffle (Graded)	Casino / specialty	7	99	1
+cs_cond_00	Chocoboost	Casino / specialty	7	99	1
+cs_cond_01	Chocobull	Casino / specialty	7	99	1
+material_a035	Potent Bolt	Monster growth materials	8	99	1
+material_a000	Potent Droplet	Monster growth materials	8	99	1
+material_a036	Potent Chip	Monster growth materials	8	99	1
+material_a001	Potent Sliver	Monster growth materials	8	99	1
+material_a037	Potent Engine	Monster growth materials	8	99	1
+material_a002	Potent Orb	Monster growth materials	8	99	1
+material_a038	Potent Booster	Monster growth materials	8	99	1
+material_a003	Potent Essence	Monster growth materials	8	99	1
+material_a004	Potent Crystal	Monster growth materials	8	99	1
+material_a039	Potent Generator	Monster growth materials	8	99	1
+material_a030	Vitality Bolt	Monster growth materials	8	99	1
+material_a015	Vitality Droplet	Monster growth materials	8	99	1
+material_a031	Vitality Chip	Monster growth materials	8	99	1
+material_a016	Vitality Sliver	Monster growth materials	8	99	1
+material_a032	Vitality Engine	Monster growth materials	8	99	1
+material_a017	Vitality Orb	Monster growth materials	8	99	1
+material_a033	Vitality Booster	Monster growth materials	8	99	1
+material_a018	Vitality Essence	Monster growth materials	8	99	1
+material_a019	Vitality Crystal	Monster growth materials	8	99	1
+material_a034	Vitality Generator	Monster growth materials	8	99	1
+material_a020	Power Bolt	Monster growth materials	8	99	1
+material_a005	Power Droplet	Monster growth materials	8	99	1
+material_a021	Power Chip	Monster growth materials	8	99	1
+material_a006	Power Sliver	Monster growth materials	8	99	1
+material_a022	Power Engine	Monster growth materials	8	99	1
+material_a007	Power Orb	Monster growth materials	8	99	1
+material_a023	Power Booster	Monster growth materials	8	99	1
+material_a008	Power Essence	Monster growth materials	8	99	1
+material_a009	Power Crystal	Monster growth materials	8	99	1
+material_a024	Power Generator	Monster growth materials	8	99	1
+material_a025	Mana Bolt	Monster growth materials	8	99	1
+material_a010	Mana Droplet	Monster growth materials	8	99	1
+material_a026	Mana Chip	Monster growth materials	8	99	1
+material_a011	Mana Sliver	Monster growth materials	8	99	1
+material_a027	Mana Engine	Monster growth materials	8	99	1
+material_a012	Mana Orb	Monster growth materials	8	99	1
+material_a028	Mana Booster	Monster growth materials	8	99	1
+material_a013	Mana Essence	Monster growth materials	8	99	1
+material_a014	Mana Crystal	Monster growth materials	8	99	1
+material_a029	Mana Generator	Monster growth materials	8	99	1
+acc_080_001	Delicate Genji Glove	Accessories	2	99	0
+acc_081_001	Delicate Genji Shield	Accessories	2	99	0
+acc_082_000	Lightning Cross	Accessories	2	99	0
+acc_083_000	Sergeant's Badge	Accessories	2	99	0
+acc_084_000	Genji Helm	Accessories	2	99	0
+acc_084_001	Delicate Genji Helm	Accessories	2	99	0
+acc_085_000	Bloody Medallion	Accessories	2	99	0
+acc_086_000	Colonel's Glasses	Accessories	2	99	0
+acc_087_000	Snow's Bandanna	Accessories	2	99	0

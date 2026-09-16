@@ -1,0 +1,196 @@
+id	name	family	category	value
+auto_amdef_s1	Resist Physical/Magic 5%	physmag	Physical / Magic Resistance	5
+auto_amdef_s2	Resist Physical/Magic 10%	physmag	Physical / Magic Resistance	10
+auto_amdef_s3	Resist Physical/Magic 15%	physmag	Physical / Magic Resistance	15
+auto_amdef_s4	Resist Physical/Magic 20%	physmag	Physical / Magic Resistance	20
+auto_defp_1	Resist Physical 5%	physical	Physical / Magic Resistance	5
+auto_defp_2	Resist Physical 11%	physical	Physical / Magic Resistance	11
+auto_defp_3	Resist Physical 15%	physical	Physical / Magic Resistance	15
+auto_defp_4	Resist Physical 19%	physical	Physical / Magic Resistance	19
+auto_defp_5	Resist Physical 21%	physical	Physical / Magic Resistance	21
+auto_defp_6	Resist Physical 26%	physical	Physical / Magic Resistance	26
+auto_defp_7	Resist Physical 36%	physical	Physical / Magic Resistance	36
+auto_defp_8	Resist Physical 75%	physical	Physical / Magic Resistance	75
+auto_mdefp_1	Resist Magic 5%	magic	Physical / Magic Resistance	5
+auto_mdefp_2	Resist Magic 11%	magic	Physical / Magic Resistance	11
+auto_mdefp_3	Resist Magic 15%	magic	Physical / Magic Resistance	15
+auto_mdefp_4	Resist Magic 19%	magic	Physical / Magic Resistance	19
+auto_mdefp_5	Resist Magic 21%	magic	Physical / Magic Resistance	21
+auto_mdefp_6	Resist Magic 26%	magic	Physical / Magic Resistance	26
+auto_mdefp_7	Resist Magic 36%	magic	Physical / Magic Resistance	36
+auto_mdefp_8	Resist Magic 75%	magic	Physical / Magic Resistance	75
+auto_fdefp_1	Resist Fire 10%	fire	Elemental Resistance	10
+auto_fdefp_2	Resist Fire 29%	fire	Elemental Resistance	29
+auto_fdefp_3	Resist Fire 33%	fire	Elemental Resistance	33
+auto_fdefp_4	Resist Fire 39%	fire	Elemental Resistance	39
+auto_fdefp_5	Resist Fire 40%	fire	Elemental Resistance	40
+auto_fdefp_6	Resist Fire 45%	fire	Elemental Resistance	45
+auto_fdefp_7	Resist Fire 53%	fire	Elemental Resistance	53
+auto_idefp_1	Resist Ice 10%	ice	Elemental Resistance	10
+auto_idefp_2	Resist Ice 29%	ice	Elemental Resistance	29
+auto_idefp_3	Resist Ice 33%	ice	Elemental Resistance	33
+auto_idefp_4	Resist Ice 39%	ice	Elemental Resistance	39
+auto_idefp_5	Resist Ice 40%	ice	Elemental Resistance	40
+auto_idefp_6	Resist Ice 45%	ice	Elemental Resistance	45
+auto_idefp_7	Resist Ice 53%	ice	Elemental Resistance	53
+auto_adefp_1	Resist Wind 10%	wind	Elemental Resistance	10
+auto_adefp_2	Resist Wind 29%	wind	Elemental Resistance	29
+auto_adefp_3	Resist Wind 33%	wind	Elemental Resistance	33
+auto_adefp_4	Resist Wind 39%	wind	Elemental Resistance	39
+auto_adefp_5	Resist Wind 40%	wind	Elemental Resistance	40
+auto_adefp_6	Resist Wind 45%	wind	Elemental Resistance	45
+auto_adefp_7	Resist Wind 53%	wind	Elemental Resistance	53
+auto_ldefp_1	Resist Lightning 10%	lightning	Elemental Resistance	10
+auto_ldefp_2	Resist Lightning 29%	lightning	Elemental Resistance	29
+auto_ldefp_3	Resist Lightning 33%	lightning	Elemental Resistance	33
+auto_ldefp_4	Resist Lightning 39%	lightning	Elemental Resistance	39
+auto_ldefp_5	Resist Lightning 40%	lightning	Elemental Resistance	40
+auto_ldefp_6	Resist Lightning 45%	lightning	Elemental Resistance	45
+auto_ldefp_7	Resist Lightning 53%	lightning	Elemental Resistance	53
+auto_6def_1	Resist All Elements 5%	elements	Elemental Resistance	5
+auto_6def_2	Resist All Elements 13%	elements	Elemental Resistance	13
+auto_6def_3	Resist All Elements 20%	elements	Elemental Resistance	20
+auto_6def_4	Resist All Elements 27%	elements	Elemental Resistance	27
+auto_6def_5	Resist All Elements 30%	elements	Elemental Resistance	30
+auto_sdefp_dp1	Resist Deprotect 10%	status_dp	Status Resistance	10
+auto_sdefp_dp2	Resist Deprotect 33%	status_dp	Status Resistance	33
+auto_sdefp_dp3	Resist Deprotect 44%	status_dp	Status Resistance	44
+auto_sdefp_dp4	Resist Deprotect 66%	status_dp	Status Resistance	66
+auto_sdefp_dp5	Resist Deprotect 100%	status_dp	Status Resistance	100
+auto_sdefp_ds1	Resist Deshell 10%	status_ds	Status Resistance	10
+auto_sdefp_ds2	Resist Deshell 33%	status_ds	Status Resistance	33
+auto_sdefp_ds3	Resist Deshell 44%	status_ds	Status Resistance	44
+auto_sdefp_ds4	Resist Deshell 66%	status_ds	Status Resistance	66
+auto_sdefp_ds5	Resist Deshell 100%	status_ds	Status Resistance	100
+auto_sdefp_wk1	Resist Imperil 10%	status_wk	Status Resistance	10
+auto_sdefp_wk2	Resist Imperil 33%	status_wk	Status Resistance	33
+auto_sdefp_wk3	Resist Imperil 44%	status_wk	Status Resistance	44
+auto_sdefp_wk4	Resist Imperil 66%	status_wk	Status Resistance	66
+auto_sdefp_wk5	Resist Imperil 100%	status_wk	Status Resistance	100
+auto_sdefp_bi1	Resist Poison 10%	status_bi	Status Resistance	10
+auto_sdefp_bi2	Resist Poison 33%	status_bi	Status Resistance	33
+auto_sdefp_bi3	Resist Poison 44%	status_bi	Status Resistance	44
+auto_sdefp_bi4	Resist Poison 66%	status_bi	Status Resistance	66
+auto_sdefp_bi5	Resist Poison 100%	status_bi	Status Resistance	100
+auto_sdefp_sl1	Resist Slow 10%	status_sl	Status Resistance	10
+auto_sdefp_sl2	Resist Slow 33%	status_sl	Status Resistance	33
+auto_sdefp_sl3	Resist Slow 44%	status_sl	Status Resistance	44
+auto_sdefp_sl4	Resist Slow 66%	status_sl	Status Resistance	66
+auto_sdefp_sl5	Resist Slow 100%	status_sl	Status Resistance	100
+auto_sdefp_pn1	Resist Pain 10%	status_pn	Status Resistance	10
+auto_sdefp_pn2	Resist Pain 33%	status_pn	Status Resistance	33
+auto_sdefp_pn3	Resist Pain 44%	status_pn	Status Resistance	44
+auto_sdefp_pn4	Resist Pain 66%	status_pn	Status Resistance	66
+auto_sdefp_pn5	Resist Pain 100%	status_pn	Status Resistance	100
+auto_sdefp_fg1	Resist Fog 10%	status_fg	Status Resistance	10
+auto_sdefp_fg2	Resist Fog 33%	status_fg	Status Resistance	33
+auto_sdefp_fg3	Resist Fog 44%	status_fg	Status Resistance	44
+auto_sdefp_fg4	Resist Fog 66%	status_fg	Status Resistance	66
+auto_sdefp_fg5	Resist Fog 100%	status_fg	Status Resistance	100
+auto_sdefp_cs1	Resist Curse 10%	status_cs	Status Resistance	10
+auto_sdefp_cs2	Resist Curse 33%	status_cs	Status Resistance	33
+auto_sdefp_cs3	Resist Curse 44%	status_cs	Status Resistance	44
+auto_sdefp_cs4	Resist Curse 66%	status_cs	Status Resistance	66
+auto_sdefp_cs5	Resist Curse 100%	status_cs	Status Resistance	100
+auto_sdefp_de1	Resist Dispel 10%	status_de	Status Resistance	10
+auto_sdefp_de2	Resist Dispel 33%	status_de	Status Resistance	33
+auto_sdefp_de3	Resist Dispel 44%	status_de	Status Resistance	44
+auto_sdefp_de4	Resist Dispel 66%	status_de	Status Resistance	66
+auto_sdefp_de5	Resist Dispel 100%	status_de	Status Resistance	100
+auto_def_s1	Resilience 10%	resilience	Status Resistance	10
+auto_def_s2	Resilience 15%	resilience	Status Resistance	15
+auto_def_s3	Resilience 20%	resilience	Status Resistance	20
+auto_def_s4	Resilience 40%	resilience	Status Resistance	40
+auto_def_s5	Resilience 60%	resilience	Status Resistance	60
+auto_hpp_1	HP +8%	hpboost	Stat Boost	8
+auto_hpp_2	HP +10%	hpboost	Stat Boost	10
+auto_hpp_3	HP +12%	hpboost	Stat Boost	12
+auto_hpp_4	HP +13%	hpboost	Stat Boost	13
+auto_hpp_5	HP +16%	hpboost	Stat Boost	16
+auto_hpp_6	HP +19%	hpboost	Stat Boost	19
+auto_hpp_7	HP +23%	hpboost	Stat Boost	23
+auto_hpp_8	HP +25%	hpboost	Stat Boost	25
+auto_hpp_9	HP +30%	hpboost	Stat Boost	30
+auto_att_1	Strength +8%	strboost	Stat Boost	8
+auto_att_2	Strength +10%	strboost	Stat Boost	10
+auto_att_3	Strength +12%	strboost	Stat Boost	12
+auto_att_4	Strength +14%	strboost	Stat Boost	14
+auto_att_5	Strength +16%	strboost	Stat Boost	16
+auto_att_6	Strength +20%	strboost	Stat Boost	20
+auto_att_7	Strength +25%	strboost	Stat Boost	25
+auto_att_8	Strength +35%	strboost	Stat Boost	35
+auto_att_9	Strength +50%	strboost	Stat Boost	50
+auto_matt_1	Magic +8%	magboost	Stat Boost	8
+auto_matt_2	Magic +10%	magboost	Stat Boost	10
+auto_matt_3	Magic +12%	magboost	Stat Boost	12
+auto_matt_4	Magic +14%	magboost	Stat Boost	14
+auto_matt_5	Magic +16%	magboost	Stat Boost	16
+auto_matt_6	Magic +20%	magboost	Stat Boost	20
+auto_matt_7	Magic +25%	magboost	Stat Boost	25
+auto_matt_8	Magic +35%	magboost	Stat Boost	35
+auto_matt_9	Magic +50%	magboost	Stat Boost	50
+auto_00_0	ATB Advantage	atbstart	Battle Utility	Normal
+auto_00_1	First Strike	atbstart	Battle Utility	Enhanced
+auto_cp	Double CP	doublecp	Rewards	2x CP
+auto_crack	Pressure II	pressure	Battle Utility	II
+auto_keep	Immovable II	immovable	Battle Utility	II
+auto_law	Jungle Law	junglelaw	Battle Utility	-
+auto_rol	Role Resonance	roleresonance	Role Bonus	-
+auto_weeks	Weak Spot	weakspot	Battle Utility	-
+auto_drop_0	Item Scavenger II	itemdrop	Rewards	II
+auto_drop_1	Item Collector	itemdrop	Rewards	Collector
+auto_gilup	Gilfinder II	gilfinder	Rewards	II
+auto_b_atb	Kill: ATB Charge	killatb	Battle Utility	-
+auto_b_libra	Kill: Libra Charge	killlibra	Battle Utility	-
+auto_shorten	Rapid Recovery	rapidrecovery	Battle Utility	-
+auto_triplets	Pack Mentality	packmentality	Role Bonus	-
+auto_syncup	Feral Speed II	feralspeed	Feral Link	II
+auto_syncmax	Feral Surge	feralsurge	Feral Link	-
+auto_p_myte	Critical: Tetradefense	criticaltetradefense	Critical Buff	-
+auto_myte	Auto-Tetradefense	autotetradefense	Auto Buff	-
+auto_p_forc	Critical: Vigilance	criticalvigilance	Critical Buff	-
+auto_forc	Auto-Vigilance	autovigilance	Auto Buff	-
+auto_p_hast	Critical: Haste	criticalhaste	Critical Buff	-
+auto_hast	Auto-Haste	autohaste	Auto Buff	-
+auto_p_prot	Critical: Protect	criticalprotect	Critical Buff	-
+auto_prot	Auto-Protect	autoprotect	Auto Buff	-
+auto_p_shel	Critical: Shell	criticalshell	Critical Buff	-
+auto_shel	Auto-Shell	autoshell	Auto Buff	-
+auto_p_brav	Critical: Bravery	criticalbravery	Critical Buff	-
+auto_brav	Auto-Bravery	autobravery	Auto Buff	-
+auto_p_fait	Critical: Faith	criticalfaith	Critical Buff	-
+auto_fait	Auto-Faith	autofaith	Auto Buff	-
+auto_p_veil	Critical: Veil	criticalveil	Critical Buff	-
+auto_veil	Auto-Veil	autoveil	Auto Buff	-
+awp_all_250	Hindrance	awp_all_250	Advanced / Role Passive	Lock state unknown
+awp_all_350	Fettered Magic	awp_all_350	Advanced / Role Passive	Lock state unknown
+awp_c000_000	Attack ATB Charge	awp_c000_atb	Advanced / Role Passive	Lock state unknown
+awp_c000_050	Attack ATB Charge II	awp_c000_atb	Advanced / Role Passive	Lock state unknown
+awp_c000_100	Improved Raise	awp_c000_raise	Advanced / Role Passive	Lock state unknown
+awp_c000_150	Improved Raise II	awp_c000_raise	Advanced / Role Passive	Lock state unknown
+awp_c001_000	Improved Guard	awp_c001_guard	Advanced / Role Passive	Lock state unknown
+awp_c001_050	Improved Guard II	awp_c001_guard	Advanced / Role Passive	Lock state unknown
+awp_c001_100	Critical: Power Surge	awp_c001_power	Advanced / Role Passive	Lock state unknown
+awp_c001_150	Critical: Power Surge II	awp_c001_power	Advanced / Role Passive	Lock state unknown
+awp_c001_200	Improved Ward	awp_c001_ward	Advanced / Role Passive	Lock state unknown
+awp_c001_250	Improved Ward II	awp_c001_ward	Advanced / Role Passive	Lock state unknown
+awp_c002_000	Augment Maintenance	awp_c002_augment	Advanced / Role Passive	Lock state unknown
+awp_c002_050	Augment Maintenance II	awp_c002_augment	Advanced / Role Passive	Lock state unknown
+awp_c002_100	Chain Bonus Boost	awp_c002_chain	Advanced / Role Passive	Lock state unknown
+awp_c002_150	Chain Bonus Boost II	awp_c002_chain	Advanced / Role Passive	Lock state unknown
+awp_c002_200	Stagger Maintenance	awp_c002_stagger	Advanced / Role Passive	Lock state unknown
+awp_c002_250	Stagger Maintenance II	awp_c002_stagger	Advanced / Role Passive	Lock state unknown
+awp_c003_000	Critical Shield	awp_c003_shield	Advanced / Role Passive	Lock state unknown
+awp_c003_050	Critical Shield II	awp_c003_shield	Advanced / Role Passive	Lock state unknown
+awp_c003_200	Defense Maintenance	awp_c003_defense	Advanced / Role Passive	Lock state unknown
+awp_c003_250	Defense Maintenance II	awp_c003_defense	Advanced / Role Passive	Lock state unknown
+awp_c004_000	Improved Cure	awp_c004_cure	Advanced / Role Passive	Lock state unknown
+awp_c004_050	Improved Cure II	awp_c004_cure	Advanced / Role Passive	Lock state unknown
+awp_c004_100	Ally KO: Power Surge	awp_c004_allyko	Advanced / Role Passive	Lock state unknown
+awp_c004_150	Ally KO: Power Surge II	awp_c004_allyko	Advanced / Role Passive	Lock state unknown
+awp_c004_200	Improved Debuffing	awp_c004_debuff	Advanced / Role Passive	Lock state unknown
+awp_c004_250	Improved Debuffing II	awp_c004_debuff	Advanced / Role Passive	Lock state unknown
+awp_c005_100	Improved Debilitation	awp_c005_debil	Advanced / Role Passive	Lock state unknown
+awp_c005_150	Improved Debilitation II	awp_c005_debil	Advanced / Role Passive	Lock state unknown
+awp_c005_200	Improved Counter	awp_c005_counter	Advanced / Role Passive	Lock state unknown
+awp_c005_250	Improved Counter II	awp_c005_counter	Advanced / Role Passive	Lock state unknown

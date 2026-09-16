@@ -1,0 +1,645 @@
+k001	Pantheron
+k002	Silver Lobo
+k003	Gorgonopsid
+k004	Adamantheron
+k005	Mánagarmr
+k006	Flavorful Flan
+k007	Rust Pudding
+k008	Flanbanero
+k010	Flanborg
+k012	Dreadnought
+k015	Behemoth
+k016	Beta Behemoth
+k018	Orion
+k034	Skata'ne
+k035	Incubus
+k036	Yaksha
+k037	Triffid
+k038	Vespid
+k039	Barbed Specter
+k040	Vespid Soldier
+k041	Gremlin
+k042	Imp
+k043	Zwerg Scandroid
+k045	Leyak
+k047	Alpha Behemoth
+k048	Garuda
+k049	Kalavinka
+k050	Wyvern
+k053	Goblin
+k054	Munchkin
+k055	Borgbear
+k056	Goblin Chieftain
+k057	Munchkin Boss
+k058	Borgbear Hero
+k059	Sahagin
+k060	Orobon
+k061	Dagonite
+k063	Pulse Soldier
+k064	Pulse Knight
+k065	Pulse Gladiator
+k066	Bomb
+k069	Navidon
+k070	Stonefist
+k071	Lucidon
+k072	Thermadon
+k075	Grand Behemoth
+k077	Proto-behemoth
+k079	Flanitor
+k097	Protoflorian
+k098	Harvester
+k099	Crawler
+k100	Noctilucale
+k101	Alraune
+k102	Frag Leech
+k115	Uhlan
+k116	Cuirassier
+k117	Ciconia Cycle
+k118	Milvus Velocycle
+k119	Falco Velocycle
+k120	Aquila Velocycle
+k123	Bloodfang Bass
+k124	Breshan Bass
+k125	Hedge Frog
+k126	Mud Frog
+k127	Ceratosaur
+k128	Ceratoraptor
+k132	Midlight Reaper
+k133	Megrim Thresher
+k150	Thexteron
+k151	Myrmidon
+k152	Viking
+k153	Watchdrone
+k172	Phosphoric Ooze
+k173	Garchimacera
+k174	Rangda
+k175	Amphisbaena
+k176	Behemoth King
+k177	Berserker
+k178	Tyrant
+k179	Immortal
+k180	Boxed Phalanx
+k182	Hoplite
+k183	Stikini
+k184	Succubus
+k185	Yakshini
+k186	Adamantoise
+k187	Adamanchelid
+k188	Wurtzitoise
+k189	Ochu
+k190	Microchu
+k205	Deckdrone
+k206	Ahriman
+k207	Pulse Centurion
+k211	Zwerg Metro
+k212	Megistotherian
+k213	Svarog
+k214	Circuitron
+k215	Cryohedron
+k216	Juggernaut
+k233	Enlil
+k234	Enki
+k235	Bandersnatch
+k236	Jabberwocky
+k243	Flare Behemoth
+k253	Cactuar
+k254	Tonberry
+k255	Metalligantuar
+k256	Cactrot
+k257	Gigantuar
+k260	Crusader
+k270	Nekton
+k271	Meonekton
+k272	Neuston
+k273	Cait Sith
+k275	Miniflan
+k276	Nekton
+k277	Meonekton
+k278	Neuston
+k400	Uridimmu
+k401	Adroa
+k402	Pulse Champion
+k403	Amam
+k404	Rakshasa
+k405	Neochu
+k406	Gurangatch
+k407	Behemoth Lord
+k408	Zirnitra
+k409	Verdelet
+k412	Rafflesia
+k413	Mushussu
+k415	Humbaba
+k416	Spartan
+k417	Ugallu
+k419	Ectopudding
+k420	Gelatitan
+k421	Shaolong Gui
+k422	Long Gui
+k423	Nanochu
+k424	Cryptos
+k430	Luminous Puma
+k431	Gytrash
+k432	Seeping Brie
+k433	Albino Lobo
+k434	Flandit
+k435	Garganzola
+k436	Flangonzola
+k437	Fencer
+k438	Yeoman
+k439	Fasan Velocycle
+k440	Ibis Velocycle
+k441	Gandayaks
+k442	Gahongas
+k443	Clematis
+k444	Necrosis
+k445	Koboldroid Yin
+k446	Koboldroid Yang
+k447	Buccaboo
+k448	Gancanagh
+k449	Buccaboo Ace
+k450	Gancanagh Ace
+k451	Sahagin Prince
+k452	Cloudburst
+k453	Tempest
+k454	Debris
+k455	Reaver
+k456	Zaghnal
+k457	Narasimha
+k458	Vodianoi
+k459	Samovira
+k460	Shaguma
+k461	Haguma
+k462	Dendrobium
+k463	Mandrake
+k490	Mewmao
+k491	Schrodinger
+k492	Forked Cat
+k493	Clione
+k494	Pleuston
+k495	Chelicerata
+k496	Pantopoda
+k640	Bamapama
+k641	Mimi
+k642	Fachan
+k643	Unsaganashi
+k644	Amanojaku
+k645	Notsugo
+k646	Vouivre
+k647	Kanna Kamuy
+k648	Fafnir
+k649	Deathgaze
+k650	Moblin
+k651	Major Moblin
+k652	Swampmonk
+k653	Apkallu
+k654	Oannes
+k655	Glyptodon
+k656	Bunkerbeast
+k657	Calautidon
+k658	Indigo Shot
+k659	White Balsam
+k660	Sarracenia
+k661	Spiranthes
+k662	Caterchipillar
+k663	Exoray
+k664	Dragoon
+k665	Spiceacilian
+k666	Tabasco Toad
+k667	Pitterpatter
+k668	Chunerpeton
+k669	Crested Bullfrog
+k670	Crowned Frog
+k671	Battledrone
+k672	Testudo
+k673	Scutari
+k674	Sagarmatha
+k675	Dhaulagiri
+k676	Mochu
+k677	Chichu
+k678	Xolotl
+k679	Miquiztli
+k680	Itzlacoliuhque
+k681	Tezcatlipoca
+k682	Metallicactuar
+k683	Cactuaroni
+k684	Cactuarama
+k685	Cactuarina
+k686	Don Tonberry
+k850	Azure Behemoth
+k851	Apotamkin
+k852	Illuyankas
+k853	Grenade
+k854	Wardrone
+k855	Nightblade Puma
+k856	Lancer
+k861	Pink Lily
+k862	Akupara
+k863	Chaochu
+k865	Golden Chocobo
+k866	Silver Chocobo
+k867	White Chocobo
+k868	Black Chocobo
+k869	Blue Chocobo
+k870	Red Chocobo
+k871	Green Chocobo
+k872	Purple Chocobo
+k882	Chocobo
+k895	Twilight Odin
+k950	Unused / unnamed monster 950
+k951	Unused / unnamed monster 951
+k952	Unused / unnamed monster 952
+k953	Unused / unnamed monster 953
+k954	Unused / unnamed monster 954
+k959	Unused / unnamed monster 959
+k961	Unused / unnamed monster 961
+k962	Unused / unnamed monster 962
+k969	Unused / unnamed monster 969
+k971	Unused / unnamed monster 971
+k973	Unused / unnamed monster 973
+k974	Unused / unnamed monster 974
+m001	Pantheron
+m002	Silver Lobo
+m003	Gorgonopsid
+m004	Adamantheron
+m005	Mánagarmr
+m006	Flan
+m007	Rust Pudding
+m008	Flanbanero
+m010	Flanborg
+m012	Dreadnought
+m015	Feral Behemoth
+m016	Beta Behemoth
+m017	Corps Marksman
+m018	Orion
+m019	Ushumgal Subjugator
+m020	Havoc Skytank
+m034	Skata'ne
+m035	Incubus
+m036	Yaksha
+m037	Triffid
+m038	Vespid
+m039	Barbed Specter
+m040	Vespid Soldier
+m041	Gremlin
+m042	Imp
+m043	Zwerg Scandroid
+m045	Leyak
+m047	Alpha Behemoth
+m048	Garuda
+m049	Kalavinka
+m050	Wyvern
+m053	Goblin
+m054	Munchkin
+m055	Borgbear
+m056	Goblin Chieftain
+m057	Munchkin Maestro
+m058	Borgbear Hero
+m059	Sahagin
+m060	Orobon
+m061	Dagonite
+m062	Corps Watchman
+m063	Pulsework Soldier
+m064	Pulsework Knight
+m065	Pulsework Gladiator
+m066	Bomb
+m069	Navidon
+m070	Scalebeast
+m071	Lucidon
+m072	Thermadon
+m075	Greater Behemoth
+m077	Proto-behemoth
+m079	Flanitor
+m080	PSICOM Predator
+m081	PSICOM Ranger
+m082	PSICOM Warden
+m083	PSICOM Infiltrator
+m084	Sanctum Archangel
+m097	Aster Protoflorian
+m098	Vernal Harvester
+m099	Crawler
+m100	Noctilucale
+m101	Alraune
+m102	Frag Leech
+m104	Ghast
+m105	Taxim
+m106	Strigoi
+m107	Vampire
+m108	Wight
+m109	Nelapsi
+m110	Pijavica
+m111	Varcolaci
+m115	Uhlan
+m116	Bulwarker
+m117	Ciconia Velocycle
+m118	Milvus Velocycle
+m119	Falco Velocycle
+m120	Aquila Velocycle
+m123	Bloodfang Bass
+m124	Breshan Bass
+m125	Hedge Frog
+m126	Mud Frog
+m127	Ceratosaur
+m128	Ceratoraptor
+m129	Manasvin Warmech
+m130	Manasvin Warmech
+m131	Anavatapta Warmech
+m132	Midlight Reaper
+m133	Megrim Thresher
+m137	Tiamat Eliminator
+m139	PSICOM Aerial Recon
+m140	PSICOM Aerial Sniper
+m141	PSICOM Dragoon
+m144	PSICOM Huntress
+m145	Sanctum Inquisitrix
+m150	Thexteron
+m151	Myrmidon
+m152	Viking
+m153	Watchdrone
+m154	The Proudclad
+m155	Corps Tranquifex
+m156	Corps Pacifex
+m157	Corps Gunner
+m158	Corps Regular
+m159	Corps Defender
+m160	Corps Steward
+m161	PSICOM Scavenger
+m162	PSICOM Tracker
+m163	PSICOM Enforcer
+m164	PSICOM Raider
+m165	Sanctum Seraph
+m166	PSICOM Marauder
+m167	PSICOM Warlord
+m168	PSICOM Reaver
+m169	Sanctum Templar
+m172	Phosphoric Ooze
+m173	Garchimacera
+m174	Rangda
+m175	Amphisbaena
+m176	Behemoth King
+m177	Berserker
+m178	Tyrant
+m179	Immortal
+m180	Boxed Phalanx
+m182	Hoplite
+m183	Stikini
+m184	Succubus
+m185	Yakshini
+m186	Adamantoise
+m187	Adamanchelid
+m188	Wurtzitoise
+m189	Ochu
+m190	Microchu
+m191	Bituitus
+m192	Chonchon
+m193	Seeker
+m194	Ghoul
+m195	Geiseric
+m196	Zenobia
+m197	Attacus
+m198	Balihann
+m199	Vetala
+m200	Gorgyra
+m201	Vercingetorix
+m202	Raspatil
+m203	Anima
+m205	Deckdrone
+m206	Ahriman
+m207	Pulsework Centurion
+m210	Dahaka
+m211	Zwerg Metrodroid
+m212	Megistotherian
+m213	Svarog
+m214	Circuitron
+m215	Cryohedron
+m216	Juggernaut
+m217	Nemesis
+m222	Syphax
+m223	Right Manipulator
+m224	Left Manipulator
+m226	Right Manipulator
+m227	Left Manipulator
+m229	PSICOM Bombardier
+m230	PSICOM Destroyer
+m231	Sanctum Celebrant
+m232	Cid Raines
+m233	Enlil
+m234	Enki
+m235	Bandersnatch
+m236	Jabberwocky
+m241	Numidia
+m242	Wladislaus
+m243	Lodestar Behemoth
+m250	Sacrifice
+m253	Cactuar
+m254	Tonberry
+m255	Metal Gigantuar
+m256	Flowering Cactuar
+m257	Gigantuar
+m260	Crusader
+m261	PSICOM Executioner
+m270	Nekton
+m271	Meonekton
+m272	Neuston
+m273	Cait Sith
+m274	Mutantomato
+m275	Miniflan
+m276	Nekton
+m277	Meonekton
+m278	Neuston
+m281	Blue Miniflan
+m282	Yellow Miniflan
+m283	Black Miniflan
+m284	Pink Miniflan
+m300	Barthandelus
+m301	Right Pauldron
+m302	Right Ailette
+m303	Left Pauldron
+m304	Left Ailette
+m310	Barthandelus
+m320	Barthandelus
+m350	Orphan
+m351	Orphan
+m352	Orphan
+m360	Orphan
+m370	Orphan
+m400	Uridimmu
+m401	Adroa
+m402	Pulsework Champion
+m403	Amam
+m404	Rakshasa
+m405	Neochu
+m406	Gurangatch
+m407	Behemoth Emperor
+m408	Zirnitra
+m409	Verdelet
+m410	Edimmu
+m411	Mithridates
+m412	Rafflesia
+m413	Mushussu
+m414	Raktavija
+m415	Humbaba
+m416	Ambling Bellows
+m417	Ugallu
+m418	Penanggalan
+m419	Ectopudding
+m420	Gelatitan
+m421	Shaolong Gui
+m422	Long Gui
+m423	Nanochu
+m424	Cryptos
+m430	Luminous Puma
+m431	Gytrash
+m432	Seeping Brie
+m433	Albino Lobo
+m434	Flandit
+m435	Garganzola
+m436	Flangonzola
+m437	Fencer
+m438	Yeoman
+m439	Fasan Velocycle
+m440	Ibis Velocycle
+m441	Gandayaks
+m442	Gahongas
+m443	Clematis
+m444	Necrosis
+m445	Koboldroid Yin
+m446	Koboldroid Yang
+m447	Buccaboo
+m448	Gancanagh
+m449	Buccaboo Ace
+m450	Gancanagh Ace
+m451	Sahagin Prince
+m452	Cloudburst
+m453	Tempest
+m454	Debris
+m455	Reaver
+m456	Zaghnal
+m457	Narasimha
+m458	Vodianoi
+m459	Samovira
+m460	Shaguma
+m461	Haguma
+m462	Dendrobium
+m463	Mandrake
+m464	Security Watchguard
+m465	Security Patroller
+m485	Security Escort
+m486	Security Ranger
+m490	Mewmao
+m491	Schrodinger
+m492	Forked Cat
+m493	Clione
+m494	Pleuston
+m495	Chelicerata
+m496	Pantopoda
+m600	Vaballathus
+m640	Bamapama
+m641	Mimi
+m642	Fachan
+m643	Unsaganashi
+m644	Amanojaku
+m645	Notsugo
+m646	Vouivre
+m647	Kanna Kamuy
+m648	Fafnir
+m649	Deathgaze
+m650	Moblin
+m651	Major Moblin
+m652	Swampmonk
+m653	Apkallu
+m654	Oannes
+m655	Glyptodon
+m656	Bunkerbeast
+m657	Calautidon
+m658	Indigo Shot
+m659	White Balsam
+m660	Sarracenia
+m661	Spiranthes
+m662	Caterchipillar
+m663	Exoray
+m664	Dragoon
+m665	Spiceacilian
+m666	Tabasco Toad
+m667	Pitterpatter
+m668	Chunerpeton
+m669	Crested Bullfrog
+m670	Crowned Frog
+m671	Battledrone
+m672	Testudo
+m673	Scutari
+m674	Sagarmatha
+m675	Dhaulagiri
+m676	Mochu
+m677	Chichu
+m678	Xolotl
+m679	Miquiztli
+m680	Itzlacoliuhque
+m681	Tezcatlipoca
+m682	Metallicactuar
+m683	Cactuaroni
+m684	Cactuarama
+m685	Cactuarina
+m686	Don Tonberry
+m687	Cocytus
+m688	Yomi
+m689	Malebranche
+m690	Ispusteke
+m691	Fomoire
+m692	Ereshkigal
+m693	Namtar
+m694	Aloeidai
+m700	Gogmagog
+m710	Faeryl
+m720	Pacos Amethyst
+m721	Pacos Luvulite
+m730	Odin
+m735	Light Bahamut
+m740	Chaos Bahamut
+m745	Caius Ballad
+m750	Royal Ripeness
+m770	Grendel
+m790	Valfodr
+m800	Jet Bahamut
+m801	Garnet Bahamut
+m802	Amber Bahamut
+m810	Proto fal'Cie Adam
+m811	Right Manipulator
+m812	Left Manipulator
+m850	Azure Behemoth
+m851	Apotamkin
+m852	Illuyankas
+m853	Grenade
+m854	Wardrone
+m855	Nightblade Puma
+m856	Lancer
+m857	Security Commander
+m858	Security Soldier
+m859	Pisaca
+m860	Mictlantecuhtli
+m861	Pink Lily
+m862	Akupara
+m863	Chaochu
+m864	Takshaka
+m865	Golden Chocobo
+m866	Silver Chocobo
+m867	White Chocobo
+m868	Black Chocobo
+m869	Blue Chocobo
+m870	Red Chocobo
+m871	Green Chocobo
+m872	Purple Chocobo
+m882	Chocobo
+m890	Snow
+m895	Twilight Odin
+m950	Unused / unnamed monster 950
+m951	Unused / unnamed monster 951
+m952	Unused / unnamed monster 952
+m953	Unused / unnamed monster 953
+m954	Unused / unnamed monster 954
+m959	Unused / unnamed monster 959
+m961	Unused / unnamed monster 961
+m962	Unused / unnamed monster 962
+m969	Unused / unnamed monster 969
+m971	Unused / unnamed monster 971
+m973	Unused / unnamed monster 973
+m974	Unused / unnamed monster 974

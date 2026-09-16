@@ -1,0 +1,98 @@
+id	name	effect	category	capacity
+acc_000_000	Iron Bangle	HP +10%	Stats	30
+acc_000_010	Delicate Iron Bangle	HP +8%	Stats	25
+acc_000_011	Durable Iron Bangle	HP +12%	Stats	35
+acc_000_001	Silver Bangle	HP +16%	Stats	45
+acc_000_012	Delicate Silver Bangle	HP +13%	Stats	40
+acc_000_013	Durable Silver Bangle	HP +19%	Stats	50
+acc_000_004	Gold Bangle	HP +25%	Stats	60
+acc_000_014	Delicate Gold Bangle	HP +23%	Stats	55
+acc_000_015	Durable Gold Bangle	HP +30%	Stats	65
+acc_000_100	Power Wristband	Strength +10%	Stats	30
+acc_000_105	Delicate Power Wristband	Strength +8%	Stats	25
+acc_000_106	Durable Power Wristband	Strength +12%	Stats	35
+acc_000_101	Brawler's Wristband	Strength +16%	Stats	45
+acc_000_107	Delicate Brawler's Wristband	Strength +14%	Stats	40
+acc_000_108	Durable Brawler's Wristband	Strength +20%	Stats	50
+acc_000_200	Magician's Mark	Magic +10%	Stats	30
+acc_000_205	Delicate Magician's Mark	Magic +8%	Stats	25
+acc_000_206	Durable Magician's Mark	Magic +12%	Stats	35
+acc_000_201	Shaman's Mark	Magic +16%	Stats	45
+acc_000_207	Delicate Shaman's Mark	Magic +14%	Stats	40
+acc_000_208	Durable Shaman's Mark	Magic +20%	Stats	50
+acc_000_300	Black Belt	Resist Physical +15%	Physical	40
+acc_000_303	Delicate Black Belt	Resist Physical +11%	Physical	30
+acc_000_304	Durable Black Belt	Resist Physical +19%	Physical	45
+acc_000_301	General's Belt	Resist Physical +26%	Physical	60
+acc_000_305	Delicate General's Belt	Resist Physical +21%	Physical	55
+acc_000_306	Durable General's Belt	Resist Physical +36%	Physical	70
+acc_000_400	Rune Bracelet	Resist Magic +15%	Magic Resist	40
+acc_000_403	Delicate Rune Bracelet	Resist Magic +11%	Magic Resist	30
+acc_000_404	Durable Rune Bracelet	Resist Magic +19%	Magic Resist	45
+acc_000_401	Witch's Bracelet	Resist Magic +26%	Magic Resist	60
+acc_000_405	Delicate Witch's Bracelet	Resist Magic +21%	Magic Resist	55
+acc_000_406	Durable Witch's Bracelet	Resist Magic +36%	Magic Resist	70
+acc_000_500	Royal Armlet	Resist Damage +15%; Strength & Magic -10%	Damage Resist	65
+acc_000_502	Delicate Royal Armlet	Resist Damage +10%; Strength & Magic -7%	Damage Resist	50
+acc_000_503	Durable Royal Armlet	Resist Damage +20%; Strength & Magic -13%	Damage Resist	75
+acc_001_000	Ember Ring	Resist Fire +33%	Elements	55
+acc_001_003	Delicate Ember Ring	Resist Fire +29%	Elements	50
+acc_001_004	Durable Ember Ring	Resist Fire +39%	Elements	60
+acc_001_001	Blaze Ring	Resist Fire +45%	Elements	70
+acc_001_005	Delicate Blaze Ring	Resist Fire +40%	Elements	65
+acc_001_006	Durable Blaze Ring	Resist Fire +53%	Elements	75
+acc_002_000	Frost Ring	Resist Ice +33%	Elements	55
+acc_002_003	Delicate Frost Ring	Resist Ice +29%	Elements	50
+acc_002_004	Durable Frost Ring	Resist Ice +39%	Elements	60
+acc_002_001	Icicle Ring	Resist Ice +45%	Elements	70
+acc_002_005	Delicate Icicle Ring	Resist Ice +40%	Elements	65
+acc_002_006	Durable Icicle Ring	Resist Ice +53%	Elements	75
+acc_003_000	Spark Ring	Resist Lightning +33%	Elements	55
+acc_003_003	Delicate Spark Ring	Resist Lightning +29%	Elements	50
+acc_003_004	Durable Spark Ring	Resist Lightning +39%	Elements	60
+acc_003_001	Fulmen Ring	Resist Lightning +45%	Elements	70
+acc_003_005	Delicate Fulmen Ring	Resist Lightning +40%	Elements	65
+acc_003_006	Durable Fulmen Ring	Resist Lightning +53%	Elements	75
+acc_005_000	Zephyr Ring	Resist Wind +33%	Elements	55
+acc_005_003	Delicate Zephyr Ring	Resist Wind +29%	Elements	50
+acc_005_004	Durable Zephyr Ring	Resist Wind +39%	Elements	60
+acc_005_001	Gale Ring	Resist Wind +45%	Elements	70
+acc_005_005	Delicate Gale Ring	Resist Wind +40%	Elements	65
+acc_005_006	Durable Gale Ring	Resist Wind +53%	Elements	75
+acc_060_000	Fire Aegis	Nullify Fire; ATB Rate Reduced	Elements	100
+acc_060_001	Delicate Fire Aegis	Random: Nullify Fire	Elements	50
+acc_061_000	Ice Aegis	Nullify Ice; ATB Rate Reduced	Elements	100
+acc_061_001	Delicate Ice Aegis	Random: Nullify Ice	Elements	50
+acc_062_000	Lightning Aegis	Nullify Lightning; ATB Rate Reduced	Elements	100
+acc_062_001	Delicate Lightning Aegis	Random: Nullify Lightning	Elements	50
+acc_063_000	Wind Aegis	Nullify Wind; ATB Rate Reduced	Elements	100
+acc_063_001	Delicate Wind Aegis	Random: Nullify Wind	Elements	50
+acc_007_000	Entite Ring	Resist Elements +20%; Strength & Magic -10%	Elements	65
+acc_007_001	Delicate Entite Ring	Resist Elements +13%; Strength & Magic -7%	Elements	50
+acc_007_002	Durable Entite Ring	Resist Elements +27%; Strength & Magic -13%	Elements	75
+acc_011_000	Metal Armband	Resist Deprotect +66%	Status	55
+acc_011_002	Delicate Metal Armband	Resist Deprotect +33%	Status	35
+acc_011_003	Durable Metal Armband	Resist Deprotect +100%	Status	75
+acc_012_000	Serenity Sachet	Resist Deshell +66%	Status	55
+acc_012_002	Delicate Serenity Sachet	Resist Deshell +33%	Status	35
+acc_012_003	Durable Serenity Sachet	Resist Deshell +100%	Status	75
+acc_014_000	Star Pendant	Resist Poison +66%	Status	55
+acc_014_002	Delicate Star Pendant	Resist Poison +33%	Status	35
+acc_014_003	Durable Star Pendant	Resist Poison +100%	Status	75
+acc_015_000	Pearl Necklace	Resist Imperil +66%	Status	55
+acc_015_002	Delicate Pearl Necklace	Resist Imperil +33%	Status	35
+acc_015_003	Durable Pearl Necklace	Resist Imperil +100%	Status	75
+acc_016_000	Warding Talisman	Resist Curse +66%	Status	55
+acc_016_002	Delicate Warding Talisman	Resist Curse +33%	Status	35
+acc_016_003	Durable Warding Talisman	Resist Curse +100%	Status	75
+acc_017_000	Pain Dampener	Resist Pain +66%	Status	55
+acc_017_002	Delicate Pain Dampener	Resist Pain +33%	Status	35
+acc_017_003	Durable Pain Dampener	Resist Pain +100%	Status	75
+acc_018_000	White Cape	Resist Fog +66%	Status	55
+acc_018_002	Delicate White Cape	Resist Fog +33%	Status	35
+acc_018_003	Durable White Cape	Resist Fog +100%	Status	75
+acc_021_000	Obsidian Choker	Resist Dispel +66%	Status	55
+acc_021_002	Delicate Obsidian Choker	Resist Dispel +33%	Status	35
+acc_021_003	Durable Obsidian Choker	Resist Dispel +100%	Status	75
+acc_023_000	Ribbon	Resilience +40% (all status ailments)	Status	100
+acc_023_003	Delicate Ribbon	Resilience +20% (all status ailments)	Status	70

@@ -1,0 +1,167 @@
+id	name	role	max_level
+k002	Silver Lobo	SAB	45
+k003	Gorgonopsid	COM	99
+k005	Mánagarmr	COM	45
+k008	Flanbanero	RAV	70
+k010	Flanborg	COM	40
+k012	Dreadnought	COM	45
+k015	Behemoth	COM	70
+k018	Orion	COM	20
+k036	Yaksha	COM	20
+k037	Triffid	SYN	70
+k038	Vespid	RAV	45
+k039	Barbed Specter	SAB	45
+k040	Vespid Soldier	COM	40
+k041	Gremlin	RAV	45
+k042	Imp	SYN	70
+k043	Zwerg Scandroid	RAV	40
+k045	Leyak	SYN	70
+k048	Garuda	SAB	40
+k053	Goblin	COM	20
+k054	Munchkin	COM	20
+k056	Goblin Chieftain	SEN	40
+k057	Munchkin Boss	RAV	40
+k063	Pulse Soldier	SEN	40
+k064	Pulse Knight	SEN	20
+k065	Pulse Gladiator	SEN	70
+k066	Bomb	RAV	20
+k069	Navidon	SEN	40
+k071	Lucidon	COM	99
+k072	Thermadon	COM	40
+k075	Grand Behemoth	RAV	70
+k077	Proto-behemoth	COM	40
+k079	Flanitor	MED	40
+k099	Crawler	COM	45
+k102	Frag Leech	COM	40
+k123	Bloodfang Bass	RAV	45
+k124	Breshan Bass	SAB	45
+k125	Hedge Frog	SAB	20
+k126	Mud Frog	RAV	20
+k127	Ceratosaur	SAB	99
+k128	Ceratoraptor	RAV	99
+k150	Thexteron	SYN	40
+k152	Viking	SAB	20
+k173	Garchimacera	RAV	45
+k174	Rangda	SAB	70
+k182	Hoplite	COM	20
+k185	Yakshini	SYN	70
+k190	Microchu	SYN	45
+k206	Ahriman	SAB	70
+k211	Zwerg Metro	RAV	20
+k213	Svarog	COM	99
+k214	Circuitron	RAV	20
+k215	Cryohedron	RAV	20
+k253	Cactuar	COM	45
+k254	Tonberry	COM	30
+k255	Metalligantuar	SEN	70
+k256	Cactrot	MED	45
+k257	Gigantuar	SYN	70
+k273	Cait Sith	MED	99
+k275	Miniflan	COM	99
+k276	Nekton	RAV	99
+k277	Meonekton	COM	20
+k400	Uridimmu	COM	40
+k423	Nanochu	SYN	40
+k430	Luminous Puma	SYN	40
+k432	Seeping Brie	COM	70
+k433	Albino Lobo	RAV	70
+k434	Flandit	SEN	99
+k435	Garganzola	COM	70
+k436	Flangonzola	COM	70
+k437	Fencer	RAV	20
+k438	Yeoman	COM	20
+k441	Gandayaks	COM	20
+k442	Gahongas	SYN	99
+k443	Clematis	SAB	70
+k444	Necrosis	SAB	99
+k445	Koboldroid Yin	RAV	40
+k446	Koboldroid Yang	RAV	70
+k447	Buccaboo	RAV	20
+k448	Gancanagh	SAB	20
+k449	Buccaboo Ace	RAV	40
+k450	Gancanagh Ace	SYN	40
+k451	Sahagin Prince	SYN	45
+k452	Cloudburst	RAV	40
+k453	Tempest	RAV	20
+k454	Debris	RAV	40
+k455	Reaver	COM	70
+k456	Zaghnal	RAV	45
+k457	Narasimha	COM	70
+k458	Vodianoi	COM	20
+k459	Samovira	SAB	45
+k460	Shaguma	COM	20
+k461	Haguma	MED	99
+k462	Dendrobium	SAB	99
+k463	Mandrake	COM	99
+k490	Mewmao	SYN	40
+k491	Schrodinger	SAB	70
+k492	Forked Cat	SAB	70
+k493	Clione	SYN	70
+k494	Pleuston	RAV	45
+k495	Chelicerata	SAB	99
+k496	Pantopoda	SAB	45
+k640	Bamapama	SAB	45
+k641	Mimi	SAB	45
+k642	Fachan	SYN	70
+k643	Unsaganashi	SAB	70
+k644	Amanojaku	SYN	45
+k645	Notsugo	RAV	45
+k646	Vouivre	COM	70
+k647	Kanna Kamuy	SAB	40
+k649	Deathgaze	SAB	70
+k650	Moblin	COM	20
+k651	Major Moblin	SEN	45
+k652	Swampmonk	RAV	45
+k653	Apkallu	COM	45
+k654	Oannes	SYN	45
+k656	Bunkerbeast	SEN	70
+k657	Calautidon	SEN	99
+k660	Sarracenia	COM	60
+k661	Spiranthes	MED	40
+k662	Caterchipillar	MED	45
+k663	Exoray	MED	40
+k664	Dragoon	COM	20
+k665	Spiceacilian	RAV	99
+k666	Tabasco Toad	RAV	99
+k667	Pitterpatter	SAB	45
+k668	Chunerpeton	COM	45
+k672	Testudo	SYN	20
+k673	Scutari	COM	20
+k677	Chichu	COM	70
+k678	Xolotl	SEN	40
+k679	Miquiztli	SYN	40
+k681	Tezcatlipoca	SEN	60
+k682	Metallicactuar	COM	45
+k683	Cactuaroni	COM	45
+k684	Cactuarama	MED	45
+k685	Cactuarina	MED	45
+k686	Don Tonberry	COM	30
+k851	Apotamkin	RAV	20
+k852	Illuyankas	SAB	40
+k853	Grenade	RAV	20
+k856	Lancer	SEN	20
+k861	Pink Lily	RAV	40
+k865	Golden Chocobo	COM	45
+k866	Silver Chocobo	SEN	45
+k867	White Chocobo	MED	99
+k868	Black Chocobo	SAB	99
+k869	Blue Chocobo	RAV	99
+k870	Red Chocobo	COM	99
+k871	Green Chocobo	MED	99
+k872	Purple Chocobo	SYN	99
+k882	Chocobo	COM	99
+k895	Twilight Odin	COM	99
+# v1.9.32 DLC / episode recruit reference rows
+# m790 and m890 are mapped internal IDs. dlc_ref_* rows are reference-only until their real APP.DAT IDs are verified.
+m790	Valfodr	RAV	99
+m890	Snow	SEN	13
+dlc_ref_amodar	Amodar	COM	13
+dlc_ref_gilgamesh	Gilgamesh	COM	13
+dlc_ref_lightning_com	Lightning	COM	13
+dlc_ref_omega	Omega	COM	99
+dlc_ref_typhon	Typhon	COM	13
+dlc_ref_lightning_rav	Lightning	RAV	13
+dlc_ref_nabaat	Nabaat	SAB	13
+dlc_ref_sazh	Sazh	SYN	45
+dlc_ref_ultros	Ultros	SYN	13
+dlc_ref_pupu	Pupu	MED	13

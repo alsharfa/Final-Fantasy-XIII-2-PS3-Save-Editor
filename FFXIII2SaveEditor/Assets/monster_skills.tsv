@@ -1,0 +1,131 @@
+id	name	role	category
+rk000	Feral Link	Special	Feral Link
+at010_00	Attack	Commando	Attack
+at520_00	Blitz	Commando	Attack
+at600_00	Drain Attack	Commando	Attack
+at620_00	Area Sweep	Commando	Attack
+aat500_00	Launch	Commando	Role Ability
+aat530_00	Ravage	Commando	Role Ability
+aat540_00	Blindside	Commando	Role Ability
+aat550_00	Powerchain	Commando	Role Ability
+aat560_00	Smite	Commando	Role Ability
+aat570_00	Scourge	Commando	Role Ability
+aat630_00	Armor Breaker	Commando	Role Ability
+aat640_00	Mind Piercer	Commando	Role Ability
+aat650_00	Bloodthirsty	Commando	Role Ability
+aat660_00	Stagger: Wound	Commando	Role Ability
+aat670_00	Stagger: Drain	Commando	Role Ability
+aat720_00	Slow Chaser	Commando	Chaser
+aat730_00	Deprotect Chaser	Commando	Chaser
+aat740_00	Deshell Chaser	Commando	Chaser
+aat750_00	Imperil Chaser	Commando	Chaser
+aat760_00	Curse Chaser	Commando	Chaser
+aat770_00	Fog Chaser	Commando	Chaser
+aat780_00	Pain Chaser	Commando	Chaser
+aat790_00	Poison Chaser	Commando	Chaser
+aat800_00	Bravery Feeder	Commando	Feeder
+aat810_00	Faith Feeder	Commando	Feeder
+aat820_00	Haste Feeder	Commando	Feeder
+aat830_00	Protect Feeder	Commando	Feeder
+aat840_00	Shell Feeder	Commando	Feeder
+aat860_00	Vigilance Feeder	Commando	Feeder
+ade720_00	Lifesiphon	Commando	Role Ability
+ade730_00	Faultsiphon	Commando	Role Ability
+ade740_00	Adrenaline	Commando	Role Ability
+ade700_00	Jeopardize	Commando	Hidden Role Ability
+ma000_00	Ruin	Ravager	Magic
+ma020_00	Ruinga	Ravager	Magic
+mb000_00	Fire	Ravager	Magic
+mb010_00	Fira	Ravager	Magic
+mb020_00	Firaga	Ravager	Magic
+mb100_00	Blizzard	Ravager	Magic
+mb110_00	Blizzara	Ravager	Magic
+mb120_00	Blizzaga	Ravager	Magic
+mb200_00	Thunder	Ravager	Magic
+mb210_00	Thundara	Ravager	Magic
+mb220_00	Thundaga	Ravager	Magic
+mb400_00	Aero	Ravager	Magic
+mb410_00	Aerora	Ravager	Magic
+mb420_00	Aeroga	Ravager	Magic
+at010_10	Flamestrike	Ravager	Strike
+at010_20	Froststrike	Ravager	Strike
+at010_30	Sparkstrike	Ravager	Strike
+at010_50	Galestrike	Ravager	Strike
+at620_20	Ice Blitz	Ravager	Blitz
+at620_30	Electric Blitz	Ravager	Blitz
+at620_50	Aero Blitz	Ravager	Blitz
+ade800_00	Fearsiphon	Ravager	Role Ability
+ade810_00	Overwhelm	Ravager	Role Ability
+ade820_00	Vigor	Ravager	Hidden Role Ability
+ac100_00	Provoke	Sentinel	Role Ability
+ac110_00	Challenge	Sentinel	Role Ability
+gd010_00	Steelguard	Sentinel	Guard
+gd110_00	Mediguard	Sentinel	Guard
+gd210_00	Elude	Sentinel	Guard
+gd310_00	Vendetta	Sentinel	Guard
+gd410_00	Entrench	Sentinel	Guard
+gd510_00	Element Guard	Sentinel	Guard
+ade600_00	Deathward	Sentinel	Role Ability
+ade610_00	Fringeward	Sentinel	Role Ability
+ade620_00	Reprieve	Sentinel	Hidden Role Ability
+mg000_00	Deprotect	Saboteur	Debuff
+mg010_00	Deshell	Saboteur	Debuff
+mg020_00	Poison	Saboteur	Debuff
+mg030_00	Imperil	Saboteur	Debuff
+mg200_00	Deprotega	Saboteur	Debuff
+mg210_00	Deshellga	Saboteur	Debuff
+mg220_00	Poisonga	Saboteur	Debuff
+mg230_00	Imperilga	Saboteur	Debuff
+mg240_00	Dispel	Saboteur	Debuff
+mg250_00	Dispelga	Saboteur	Debuff
+mg510_00	Fog	Saboteur	Debuff
+mg520_00	Pain	Saboteur	Debuff
+mg530_00	Curse	Saboteur	Debuff
+mg550_00	Wound	Saboteur	Debuff
+mg710_00	Fogga	Saboteur	Debuff
+mg720_00	Painga	Saboteur	Debuff
+mg730_00	Cursega	Saboteur	Debuff
+mg750_00	Woundga	Saboteur	Debuff
+mg800_00	Endless Knightmare	Saboteur	Special
+mg000_at	Deprotect II	Saboteur	Debuff
+mg010_at	Deshell II	Saboteur	Debuff
+mg020_at	Poison II	Saboteur	Debuff
+mg030_at	Imperil II	Saboteur	Debuff
+mg200_at	Heavy Deprotega	Saboteur	Debuff
+mg210_at	Heavy Deshellga	Saboteur	Debuff
+mg220_at	Heavy Poisonga	Saboteur	Debuff
+mg230_at	Heavy Imperilga	Saboteur	Debuff
+mg510_at	Fog II	Saboteur	Debuff
+mg520_at	Pain II	Saboteur	Debuff
+mg530_at	Curse II	Saboteur	Debuff
+mg710_at	Heavy Fogga	Saboteur	Debuff
+mg720_at	Heavy Painga	Saboteur	Debuff
+mg730_at	Heavy Cursega	Saboteur	Debuff
+ade900_00	Jinx	Saboteur	Hidden Role Ability
+me000_00	Bravery	Synergist	Buff
+me010_00	Faith	Synergist	Buff
+me020_00	Haste	Synergist	Buff
+me030_00	Enfire	Synergist	Buff
+me040_00	Enfrost	Synergist	Buff
+me050_00	Enthunder	Synergist	Buff
+me070_00	Vigilance	Synergist	Buff
+me080_00	Enaero	Synergist	Buff
+me220_00	Bravega	Synergist	Buff
+me230_00	Faithga	Synergist	Buff
+me500_00	Protect	Synergist	Buff
+me510_00	Shell	Synergist	Buff
+me520_00	Veil	Synergist	Buff
+me720_00	Protectga	Synergist	Buff
+me730_00	Shellga	Synergist	Buff
+me740_00	Veilga	Synergist	Buff
+me750_00	Vigilaga	Synergist	Buff
+me800_00	Endless Blessings	Synergist	Special
+ade850_00	Boon	Synergist	Hidden Role Ability
+mw000_00	Cure	Medic	Healing
+mw010_00	Cura	Medic	Healing
+mw020_00	Curasa	Medic	Healing
+mw030_00	Curaja	Medic	Hidden Role Ability
+mw100_00	Raise	Medic	Healing
+mw200_00	Esuna	Medic	Healing
+mw210_00	Esunada	Medic	Healing
+mw900_00	Cheer	Medic	Healing
