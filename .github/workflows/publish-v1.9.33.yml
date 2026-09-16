@@ -73,6 +73,7 @@ jobs:
           if (-not (Test-Path (Join-Path $out 'FFXIII2SaveEditor.exe'))) { throw 'Published EXE was not created.' }
           @'
           @echo off
+          cd /d "%~dp0"
           start "" FFXIII2SaveEditor.exe
           '@ | Set-Content (Join-Path $out 'RUN_EDITOR.bat') -Encoding ascii
           Compress-Archive -Path $out -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'v1.9.33-win-x64-folder.zip') -Force
@@ -85,31 +86,70 @@ jobs:
           $clean = Join-Path $env:RUNNER_TEMP 'v1933-clean-source'
           if (Test-Path $clean) { Remove-Item $clean -Recurse -Force }
           New-Item -ItemType Directory -Force -Path $clean | Out-Null
-          Copy-Item (Join-Path $src 'FFXIII2SaveEditor.sln') $clean -Force
+
+          foreach ($rootFile in @('FFXIII2SaveEditor.sln','README.md','MONSTER_LEVEL_SOURCES_v1.9.32.md')) {
+            $candidate = Join-Path $src $rootFile
+            if (Test-Path $candidate) { Copy-Item $candidate $clean -Force }
+          }
+
           robocopy (Join-Path $src 'FFXIII2SaveEditor') (Join-Path $clean 'FFXIII2SaveEditor') /E /XD bin obj | Out-Null
           $rc = $LASTEXITCODE
-          if ($rc -gt 7) { throw "robocopy failed with exit code $rc" }
+          if ($rc -gt 7) { throw "robocopy editor failed with exit code $rc" }
           $global:LASTEXITCODE = 0
+
+          if (Test-Path (Join-Path $src 'FFXIII2CoreCheck')) {
+            robocopy (Join-Path $src 'FFXIII2CoreCheck') (Join-Path $clean 'FFXIII2CoreCheck') /E /XD bin obj | Out-Null
+            $rc = $LASTEXITCODE
+            if ($rc -gt 7) { throw "robocopy CoreCheck failed with exit code $rc" }
+            $global:LASTEXITCODE = 0
+          }
+
           $sourceZip = Join-Path $env:GITHUB_WORKSPACE 'FFXIII2_PS3_Save_Editor_v1.9.33_SOURCE.zip'
           Compress-Archive -Path (Join-Path $clean '*') -DestinationPath $sourceZip -Force
+          if (-not (Test-Path $sourceZip)) { throw 'Source ZIP was not created.' }
 
       - name: Publish source to main
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
           $src = "${{ steps.source.outputs.src }}"
+
           if ($src -ne $env:GITHUB_WORKSPACE) {
-            Copy-Item (Join-Path $src 'FFXIII2SaveEditor.sln') $env:GITHUB_WORKSPACE -Force
-            if (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor')) { Remove-Item (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor') -Recurse -Force }
+            foreach ($rootFile in @('FFXIII2SaveEditor.sln','README.md','MONSTER_LEVEL_SOURCES_v1.9.32.md')) {
+              $candidate = Join-Path $src $rootFile
+              if (Test-Path $candidate) { Copy-Item $candidate $env:GITHUB_WORKSPACE -Force }
+            }
+
+            if (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor')) {
+              Remove-Item (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor') -Recurse -Force
+            }
             robocopy (Join-Path $src 'FFXIII2SaveEditor') (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor') /E /XD bin obj | Out-Null
             $rc = $LASTEXITCODE
-            if ($rc -gt 7) { throw "robocopy failed with exit code $rc" }
+            if ($rc -gt 7) { throw "robocopy editor failed with exit code $rc" }
             $global:LASTEXITCODE = 0
+
+            if (Test-Path (Join-Path $src 'FFXIII2CoreCheck')) {
+              if (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2CoreCheck')) {
+                Remove-Item (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2CoreCheck') -Recurse -Force
+              }
+              robocopy (Join-Path $src 'FFXIII2CoreCheck') (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2CoreCheck') /E /XD bin obj | Out-Null
+              $rc = $LASTEXITCODE
+              if ($rc -gt 7) { throw "robocopy CoreCheck failed with exit code $rc" }
+              $global:LASTEXITCODE = 0
+            }
           }
-          if (Test-Path 'payload\v1933') { Remove-Item 'payload\v1933' -Recurse -Force }
+
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
+
+          git add FFXIII2SaveEditor
+          if (Test-Path 'FFXIII2CoreCheck') { git add FFXIII2CoreCheck }
+          if (Test-Path 'FFXIII2SaveEditor.sln') { git add FFXIII2SaveEditor.sln }
+          if (Test-Path 'README.md') { git add README.md }
+          if (Test-Path 'MONSTER_LEVEL_SOURCES_v1.9.32.md') { git add MONSTER_LEVEL_SOURCES_v1.9.32.md }
+          git rm -r --ignore-unmatch payload .publish | Out-Null
+          $global:LASTEXITCODE = 0
+
           git diff --cached --quiet
           if ($LASTEXITCODE -ne 0) {
             git commit -m 'Publish v1.9.33 source and clean staging payload'
