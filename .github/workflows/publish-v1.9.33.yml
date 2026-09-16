@@ -1,0 +1,147 @@
+name: Publish v1.9.33
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-v1.9.33.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Reconstruct v1.9.33 source
+        id: source
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $parts = @(Get-ChildItem 'payload\v1933\part*.b64' -ErrorAction SilentlyContinue | Sort-Object Name)
+          if ($parts.Count -eq 18) {
+            $b64 = ($parts | ForEach-Object { (Get-Content $_.FullName -Raw).Trim() }) -join ''
+            $xz = Join-Path $env:RUNNER_TEMP 'v1933-source.tar.xz'
+            [IO.File]::WriteAllBytes($xz, [Convert]::FromBase64String($b64))
+            $hash = (Get-FileHash $xz -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($hash -ne 'bac92e362d7012c902ab31039c77ef1a7b157c8f1e0b29003be9283e53d44137') {
+              throw "Payload hash mismatch. Got $hash"
+            }
+            $src = Join-Path $env:RUNNER_TEMP 'v1933-src'
+            New-Item -ItemType Directory -Force -Path $src | Out-Null
+            tar -xJf $xz -C $src
+            if ($LASTEXITCODE -ne 0) { throw 'Could not extract v1.9.33 source payload.' }
+          }
+          elseif (Test-Path 'FFXIII2SaveEditor\FFXIII2SaveEditor.csproj') {
+            $src = $env:GITHUB_WORKSPACE
+          }
+          else {
+            throw "Expected 18 payload parts or an existing source tree; found $($parts.Count) payload parts."
+          }
+          if (-not (Test-Path (Join-Path $src 'FFXIII2SaveEditor\FFXIII2SaveEditor.csproj'))) {
+            throw 'FFXIII2SaveEditor.csproj is missing after source reconstruction.'
+          }
+          "src=$src" >> $env:GITHUB_OUTPUT
+
+      - name: Restore
+        shell: pwsh
+        run: dotnet restore "${{ steps.source.outputs.src }}\FFXIII2SaveEditor\FFXIII2SaveEditor.csproj"
+
+      - name: Compile editor
+        shell: pwsh
+        run: dotnet build "${{ steps.source.outputs.src }}\FFXIII2SaveEditor\FFXIII2SaveEditor.csproj" -c Release --no-restore
+
+      - name: Publish Windows x64 folder
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $out = Join-Path $env:GITHUB_WORKSPACE 'v1.9.33-win-x64-folder'
+          if (Test-Path $out) { Remove-Item $out -Recurse -Force }
+          dotnet publish "${{ steps.source.outputs.src }}\FFXIII2SaveEditor\FFXIII2SaveEditor.csproj" -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishReadyToRun=false -o $out
+          if ($LASTEXITCODE -ne 0) { throw 'dotnet publish failed.' }
+          if (-not (Test-Path (Join-Path $out 'FFXIII2SaveEditor.exe'))) { throw 'Published EXE was not created.' }
+          @'
+          @echo off
+          start "" FFXIII2SaveEditor.exe
+          '@ | Set-Content (Join-Path $out 'RUN_EDITOR.bat') -Encoding ascii
+          Compress-Archive -Path $out -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'v1.9.33-win-x64-folder.zip') -Force
+
+      - name: Package clean source
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $src = "${{ steps.source.outputs.src }}"
+          $clean = Join-Path $env:RUNNER_TEMP 'v1933-clean-source'
+          if (Test-Path $clean) { Remove-Item $clean -Recurse -Force }
+          New-Item -ItemType Directory -Force -Path $clean | Out-Null
+          Copy-Item (Join-Path $src 'FFXIII2SaveEditor.sln') $clean -Force
+          robocopy (Join-Path $src 'FFXIII2SaveEditor') (Join-Path $clean 'FFXIII2SaveEditor') /E /XD bin obj | Out-Null
+          if ($LASTEXITCODE -gt 7) { throw "robocopy failed with exit code $LASTEXITCODE" }
+          $sourceZip = Join-Path $env:GITHUB_WORKSPACE 'FFXIII2_PS3_Save_Editor_v1.9.33_SOURCE.zip'
+          Compress-Archive -Path (Join-Path $clean '*') -DestinationPath $sourceZip -Force
+
+      - name: Publish source to main
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $src = "${{ steps.source.outputs.src }}"
+          if ($src -ne $env:GITHUB_WORKSPACE) {
+            Copy-Item (Join-Path $src 'FFXIII2SaveEditor.sln') $env:GITHUB_WORKSPACE -Force
+            if (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor')) { Remove-Item (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor') -Recurse -Force }
+            robocopy (Join-Path $src 'FFXIII2SaveEditor') (Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor') /E /XD bin obj | Out-Null
+            if ($LASTEXITCODE -gt 7) { throw "robocopy failed with exit code $LASTEXITCODE" }
+          }
+          if (Test-Path 'payload\v1933') { Remove-Item 'payload\v1933' -Recurse -Force }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m 'Publish v1.9.33 source and clean staging payload'
+            git push origin main
+          }
+
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: FFXIII2-PS3-Save-Editor-v1.9.33
+          path: |
+            v1.9.33-win-x64-folder.zip
+            FFXIII2_PS3_Save_Editor_v1.9.33_SOURCE.zip
+
+      - name: Create or update GitHub Release v1.9.33
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $notes = @'
+          ## Final Fantasy XIII-2 PS3 Save Editor v1.9.33
+
+          - Direct Chocobo Racing RP editing: 0–600
+          - Verified decrypted APP RP field: `0x10CDC` (BE16)
+          - Max Racing Stats / God Chocobo use the real RP field
+          - Windows x64 self-contained folder build
+          - Matching source package included
+
+          The Windows package was built by GitHub Actions from the v1.9.33 source in this repository.
+          '@
+          gh release view v1.9.33 *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload v1.9.33 v1.9.33-win-x64-folder.zip FFXIII2_PS3_Save_Editor_v1.9.33_SOURCE.zip --clobber
+            gh release edit v1.9.33 --title 'v1.9.33 - Direct Chocobo RP' --notes $notes
+          }
+          else {
+            gh release create v1.9.33 v1.9.33-win-x64-folder.zip FFXIII2_PS3_Save_Editor_v1.9.33_SOURCE.zip --title 'v1.9.33 - Direct Chocobo RP' --notes $notes
+          }
