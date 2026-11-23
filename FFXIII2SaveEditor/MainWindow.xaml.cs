@@ -2636,92 +2636,7 @@ private void SetLoading(bool loading)
         {
             byte[] before = (byte[])Plain.Clone();
             byte[] work = (byte[])Plain.Clone();
-            string[] current = SaveCore.MonsterPassiveIds(work, _selectedMonster.Slot);
-            var protectedSlots = Enumerable.Range(0, current.Length)
-                .Where(i => current[i].StartsWith("awp_", StringComparison.OrdinalIgnoreCase))
-                .ToHashSet();
-
-            // awp_* is an advanced/role-passive namespace, not a proven lock flag. Presets preserve
-            // existing awp_* slots conservatively because the per-monster Red/Yellow Lock state is unmapped.
-            var protectedFamilies = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            var protectedIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            foreach (int index in protectedSlots)
-            {
-                string id = current[index];
-                protectedIds.Add(id);
-                if (_data.TraitsById.TryGetValue(id, out Trait? lockedTrait) && !string.IsNullOrWhiteSpace(lockedTrait.Family))
-                    protectedFamilies.Add(lockedTrait.Family);
-            }
-            desired = desired
-                .Where(trait => !protectedIds.Contains(trait.Id)
-                    && (string.IsNullOrWhiteSpace(trait.Family) || !protectedFamilies.Contains(trait.Family)))
-                .ToList();
-
-            var usedTargets = new HashSet<int>();
-            int changed = 0;
-            int added = 0;
-            int satisfied = 0;
-            int skipped = 0;
-
-            foreach (Trait trait in desired)
-            {
-                current = SaveCore.MonsterPassiveIds(work, _selectedMonster.Slot);
-
-                int exact = Array.FindIndex(current, id => string.Equals(id, trait.Id, StringComparison.OrdinalIgnoreCase));
-                if (exact >= 0)
-                {
-                    satisfied++;
-                    usedTargets.Add(exact);
-                    continue;
-                }
-
-                // Upgrade/replace the same passive family first, preserving protected slots.
-                int target = -1;
-                if (!string.IsNullOrWhiteSpace(trait.Family))
-                {
-                    for (int i = 0; i < current.Length; i++)
-                    {
-                        if (protectedSlots.Contains(i) || usedTargets.Contains(i) || string.IsNullOrEmpty(current[i])) continue;
-                        if (_data.TraitsById.TryGetValue(current[i], out Trait? existingTrait)
-                            && string.Equals(existingTrait.Family, trait.Family, StringComparison.OrdinalIgnoreCase))
-                        {
-                            target = i;
-                            break;
-                        }
-                    }
-                }
-
-                // When total ability count is verified, prefer an empty slot before replacing an
-                // unrelated passive. Otherwise only occupied writable slots are eligible.
-                if (target < 0 && PassiveCountChangesVerified)
-                {
-                    target = Enumerable.Range(0, current.Length)
-                        .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && string.IsNullOrEmpty(current[i]), -1);
-                }
-                if (target < 0)
-                {
-                    target = Enumerable.Range(0, current.Length)
-                        .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && !string.IsNullOrEmpty(current[i]), -1);
-                }
-
-                if (target < 0)
-                {
-                    skipped++;
-                    continue;
-                }
-
-                bool wasEmpty = string.IsNullOrEmpty(current[target]);
-                if (wasEmpty && !PassiveCountChangesVerified)
-                {
-                    skipped++;
-                    continue;
-                }
-
-                SaveCore.WriteMonsterPassive(work, _selectedMonster.Slot, target, trait.Id);
-                usedTargets.Add(target);
-                changed++;
-                if (wasEmpty) added++;
-            }
+            var (changed, added, satisfied, skipped) = ApplyPassivePresetTo(work, _selectedMonster.Slot, desired);
 
             if (changed == 0)
             {
@@ -2744,6 +2659,99 @@ private void SetLoading(bool loading)
         {
             Error(ex.Message, "Passive preset failed");
         }
+    }
+
+    // Shared by the passive preset buttons and "Optimize this monster". Writes into `work` only.
+    private (int Changed, int Added, int Satisfied, int Skipped) ApplyPassivePresetTo(byte[] work, int slot, List<Trait> desired)
+    {
+        string[] current = SaveCore.MonsterPassiveIds(work, slot);
+        var protectedSlots = Enumerable.Range(0, current.Length)
+            .Where(i => current[i].StartsWith("awp_", StringComparison.OrdinalIgnoreCase))
+            .ToHashSet();
+
+        // awp_* is an advanced/role-passive namespace, not a proven lock flag. Presets preserve
+        // existing awp_* slots conservatively because the per-monster Red/Yellow Lock state is unmapped.
+        var protectedFamilies = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var protectedIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (int index in protectedSlots)
+        {
+            string id = current[index];
+            protectedIds.Add(id);
+            if (_data.TraitsById.TryGetValue(id, out Trait? lockedTrait) && !string.IsNullOrWhiteSpace(lockedTrait.Family))
+                protectedFamilies.Add(lockedTrait.Family);
+        }
+        desired = desired
+            .Where(trait => !protectedIds.Contains(trait.Id)
+                && (string.IsNullOrWhiteSpace(trait.Family) || !protectedFamilies.Contains(trait.Family)))
+            .ToList();
+
+        var usedTargets = new HashSet<int>();
+        int changed = 0;
+        int added = 0;
+        int satisfied = 0;
+        int skipped = 0;
+
+        foreach (Trait trait in desired)
+        {
+            current = SaveCore.MonsterPassiveIds(work, slot);
+
+            int exact = Array.FindIndex(current, id => string.Equals(id, trait.Id, StringComparison.OrdinalIgnoreCase));
+            if (exact >= 0)
+            {
+                satisfied++;
+                usedTargets.Add(exact);
+                continue;
+            }
+
+            // Upgrade/replace the same passive family first, preserving protected slots.
+            int target = -1;
+            if (!string.IsNullOrWhiteSpace(trait.Family))
+            {
+                for (int i = 0; i < current.Length; i++)
+                {
+                    if (protectedSlots.Contains(i) || usedTargets.Contains(i) || string.IsNullOrEmpty(current[i])) continue;
+                    if (_data.TraitsById.TryGetValue(current[i], out Trait? existingTrait)
+                        && string.Equals(existingTrait.Family, trait.Family, StringComparison.OrdinalIgnoreCase))
+                    {
+                        target = i;
+                        break;
+                    }
+                }
+            }
+
+            // When total ability count is verified, prefer an empty slot before replacing an
+            // unrelated passive. Otherwise only occupied writable slots are eligible.
+            if (target < 0 && PassiveCountChangesVerified)
+            {
+                target = Enumerable.Range(0, current.Length)
+                    .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && string.IsNullOrEmpty(current[i]), -1);
+            }
+            if (target < 0)
+            {
+                target = Enumerable.Range(0, current.Length)
+                    .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && !string.IsNullOrEmpty(current[i]), -1);
+            }
+
+            if (target < 0)
+            {
+                skipped++;
+                continue;
+            }
+
+            bool wasEmpty = string.IsNullOrEmpty(current[target]);
+            if (wasEmpty && !PassiveCountChangesVerified)
+            {
+                skipped++;
+                continue;
+            }
+
+            SaveCore.WriteMonsterPassive(work, slot, target, trait.Id);
+            usedTargets.Add(target);
+            changed++;
+            if (wasEmpty) added++;
+        }
+
+        return (changed, added, satisfied, skipped);
     }
 
     private void AddTrait_Click(object sender, RoutedEventArgs e)
@@ -3252,9 +3260,26 @@ private void SetLoading(bool loading)
         catch (Exception ex) { Error(ex.Message, "Export failed"); }
     }
 
+    // Shows what will be written compared with the save as loaded. Returns false if the user cancels.
+    private bool ConfirmChangeSummary()
+    {
+        if (_loadedBaselinePlain is null) return true;
+        List<string> lines;
+        try { lines = ChangeSummary.Describe(_loadedBaselinePlain, Plain, _data, Lang.French); }
+        catch { return true; }
+        if (lines.Count == 0)
+            return Confirm("No change compared with the loaded save. Write anyway?");
+        const int max = 40;
+        string body = string.Join("\n", lines.Take(max)) + (lines.Count > max ? "\n…" : "");
+        string header = Lang.French ? "Modifications qui vont être écrites :" : "Changes that will be written:";
+        string footer = Lang.French ? "Continuer ?" : "Continue?";
+        return MessageBox.Show(this, $"{header}\n\n{body}\n\n{footer}", Lang.T("Confirm"), MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+    }
+
     private void SaveEncryptedCopy_Click(object sender, RoutedEventArgs e)
     {
         if (!RequireEditable() || _session is null) return;
+        if (!ConfirmChangeSummary()) return;
         try
         {
             byte[] encrypted = EncryptedBytes();
@@ -3277,6 +3302,7 @@ private void SetLoading(bool loading)
             Warn("APP.DAT is listed as PARAM.PFD-protected. In-place saving is disabled because PARAM.PFD would need rebuilding.");
             return;
         }
+        if (!ConfirmChangeSummary()) return;
         if (!Confirm("Save changes directly to this PS3 save folder?\n\nAn external backup of the original APP.DAT will be created first.")) return;
 
         string original = Path.Combine(_session.Folder, "APP.DAT");

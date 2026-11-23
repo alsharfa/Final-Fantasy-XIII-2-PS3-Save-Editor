@@ -3,6 +3,8 @@ rk000	Feral Link	Special	Feral Link
 at010_00	Attack	Commando	Attack
 at520_00	Blitz	Commando	Attack
 at600_00	Drain Attack	Commando	Attack
+ade710_00	Deathblow	Commando	Role Ability
+at620_10	Heat Blitz	Ravager	Blitz
 at620_00	Area Sweep	Commando	Attack
 aat500_00	Launch	Commando	Role Ability
 aat530_00	Ravage	Commando	Role Ability
@@ -129,3 +131,5 @@ mw100_00	Raise	Medic	Healing
 mw200_00	Esuna	Medic	Healing
 mw210_00	Esunada	Medic	Healing
 mw900_00	Cheer	Medic	Healing
+mg240_at	Dispel II	Saboteur	Debuff
+mg250_at	Heavy Dispelga	Saboteur	Debuff

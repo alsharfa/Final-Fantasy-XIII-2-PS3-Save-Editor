@@ -527,3 +527,13 @@ Medic	Soigneur
 Sentinel	Défenseur
 Saboteur	Saboteur
 Synergist	Tacticien
+Optimize Monster	Optimiser le monstre
+Passive preset + recommended active skills for the detected role, in one step. Stats are not changed.	Preset de passifs + aptitudes actives recommandées pour le rôle détecté, en une fois. Les stats ne changent pas.
+Optimize {*} ({*})?\n\nPassives ({*}):\n{*}\n\nActive skills to add:\n{*}\n\nStats are not changed. Existing skills are kept and awp_* passives are preserved. One Undo Monster Edit reverts everything.	Optimiser {0} ({1}) ?\n\nPassifs ({2}) :\n{3}\n\nAptitudes actives à ajouter :\n{4}\n\nLes stats ne changent pas. Les aptitudes existantes et les passifs awp_* sont conservés. Un seul « Annuler (monstre) » annule tout.
+  (locked: ability-count field not verified)	  (verrouillé : compteur d'aptitudes non vérifié)
+{*} is already optimized for {*}.	{0} est déjà optimisé pour le rôle {1}.
+{*} optimized: {*} passive(s), {*} active skill(s)	{0} optimisé : {1} passif(s), {2} aptitude(s) active(s)
+Optimize failed	Échec de l'optimisation
+Balanced	Équilibré
+Tank	Tank
+No change compared with the loaded save. Write anyway?	Aucune modification par rapport à la sauvegarde chargée. Écrire quand même ?

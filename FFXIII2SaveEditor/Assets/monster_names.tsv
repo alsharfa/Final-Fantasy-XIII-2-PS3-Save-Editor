@@ -245,18 +245,18 @@ k871	Green Chocobo
 k872	Purple Chocobo
 k882	Chocobo
 k895	Twilight Odin
-k950	Unused / unnamed monster 950
+k950	Typhon
 k951	Ultros
 k952	Omega
-k953	Unused / unnamed monster 953
+k953	Gilgamesh
 k954	PuPu
 k959	Valfodr
-k961	Unused / unnamed monster 961
-k962	Unused / unnamed monster 962
+k961	Nabaat
+k962	Amodar
 k969	Lightning (Ravager)
 k971	Unused / unnamed monster 971
-k973	Unused / unnamed monster 973
-k974	Unused / unnamed monster 974
+k973	Snow
+k974	Sazh
 m001	Pantheron
 m002	Silver Lobo
 m003	Gorgonopsid
@@ -643,3 +643,4 @@ m969	Unused / unnamed monster 969
 m971	Unused / unnamed monster 971
 m973	Unused / unnamed monster 973
 m974	Unused / unnamed monster 974
+k094	Goblin
