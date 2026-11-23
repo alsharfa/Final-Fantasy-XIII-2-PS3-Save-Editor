@@ -537,3 +537,10 @@ Optimize failed	Échec de l'optimisation
 Balanced	Équilibré
 Tank	Tank
 No change compared with the loaded save. Write anyway?	Aucune modification par rapport à la sauvegarde chargée. Écrire quand même ?
+Writable / PARAM.PFD re-signed on save	Modifiable / PARAM.PFD re-signé à l'enregistrement
+APP.DAT is listed as PARAM.PFD-protected and this region has no built-in secure-file ID, so PARAM.PFD cannot be re-signed.	APP.DAT est protégé par PARAM.PFD et cette région n'a pas d'identifiant intégré : PARAM.PFD ne peut pas être re-signé.
+Save changes directly to this PS3 save folder?\n\nAPP.DAT is protected by PARAM.PFD: PARAM.PFD will be re-signed automatically. External backups of the original APP.DAT and PARAM.PFD will be created first.	Enregistrer directement dans ce dossier de sauvegarde PS3 ?\n\nAPP.DAT est protégé par PARAM.PFD : PARAM.PFD sera re-signé automatiquement. Des copies d'APP.DAT et de PARAM.PFD d'origine seront d'abord créées.
+The current PARAM.PFD does not validate with the built-in keys; it was left untouched.	Le PARAM.PFD actuel n'est pas validé avec les clés intégrées ; il n'a pas été modifié.
+Re-signed PARAM.PFD failed self-validation; nothing was written.	Le PARAM.PFD re-signé n'a pas passé l'auto-vérification ; rien n'a été écrit.
+PARAM.PFD backup readback failed	Échec de la relecture de la copie de PARAM.PFD
+PARAM.PFD on disk does not validate after writing	Le PARAM.PFD écrit sur le disque n'est pas valide

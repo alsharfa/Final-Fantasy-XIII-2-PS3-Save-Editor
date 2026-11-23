@@ -280,6 +280,9 @@ public static class SaveCore
         ["BCAS20224"] = new byte[] { 0xE7, 0x78, 0x35, 0x98, 0x21, 0x1C, 0xF6, 0x34, 0x24, 0xB9, 0x4E, 0xE9, 0x4E, 0x4A, 0x5D, 0x2C },
     };
 
+    public static byte[]? SecureFileIdFor(string title)
+        => SecureFileIds.TryGetValue(title, out byte[]? id) ? (byte[])id.Clone() : null;
+
     public static ulong DeriveWorkingKey(byte[] key)
     {
         if (key.Length != 16)

@@ -329,7 +329,7 @@ private void SetLoading(bool loading)
         RegionText.Text = region;
         ChecksumText.Text = SaveCore.StoredChecksum(_plain) == SaveCore.CalculateChecksum(_plain) ? "Valid" : "Invalid - repair on edit";
         AccessText.Text = _writeAllowed
-            ? (AppIsPfdProtected ? "Writable / export + resign required"
+            ? (AppIsPfdProtected ? "Writable / PARAM.PFD re-signed on save"
                 : SaveCore.RegionSupportForTitle(_session.TitleId) == RegionSupport.Tested ? "Writable / tested" : "Writable / EUR layout (keep a backup)")
             : (_session.PfdMetadataReliable ? "Read-only safety mode" : "Read-only / PFD unreadable");
         LoadedText.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
@@ -341,8 +341,8 @@ private void SetLoading(bool loading)
         bool loaded = _plain is not null;
         ExportDecryptedButton.IsEnabled = loaded && !_loading;
         SaveEncryptedButton.IsEnabled = loaded && _writeAllowed && !_loading;
-        SaveInPlaceButton.IsEnabled = loaded && _writeAllowed && !_loading && !AppIsPfdProtected;
-        SaveInPlaceButton.Content = AppIsPfdProtected ? "In-Place Disabled (PFD)" : "Save In Place + Backup";
+        SaveInPlaceButton.IsEnabled = loaded && _writeAllowed && !_loading;
+        SaveInPlaceButton.Content = "Save In Place + Backup";
         bool chocoboEditable = loaded && _writeAllowed && !_loading
             && _selectedMonster is not null
             && SaveCore.IsChocoboMonster(_selectedMonster.Id, _selectedMonster.Name);
@@ -373,9 +373,7 @@ private void SetLoading(bool loading)
         _plain = SaveCore.RepairChecksum(Plain);
         _dirty = true;
         UpdateSaveInfo();
-        Status(AppIsPfdProtected
-            ? message + " - changes are in memory. Use Encrypted Copy, then complete your normal PS3 resign/rebuild step."
-            : message + " - changes are in memory until you save.");
+        Status(message + " - changes are in memory until you save.");
     }
 
     private void RefreshSelectedTab()
@@ -3297,22 +3295,45 @@ private void SetLoading(bool loading)
     private void SaveInPlace_Click(object sender, RoutedEventArgs e)
     {
         if (!RequireEditable() || _session is null) return;
-        if (_session.PfdNames.Any(n => n.Equals("APP.DAT", StringComparison.OrdinalIgnoreCase)))
+        bool resign = AppIsPfdProtected;
+        byte[]? secureFileId = SaveCore.SecureFileIdFor(_session.TitleId);
+        if (resign && secureFileId is null)
         {
-            Warn("APP.DAT is listed as PARAM.PFD-protected. In-place saving is disabled because PARAM.PFD would need rebuilding.");
+            Warn("APP.DAT is listed as PARAM.PFD-protected and this region has no built-in secure-file ID, so PARAM.PFD cannot be re-signed.");
             return;
         }
         if (!ConfirmChangeSummary()) return;
-        if (!Confirm("Save changes directly to this PS3 save folder?\n\nAn external backup of the original APP.DAT will be created first.")) return;
+        if (!Confirm(resign
+            ? "Save changes directly to this PS3 save folder?\n\nAPP.DAT is protected by PARAM.PFD: PARAM.PFD will be re-signed automatically. External backups of the original APP.DAT and PARAM.PFD will be created first."
+            : "Save changes directly to this PS3 save folder?\n\nAn external backup of the original APP.DAT will be created first.")) return;
 
         string original = Path.Combine(_session.Folder, "APP.DAT");
+        string pfdPath = Path.Combine(_session.Folder, "PARAM.PFD");
         string? backup = null;
         byte[]? originalBytes = null;
+        byte[]? originalPfd = null;
         try
         {
             byte[] encrypted = EncryptedBytes();
             SaveCore.VerifyEncryptedRoundtrip(encrypted, _session.WorkingKey, Plain);
             originalBytes = File.ReadAllBytes(original);
+            byte[]? newPfd = null;
+            if (resign)
+            {
+                originalPfd = File.ReadAllBytes(pfdPath);
+                var originalFiles = new Dictionary<string, byte[]> { ["APP.DAT"] = originalBytes };
+                string keyPath = Path.Combine(_session.Folder, "KEY.DAT");
+                if (File.Exists(keyPath)) originalFiles["KEY.DAT"] = File.ReadAllBytes(keyPath);
+                // Refuse to touch a PARAM.PFD that this signer cannot reproduce: the original must validate first.
+                if (!PfdSigner.Validate(originalPfd, originalFiles, secureFileId!).AllValid)
+                    throw new IOException("The current PARAM.PFD does not validate with the built-in keys; it was left untouched.");
+                newPfd = PfdSigner.Resign(originalPfd, new Dictionary<string, byte[]> { ["APP.DAT"] = encrypted }, secureFileId!);
+                if (!PfdSigner.Validate(newPfd, new Dictionary<string, byte[]> { ["APP.DAT"] = encrypted }, secureFileId!).AllValid)
+                    throw new IOException("Re-signed PARAM.PFD failed self-validation; nothing was written.");
+                string pfdBackup = Path.Combine(EditorOutputDir("Backups"), $"PARAM_{Stamp()}.PFD");
+                WriteFlushed(pfdBackup, originalPfd);
+                if (!File.ReadAllBytes(pfdBackup).SequenceEqual(originalPfd)) throw new IOException("PARAM.PFD backup readback failed");
+            }
             string backupDir = EditorOutputDir("Backups");
             backup = Path.Combine(backupDir, $"APP_{Stamp()}.DAT");
             WriteFlushed(backup, originalBytes);
@@ -3325,7 +3346,14 @@ private void SetLoading(bool loading)
 
             AtomicReplace(original, encrypted);
             SaveCore.VerifyEncryptedFile(original, _session.WorkingKey, Plain);
+            if (newPfd is not null)
+            {
+                AtomicReplace(pfdPath, newPfd);
+                if (!PfdSigner.Validate(File.ReadAllBytes(pfdPath), new Dictionary<string, byte[]> { ["APP.DAT"] = File.ReadAllBytes(original) }, secureFileId!).AllValid)
+                    throw new IOException("PARAM.PFD on disk does not validate after writing");
+            }
             _plain = SaveCore.RepairChecksum(Plain);
+            _loadedBaselinePlain = (byte[])Plain.Clone();
             _dirty = false;
             Info("APP.DAT updated and verified.\nBackup:\n" + backup, "Save complete");
             Status("APP.DAT saved safely and verified from disk.");
@@ -3336,6 +3364,7 @@ private void SetLoading(bool loading)
             {
                 try
                 {
+                    if (originalPfd is not null) AtomicReplace(pfdPath, originalPfd);
                     AtomicReplace(original, originalBytes);
                     byte[] restored = File.ReadAllBytes(original);
                     if (!restored.SequenceEqual(originalBytes))
