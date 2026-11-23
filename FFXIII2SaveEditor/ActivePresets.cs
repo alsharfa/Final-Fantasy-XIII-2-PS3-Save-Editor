@@ -8,49 +8,51 @@ namespace FFXIII2SaveEditor;
 // Role-based ACTIVE skill presets. Add-only: existing skills (and Feral Link) are never removed
 // or reordered; recommended same-role abilities that are missing are appended to empty slots in
 // priority order until the 32 editable slots are full. Only abilities whose catalogued role
-// matches the monster's role are used, so nothing is cross-role. "Special" unique abilities
-// (Endless Knightmare / Endless Blessings) are never injected.
+// matches the monster's role are used, so nothing is cross-role. Hidden role abilities and the
+// role "Special" abilities (Endless Knightmare / Endless Blessings) are included.
 public partial class MainWindow
 {
     private static readonly Dictionary<string, string[]> ActivePresets = new(StringComparer.OrdinalIgnoreCase)
     {
         ["Commando"] = new[]
         {
-            "Attack", "Blitz", "Area Sweep", "Launch", "Powerchain", "Smite", "Ravage", "Scourge",
+            "Jeopardize", "Attack", "Blitz", "Area Sweep", "Launch", "Powerchain", "Smite", "Ravage", "Scourge",
             "Blindside", "Bloodthirsty", "Faultsiphon", "Lifesiphon", "Adrenaline", "Armor Breaker",
-            "Mind Piercer", "Stagger: Wound", "Stagger: Drain", "Drain Attack", "Jeopardize",
+            "Mind Piercer", "Stagger: Wound", "Stagger: Drain", "Drain Attack",
             "Deprotect Chaser", "Deshell Chaser", "Imperil Chaser", "Poison Chaser", "Slow Chaser",
             "Curse Chaser", "Pain Chaser", "Fog Chaser",
             "Bravery Feeder", "Faith Feeder", "Haste Feeder", "Protect Feeder", "Shell Feeder", "Vigilance Feeder",
         },
         ["Ravager"] = new[]
         {
-            "Firaga", "Blizzaga", "Thundaga", "Aeroga", "Ruinga",
+            "Vigor", "Firaga", "Blizzaga", "Thundaga", "Aeroga", "Ruinga",
             "Fira", "Blizzara", "Thundara", "Aerora",
             "Fire", "Blizzard", "Thunder", "Aero", "Ruin",
             "Flamestrike", "Froststrike", "Sparkstrike", "Galestrike",
             "Ice Blitz", "Electric Blitz", "Aero Blitz",
-            "Overwhelm", "Fearsiphon", "Vigor",
+            "Overwhelm", "Fearsiphon",
         },
         ["Medic"] = new[] { "Curaja", "Curasa", "Cura", "Cure", "Esunada", "Esuna", "Raise", "Cheer" },
         ["Sentinel"] = new[]
         {
-            "Provoke", "Challenge", "Steelguard", "Mediguard", "Element Guard", "Entrench", "Elude",
-            "Vendetta", "Deathward", "Fringeward", "Reprieve",
+            "Reprieve", "Provoke", "Challenge", "Steelguard", "Mediguard", "Element Guard", "Entrench", "Elude",
+            "Vendetta", "Deathward", "Fringeward",
         },
         ["Saboteur"] = new[]
         {
+            "Endless Knightmare", "Jinx",
             "Heavy Deprotega", "Heavy Deshellga", "Heavy Imperilga", "Heavy Poisonga", "Heavy Painga",
             "Heavy Fogga", "Heavy Cursega",
             "Deprotega", "Deshellga", "Imperilga", "Poisonga", "Painga", "Fogga", "Cursega", "Woundga", "Dispelga",
             "Deprotect II", "Deshell II", "Imperil II", "Poison II", "Pain II", "Fog II", "Curse II",
-            "Deprotect", "Deshell", "Imperil", "Poison", "Pain", "Fog", "Curse", "Wound", "Dispel", "Jinx",
+            "Deprotect", "Deshell", "Imperil", "Poison", "Pain", "Fog", "Curse", "Wound", "Dispel",
         },
         ["Synergist"] = new[]
         {
+            "Endless Blessings", "Boon",
             "Bravega", "Faithga", "Protectga", "Shellga", "Veilga", "Vigilaga", "Haste",
             "Bravery", "Faith", "Protect", "Shell", "Veil", "Vigilance",
-            "Enfire", "Enfrost", "Enthunder", "Enaero", "Boon",
+            "Enfire", "Enfrost", "Enthunder", "Enaero",
         },
     };
 

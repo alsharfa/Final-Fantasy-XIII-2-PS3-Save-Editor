@@ -21,7 +21,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="310" />
+                    <ColumnDefinition Width="400" />
                 </Grid.ColumnDefinitions>
                 <!-- header.png / icon.ico are not shipped in the repository: plain text header avoids the startup XamlParseException. -->
                 <TextBlock Grid.Column="0" Text="FFXIII-2 PS3 Save Editor" FontSize="26" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,0,12,0" />
@@ -36,7 +36,7 @@
                 <Border Grid.Column="1" Background="{StaticResource Panel2Brush}" BorderBrush="#56535C" BorderThickness="1" CornerRadius="6" Padding="12,8">
                     <Grid>
                         <Grid.RowDefinitions><RowDefinition/><RowDefinition/><RowDefinition/></Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="88"/></Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="88"/></Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Text="Region" Style="{StaticResource MutedLabel}"/><TextBlock x:Name="RegionText" Grid.Row="0" Grid.Column="1" Text="-"/>
                         <TextBlock Grid.Row="1" Text="Checksum" Style="{StaticResource MutedLabel}"/><TextBlock x:Name="ChecksumText" Grid.Row="1" Grid.Column="1" Text="-"/>
                         <TextBlock Grid.Row="2" Text="Access" Style="{StaticResource MutedLabel}"/><TextBlock x:Name="AccessText" Grid.Row="2" Grid.Column="1" Text="-"/>
