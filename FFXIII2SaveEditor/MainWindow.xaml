@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FFXIII-2 PS3 Save Editor v1.9.33"
         Width="1280" Height="900" MinWidth="1020" MinHeight="640"
-        WindowStartupLocation="CenterScreen" Icon="Assets/icon.ico">
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -19,7 +19,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="310" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="Assets/header.png" Stretch="Uniform" HorizontalAlignment="Center" Margin="20,0,12,0" />
+                <!-- header.png / icon.ico are not shipped in the repository: plain text header avoids the startup XamlParseException. -->
+                <TextBlock Grid.Column="0" Text="FFXIII-2 PS3 Save Editor" FontSize="26" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,0,12,0" />
                 <Border Grid.Column="1" Background="{StaticResource Panel2Brush}" BorderBrush="#56535C" BorderThickness="1" CornerRadius="6" Padding="12,8">
                     <Grid>
                         <Grid.RowDefinitions><RowDefinition/><RowDefinition/><RowDefinition/></Grid.RowDefinitions>
