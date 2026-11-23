@@ -96,6 +96,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         InitUiScaling();
+        InitLanguage();
         _data = GameData.Load();
         RefreshMonsterLevelReference();
     }
@@ -205,6 +206,8 @@ public partial class MainWindow : Window
             SaveFolderText.Text = result.Folder;
 
             _writeAllowed = SaveCore.RegionAllowsWrite(result.TitleId) && result.WorkingKey != 0 && result.PfdMetadataReliable;
+            Lang.Resolve(result.Language);
+            SyncLanguageCombo();
             UpdateSaveInfo();
             RefreshSelectedTab();
             Status($"Save loaded successfully. {result.Mode}");
@@ -330,6 +333,7 @@ private void SetLoading(bool loading)
                 : SaveCore.RegionSupportForTitle(_session.TitleId) == RegionSupport.Tested ? "Writable / tested" : "Writable / EUR layout (keep a backup)")
             : (_session.PfdMetadataReliable ? "Read-only safety mode" : "Read-only / PFD unreadable");
         LoadedText.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+        ApplyLanguage();
     }
 
     private void UpdateActionButtons()
@@ -852,7 +856,7 @@ private void SetLoading(bool loading)
             ? "\n\nWARNING: This accessory ID is valid, but its capacity/effect metadata is not yet mapped in the editor. The save reference can be changed, but accessory-capacity safety cannot be guaranteed for this choice."
             : "";
         string message = $"Replace {character}'s equipped {current.Name} ({current.Effect}) with {selected.Name} ({selected.Effect})?\n\n{reason}{verificationWarning}\n\nThis transforms the existing equipped accessory instance; it does not create a direct character passive slot. Accessory synthesis-group bonus abilities can also change when the accessory ID changes.";
-        if (MessageBox.Show(message, "Confirm passive / resistance replacement", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes) return;
+        if (MessageBox.Show(Lang.T(message), Lang.T("Confirm passive / resistance replacement"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes) return;
         try
         {
             _plain = SaveCore.ReplaceCharacterAccessory(Plain, character, current.ManagerSlot, selected.EffectInfo.Id);
@@ -3394,8 +3398,8 @@ private void SetLoading(bool loading)
     {
         if (!_dirty) return true;
         return MessageBox.Show(this,
-            $"There are unsaved changes in the currently loaded save.\n\nDiscard those changes and {action}?",
-            "Unsaved changes",
+            Lang.T($"There are unsaved changes in the currently loaded save.\n\nDiscard those changes and {action}?"),
+            Lang.T("Unsaved changes"),
             MessageBoxButton.YesNo,
             MessageBoxImage.Warning) == MessageBoxResult.Yes;
     }
@@ -3405,8 +3409,8 @@ private void SetLoading(bool loading)
         if (_loading)
         {
             if (MessageBox.Show(this,
-                "A save is still loading. Close the editor anyway?",
-                "Loading in progress",
+                Lang.T("A save is still loading. Close the editor anyway?"),
+                Lang.T("Loading in progress"),
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning) != MessageBoxResult.Yes)
             {
@@ -3415,8 +3419,8 @@ private void SetLoading(bool loading)
             }
         }
         else if (_dirty && MessageBox.Show(this,
-            "There are unsaved changes. Close the editor without saving them?",
-            "Unsaved changes",
+            Lang.T("There are unsaved changes. Close the editor without saving them?"),
+            Lang.T("Unsaved changes"),
             MessageBoxButton.YesNo,
             MessageBoxImage.Warning) != MessageBoxResult.Yes)
         {
@@ -3426,9 +3430,13 @@ private void SetLoading(bool loading)
         base.OnClosing(e);
     }
 
-    private void Status(string message) => StatusText.Text = (_dirty ? "Modified - " : "") + message;
-    private void Warn(string message) => MessageBox.Show(this, message, "FFXIII-2 Save Editor", MessageBoxButton.OK, MessageBoxImage.Warning);
-    private void Error(string message, string title) => MessageBox.Show(this, message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-    private void Info(string message, string title) => MessageBox.Show(this, message, title, MessageBoxButton.OK, MessageBoxImage.Information);
-    private bool Confirm(string message) => MessageBox.Show(this, message, "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes;
+    private void Status(string message)
+    {
+        StatusText.Text = (_dirty ? Lang.T("Modified - ") : "") + Lang.T(message);
+        ApplyLanguage();
+    }
+    private void Warn(string message) => MessageBox.Show(this, Lang.T(message), "FFXIII-2 Save Editor", MessageBoxButton.OK, MessageBoxImage.Warning);
+    private void Error(string message, string title) => MessageBox.Show(this, Lang.T(message), Lang.T(title), MessageBoxButton.OK, MessageBoxImage.Error);
+    private void Info(string message, string title) => MessageBox.Show(this, Lang.T(message), Lang.T(title), MessageBoxButton.OK, MessageBoxImage.Information);
+    private bool Confirm(string message) => MessageBox.Show(this, Lang.T(message), Lang.T("Confirm"), MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes;
 }

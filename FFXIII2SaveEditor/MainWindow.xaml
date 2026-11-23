@@ -25,6 +25,14 @@
                 </Grid.ColumnDefinitions>
                 <!-- header.png / icon.ico are not shipped in the repository: plain text header avoids the startup XamlParseException. -->
                 <TextBlock Grid.Column="0" Text="FFXIII-2 PS3 Save Editor" FontSize="26" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,0,12,0" />
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,0" Tag="notr">
+                    <TextBlock Text="🌐" Margin="0,0,6,0" Tag="notr" />
+                    <ComboBox x:Name="LanguageCombo" Width="150" Tag="notr" ToolTip="Langue / Language">
+                        <ComboBoxItem Content="Auto" />
+                        <ComboBoxItem Content="Français" />
+                        <ComboBoxItem Content="English" />
+                    </ComboBox>
+                </StackPanel>
                 <Border Grid.Column="1" Background="{StaticResource Panel2Brush}" BorderBrush="#56535C" BorderThickness="1" CornerRadius="6" Padding="12,8">
                     <Grid>
                         <Grid.RowDefinitions><RowDefinition/><RowDefinition/><RowDefinition/></Grid.RowDefinitions>

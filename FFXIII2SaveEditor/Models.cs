@@ -90,6 +90,7 @@ public sealed class SaveLoadResult
     public bool PfdMetadataReliable { get; init; } = true;
     public IReadOnlyList<string> PfdNames { get; init; } = Array.Empty<string>();
     public int FragmentCount { get; init; } = -1;
+    public string Language { get; init; } = "";
 }
 
 public sealed class InventoryViewRow

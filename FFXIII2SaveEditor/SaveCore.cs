@@ -1743,6 +1743,7 @@ public static class SaveCore
                         PfdMetadataReliable = pfdMetadataReliable,
                         PfdNames = pfdNames,
                         FragmentCount = ReadSfoFragmentCount(folder),
+                        Language = DetectSaveLanguage(folder),
                     };
                 }
                 catch { }
@@ -1758,6 +1759,7 @@ public static class SaveCore
                 PfdMetadataReliable = pfdMetadataReliable,
                 PfdNames = pfdNames,
                 FragmentCount = ReadSfoFragmentCount(folder),
+                        Language = DetectSaveLanguage(folder),
             };
         }
 
@@ -1780,6 +1782,7 @@ public static class SaveCore
                         PfdMetadataReliable = pfdMetadataReliable,
                         PfdNames = pfdNames,
                         FragmentCount = ReadSfoFragmentCount(folder),
+                        Language = DetectSaveLanguage(folder),
                     };
                 }
             }
@@ -1792,9 +1795,27 @@ public static class SaveCore
     {
         string path = Path.Combine(folder, "PARAM.SFO");
         if (!File.Exists(path)) return -1;
-        string raw = Encoding.Latin1.GetString(File.ReadAllBytes(path));
-        Match match = Regex.Match(raw, @"Total fragments:\s*(\d{1,3})/160");
+        // UTF-8: French text uses a non-breaking space before the colon ("Fragments\u00A0: 016/160").
+        string raw = Encoding.UTF8.GetString(File.ReadAllBytes(path));
+        // English "Total fragments: 16/160", French "Fragments : 016/160", ES/IT/DE variants.
+        Match match = Regex.Match(raw, @"(?:Total fragments|Fragments|Fragmentos|Frammenti|Fragmente)\s*:\s*(\d{1,3})\s*/\s*160", RegexOptions.IgnoreCase);
         return match.Success && int.TryParse(match.Groups[1].Value, out int count) ? count : -1;
+    }
+
+    // Language the game wrote the save in, from the PARAM.SFO description text.
+    // Returns "fr", "en", "es", "it", "de" or "" when unknown.
+    public static string DetectSaveLanguage(string folder)
+    {
+        string path = Path.Combine(folder, "PARAM.SFO");
+        if (!File.Exists(path)) return "";
+        string raw;
+        try { raw = Encoding.UTF8.GetString(File.ReadAllBytes(path)); } catch { return ""; }
+        if (Regex.IsMatch(raw, @"Temps de jeu|Sauvegarde \d|Fragments\s+:", RegexOptions.IgnoreCase)) return "fr";
+        if (Regex.IsMatch(raw, @"Tiempo de juego|Fragmentos|Partida \d", RegexOptions.IgnoreCase)) return "es";
+        if (Regex.IsMatch(raw, @"Tempo di gioco|Frammenti|Salvataggio \d", RegexOptions.IgnoreCase)) return "it";
+        if (Regex.IsMatch(raw, @"Spielzeit|Fragmente|Spielstand \d", RegexOptions.IgnoreCase)) return "de";
+        if (Regex.IsMatch(raw, @"Play ?Time|Total fragments|Save \d", RegexOptions.IgnoreCase)) return "en";
+        return "";
     }
 
     public static int[] CharacterEquipmentReferences(byte[] bytes, string character)
