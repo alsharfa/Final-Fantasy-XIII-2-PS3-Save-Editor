@@ -95,6 +95,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        InitUiScaling();
         _data = GameData.Load();
         RefreshMonsterLevelReference();
     }

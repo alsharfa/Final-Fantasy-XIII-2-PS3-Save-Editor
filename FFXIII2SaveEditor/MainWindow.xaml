@@ -2,9 +2,13 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FFXIII-2 PS3 Save Editor v1.9.33"
-        Width="1280" Height="900" MinWidth="1020" MinHeight="640"
+        Width="1280" Height="900" MinWidth="760" MinHeight="480"
         WindowStartupLocation="CenterScreen">
-    <Grid Margin="10">
+    <Grid x:Name="RootLayout" Margin="10" UseLayoutRounding="True">
+        <Grid.LayoutTransform>
+            <!-- Driven by UiScaling.cs: fits the 1280x900 design into the actual window / DPI. -->
+            <ScaleTransform x:Name="RootScale" ScaleX="1" ScaleY="1" />
+        </Grid.LayoutTransform>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
