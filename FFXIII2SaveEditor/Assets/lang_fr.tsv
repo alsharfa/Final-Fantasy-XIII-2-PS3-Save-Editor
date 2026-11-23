@@ -512,3 +512,18 @@ write a passive into an empty slot	écrire un passif dans un emplacement vide
 add {*} into an empty passive slot	ajouter {0} dans un emplacement de passif vide
 remove the passive source for {*}	retirer le passif source de {0}
 Cannot {*} reliably on this save because the verified active/passive counter layout did not validate.\n\nYou can still upgrade/replace an occupied passive slot because that does not change the number of occupied passives.	Impossible de {0} de façon fiable : la structure des compteurs actifs/passifs n'a pas été validée.\n\nVous pouvez toujours améliorer/remplacer un passif occupé, car le nombre de passifs ne change pas.
+Role Preset (Auto)	Preset de rôle (auto)
+Adds the recommended active skills of the monster's role into empty slots. Nothing is removed.	Ajoute les aptitudes actives recommandées pour le rôle du monstre dans les emplacements vides. Rien n'est retiré.
+The monster's role could not be detected, so no active preset can be chosen.	Le rôle du monstre n'a pas pu être détecté : aucun preset actif ne peut être choisi.
+All 32 active skill slots are already used. Remove some skills first.	Les 32 emplacements d'aptitudes sont occupés. Retirez-en d'abord.
+{*} already has every recommended {*} active skill.	{0} possède déjà toutes les aptitudes recommandées ({1}).
+Add {*} recommended {*} active skill(s) to {*}?\n\n{*}{*}\n\nExisting skills are kept. You can use Undo Monster Edit afterward.	Ajouter {0} aptitude(s) recommandée(s) ({1}) à {2} ?\n\n{3}{4}\n\nLes aptitudes existantes sont conservées. Vous pourrez utiliser « Annuler (monstre) ».
+\n\n{*} lower-priority skill(s) do not fit and are skipped.	\n\n{0} aptitude(s) moins prioritaire(s) ne rentrent pas et sont ignorées.
+{*} active preset applied: {*} skill(s) added	Preset actif {0} appliqué : {1} aptitude(s) ajoutée(s)
+Active preset failed	Échec du preset actif
+Commando	Attaquant
+Ravager	Ravageur
+Medic	Soigneur
+Sentinel	Défenseur
+Saboteur	Saboteur
+Synergist	Tacticien
