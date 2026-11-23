@@ -1,0 +1,546 @@
+# English<TAB>Français. {*} = wildcard in English, {0},{1}... = same values in French order.
+15 race abilities available • select a tamed chocobo to edit	15 aptitudes de course disponibles • sélectionnez un chocobo apprivoisé
+ABILITY CATALOG	CATALOGUE DES APTITUDES
+ABILITY LAYOUT	STRUCTURE DES APTITUDES
+ALL ACCESSORIES	TOUS LES ACCESSOIRES
+Ability	Aptitude
+Ability / Passive	Aptitude / Passif
+Access	Accès
+Accessory	Accessoire
+Active skills	Aptitudes actives
+Add / Upgrade	Ajouter / Améliorer
+Add Missing	Ajouter manquants
+Add Selected Ability	Ajouter l'aptitude
+Add to Empty	Ajouter (vide)
+Adornment	Ornement
+Adornments	Ornements
+Advanced	Avancé
+Advanced / role passive: Red/Yellow Lock state is not mapped. Replace intentionally.	Passif avancé / de rôle : l'état de verrou rouge/jaune n'est pas cartographié. Remplacez en connaissance de cause.
+All Noel Weapons	Toutes les armes de Noel
+All Serah Weapons	Toutes les armes de Serah
+Apply God Chocobo	Appliquer Chocobo divin
+Apply Guest	Appliquer l'invité
+Apply RP	Appliquer les PdC
+Apply Selected Effect	Appliquer l'effet
+Apply Selection	Appliquer la sélection
+Apply Transfer	Appliquer le transfert
+Auto Role	Rôle auto
+Balanced	Équilibré
+Best COM	Meilleur ATT
+Best MED	Meilleur SOI
+Best RAV	Meilleur RAV
+Built-in fallback icon	Icône de secours intégrée
+CHOCOBO RACING	COURSES DE CHOCOBOS
+CURRENT ACTIVE SKILLS	APTITUDES ACTIVES
+CURRENT PASSIVES	PASSIFS ACTUELS
+Casino Coins	Jetons du casino
+Casino Records	Casino
+Category	Catégorie
+Characters	Personnages
+Checksum	Somme de contrôle
+Checksum is repaired automatically when edits are applied.	La somme de contrôle est réparée automatiquement à chaque modification.
+Chocobo Racing	Courses de chocobos
+Choose Owned or Not Owned for each adornment, then apply.	Choisissez Possédé ou Non possédé pour chaque ornement, puis appliquez.
+Choose a donor. This editor performs a controlled manual transfer and keeps the donor monster intact for save safety.	Choisissez un donneur. L'éditeur effectue un transfert manuel contrôlé et conserve le monstre donneur intact, par sécurité.
+Choose a ready-made safe passive setup for the selected monster. Automated presets use mapped normal passives only and never add new awp_* advanced passives.	Choisissez une configuration de passifs prête à l'emploi pour le monstre sélectionné. Les presets n'utilisent que des passifs normaux cartographiés et n'ajoutent jamais de nouveaux passifs avancés awp_*.
+Chooses COM, RAV, MED or Tank from the selected monster's detected active-skill role. Other roles use Balanced.	Choisit ATT, RAV, SOI ou Tank selon le rôle détecté des aptitudes actives du monstre. Les autres rôles utilisent Équilibré.
+Clamp only impossible over-cap monster levels to each species' verified real maximum. Valid lower levels and unmapped IDs are preserved.	Ramène uniquement les niveaux impossibles (au-dessus du plafond) au maximum réel vérifié de chaque espèce. Les niveaux valides et les ID non cartographiés sont conservés.
+Clear	Effacer
+Clear All	Tout effacer
+Clear All Known Skills	Effacer toutes les compétences connues
+Clear Resists	Effacer les résistances
+Commando (COM)	Attaquant (ATT)
+Complete reference for the 152 main-game recruits plus 12 DLC/reward variants. The editor automatically enforces a cap only when the monster's real APP.DAT ID is mapped; unmapped DLC IDs remain reference-only rather than guessed.	Référence complète des 152 monstres recrutables du jeu et des 12 variantes DLC/récompenses. L'éditeur n'applique un plafond que si l'ID réel du monstre dans APP.DAT est cartographié ; les ID DLC non cartographiés restent une simple référence plutôt que d'être devinés.
+Copy 10	Copier les 10
+Copy Skills	Copier les aptitudes
+Correct All Levels	Corriger tous les niveaux
+Cost	Coût
+Decrypted Backup	Sauvegarde déchiffrée
+Donor monster	Monstre donneur
+EQUIPPED PASSIVES / RESISTANCES	PASSIFS / RÉSISTANCES ÉQUIPÉS
+Edit Noel's six Crystarium role levels. Valid game range: 0–99. These fields change the saved role level only; they do not automatically rebuild Crystarium node history, learned abilities, HP, Strength or Magic.	Modifie les six niveaux de rôle du Crystarium de Noel. Plage valide : 0–99. Seul le niveau de rôle enregistré change ; l'historique des nœuds, les aptitudes apprises, les PV, la Force et la Magie ne sont pas reconstruits.
+Edit Serah's six Crystarium role levels. Valid game range: 0–99. These fields change the saved role level only; they do not automatically rebuild Crystarium node history, learned abilities, HP, Strength or Magic.	Modifie les six niveaux de rôle du Crystarium de Serah. Plage valide : 0–99. Seul le niveau de rôle enregistré change ; l'historique des nœuds, les aptitudes apprises, les PV, la Force et la Magie ne sont pas reconstruits.
+Effect	Effet
+Encrypted Copy	Copie chiffrée
+Equipment	Équipement
+Equipment Capacity	Capacité d'équipement
+FFXIII-2 PS3 Save Editor	Éditeur de sauvegarde FFXIII-2 PS3
+FRAGMENT SKILLS	COMPÉTENCES DE FRAGMENTS
+Fragment Skills	Compétences de fragments
+GOD CHOCOBO — BEST 10	CHOCOBO DIVIN — 10 MEILLEURES
+Games Played	Parties jouées
+Games Won	Parties gagnées
+General	Général
+General-purpose passive setup when no single role should dominate.	Configuration polyvalente quand aucun rôle ne doit dominer.
+Gil	Gils
+Guest	Invité
+HOW PRESETS WORK	FONCTIONNEMENT DES PRESETS
+HP	PV
+ID / Reference	ID / Référence
+Images: load a save	Images : chargez une sauvegarde
+Infusion (Safe)	Infusion (sûre)
+Inventory	Inventaire
+Item	Objet
+Level	Niveau
+Load Save	Charger
+Load a save to inspect equipped passives.	Chargez une sauvegarde pour voir les passifs équipés.
+Load a save to read the current racing profile RP.	Chargez une sauvegarde pour lire les PdC du profil de course.
+Load a save to verify skill layout.	Chargez une sauvegarde pour vérifier la structure des aptitudes.
+Lv / Max	Niv. / Max
+MONSTER IMAGE COVERAGE	IMAGES DES MONSTRES
+MONSTER LIBRARY	BIBLIOTHÈQUE DES MONSTRES
+Magic	Magie
+Magic: -	Magie : -
+Manual replacement of an occupied passive is count-neutral. Adding/removing passives is enabled when the verified active and passive counters at record+0x286/+0x287 validate for this save.	Le remplacement manuel d'un passif occupé ne change pas le nombre de passifs. L'ajout/la suppression est activé quand les compteurs vérifiés (enregistrement +0x286/+0x287) sont validés pour cette sauvegarde.
+Matches Won	Matchs gagnés
+Max All (Real Levels)	Tout au max (niveaux réels)
+Max All to 99	Tout à 99
+Max Level Reference	Niveaux max (référence)
+Max Racing Stats	Stats de course au max
+Max Safe Inventory	Inventaire au max (sûr)
+Max Selected	Sélection au max
+Max Stats	Stats au max
+Max This Monster	Ce monstre au max
+Medic (MED)	Soigneur (SOI)
+Missing real images	Images manquantes
+Mode / Category	Mode / Catégorie
+Monster	Monstre
+Monster Lab	Labo des monstres
+Move Down	Descendre
+Move Up	Monter
+No guest selected.	Aucun invité sélectionné.
+Noel CP	PC de Noel
+Noel obtains these character passives through equipped accessories. This editor transforms an already-equipped accessory instance and keeps the verified equipment references intact. All known accessory IDs are available; entries with unmapped effect/capacity metadata are marked Unverified. Accessory synthesis-group bonus abilities may also change when the accessory is transformed.	Noel obtient ces passifs via ses accessoires équipés. L'éditeur transforme un accessoire déjà équipé et conserve les références d'équipement vérifiées. Tous les ID d'accessoires connus sont disponibles ; ceux dont l'effet/la capacité ne sont pas cartographiés sont marqués Non vérifié. Les bonus de groupe de synthèse peuvent aussi changer quand l'accessoire est transformé.
+Not loaded	Non chargée
+Notes	Remarques
+OWNED EQUIPMENT	ÉQUIPEMENT POSSÉDÉ
+Open File	Ouvrir
+Open Image Folder	Dossier d'images
+Open a Final Fantasy XIII-2 PS3 save to begin.	Ouvrez une sauvegarde PS3 de Final Fantasy XIII-2 pour commencer.
+Overview	Vue d'ensemble
+Owned	Possédé
+PASSIVE CATALOG	CATALOGUE DES PASSIFS
+Paradigm Roles	Rôles de stratégie
+Party / Guests	Équipe / Invités
+Passive	Passif
+Passive / Resistance	Passif / Résistance
+Passive Presets	Presets de passifs
+Passive Source	Passif source
+Passives	Passifs
+Passives & Resistances	Passifs et résistances
+Paste 10	Coller les 10
+Paste Skills	Coller les aptitudes
+Performance-first universal setup: Blue Streak + Second Wind, Supersonic + Runaway, Sprinter, Marathoner, Limelight, Health Nut, Free Spirit, and Attention Hog. The preset replaces all 10 passive slots, raises STR/MAG to 800 / 800 minimum, and sets the direct racing-profile RP value to 600.	Configuration universelle axée performance : Blue Streak + Second Wind, Supersonic + Runaway, Sprinter, Marathoner, Limelight, Health Nut, Free Spirit et Attention Hog. Le preset remplace les 10 emplacements de passifs, monte FOR/MAG à 800 / 800 minimum et règle les PdC du profil de course à 600.
+Poker and Chronobind record counters. Games Played locations were verified from controlled real-save comparisons; the adjacent Won / Matches Won fields use the same mapped BE16 record structure.	Compteurs du poker et du Chronobind. Les emplacements « Parties jouées » ont été vérifiés par comparaison de vraies sauvegardes ; les champs Gagnées / Matchs gagnés voisins utilisent la même structure BE16.
+Presets preserve existing advanced awp_* slots and never inject new awp_* IDs because Red/Yellow Lock metadata is not mapped. If the total ability count is unverified, presets only replace occupied normal slots.	Les presets conservent les emplacements avancés awp_* existants et n'en ajoutent jamais, car le verrou rouge/jaune n'est pas cartographié. Si le nombre total d'aptitudes n'est pas vérifié, les presets ne remplacent que les emplacements normaux occupés.
+Preview Transfer	Aperçu du transfert
+QUICK ITEMS	OBJETS
+Qty	Qté
+RACE ABILITIES — 15 CATALOG / 10 PASSIVE-SLOT MAX	APTITUDES DE COURSE — 15 AU CATALOGUE / 10 EMPLACEMENTS MAX
+RACE POINTS (RP) — DIRECT SAVE VALUE	POINTS DE COURSE (PdC) — VALEUR DIRECTE
+REAL MONSTER MAX LEVELS	NIVEAUX MAX RÉELS DES MONSTRES
+RECOMMENDED PASSIVE PRESETS	PRESETS DE PASSIFS RECOMMANDÉS
+REPLACEMENT CATALOG	CATALOGUE DE REMPLACEMENT
+ROLE PRESETS	PRESETS PAR RÔLE
+RP is stored directly in the Chocobo Racing profile (0–600). It is not calculated from monster HP.	Les PdC sont stockés directement dans le profil de course (0–600). Ils ne sont pas calculés à partir des PV du monstre.
+RP:	PdC :
+Race Ability	Aptitude de course
+Race Speed is based on Strength; 800 is the effective cap.	La vitesse de course dépend de la Force ; plafond effectif : 800.
+Race Stamina is based on Magic; 800 is the effective cap.	L'endurance de course dépend de la Magie ; plafond effectif : 800.
+Race abilities are generated by monster passives. Add Selected writes the preferred mapped source shown above. All 15 are editable, but only 10 passive-derived abilities can be active at once because a monster has 10 passive slots.	Les aptitudes de course viennent des passifs du monstre. « Ajouter » écrit la source cartographiée indiquée ci-dessus. Les 15 sont modifiables, mais 10 au maximum peuvent être actives car un monstre n'a que 10 emplacements de passifs.
+Ravager (RAV)	Ravageur (RAV)
+Real Max Level	Niveau max réel
+Recommended chain-building passive setup for Ravager-focused monsters.	Configuration recommandée pour monter la jauge de choc (monstres Ravageur).
+Recommended defensive passive setup for Sentinel/tank monsters.	Configuration défensive recommandée pour les monstres Défenseur/tank.
+Recommended general endgame core. Buttons are enabled only when that monster is actually owned.	Noyau recommandé pour la fin de jeu. Les boutons ne sont actifs que si le monstre est réellement possédé.
+Recommended healing/support passive setup for Medic-focused monsters.	Configuration soin/soutien recommandée pour les monstres Soigneur.
+Recommended offensive passive setup for Commando-focused monsters.	Configuration offensive recommandée pour les monstres Attaquant.
+Refresh Images	Actualiser les images
+Region	Région
+Remove	Retirer
+Remove Selected	Retirer la sélection
+Replace	Remplacer
+Replace Selected	Remplacer la sélection
+Restore All Monster Stats	Restaurer les stats des monstres
+Restore Level, HP, Strength, Magic and ATB from the exact save state captured at load time.	Restaure Niveau, PV, Force, Magie et ATB tels qu'ils étaient au chargement.
+Restore Loaded Levels	Restaurer les niveaux chargés
+Restore Loaded Stats	Restaurer les stats chargées
+Restore Serah + Noel + Monsters	Restaurer Serah + Noel + monstres
+Restore mapped Noel stats to the exact values captured when this save was loaded.	Restaure les stats de Noel aux valeurs du chargement.
+Restore mapped Serah stats to the exact values captured when this save was loaded.	Restaure les stats de Serah aux valeurs du chargement.
+Restore mapped Serah/Noel stats and all matching monster stats from the load-time snapshot.	Restaure les stats de Serah/Noel et des monstres correspondants depuis l'état au chargement.
+Role	Rôle
+SAVE PROGRESS	PROGRESSION
+SELECTED GUEST	INVITÉ SÉLECTIONNÉ
+SELECTED PASSIVE	PASSIF SÉLECTIONNÉ
+SPEED	VITESSE
+STAMINA	ENDURANCE
+STATS / GROWTH	STATS / ÉVOLUTION
+STORY GUEST PARTY	INVITÉ DE L'HISTOIRE
+Saboteur (SAB)	Saboteur (SAB)
+Safe mode protects Feral Link. Adding/removing is enabled only when this save's ability-count field is detected with high confidence; replacing an existing slot remains available.	Le mode sûr protège Feral Link. L'ajout/la suppression n'est activé que si le compteur d'aptitudes de cette sauvegarde est détecté avec certitude ; le remplacement d'un emplacement existant reste possible.
+Safety	Sécurité
+Save	Enregistrer
+Save + Backup	Enregistrer + copie
+Save Casino Records	Enregistrer le casino
+Save Changes	Enregistrer
+Save Mapping	Enregistrer
+Save Monster	Enregistrer le monstre
+Save Role Levels	Enregistrer les rôles
+Search	Rechercher
+Select All	Tout sélectionner
+Select a chocobo in the Monster Library.	Sélectionnez un chocobo dans la bibliothèque des monstres.
+Select a passive above	Sélectionnez un passif ci-dessus
+Select an item	Sélectionnez un objet
+Select an option	Choisissez une option
+Sentinel (SEN)	Défenseur (DÉF)
+Serah CP	PC de Serah
+Serah obtains these character passives through equipped accessories. This editor transforms an already-equipped accessory instance and keeps the verified equipment references intact. All known accessory IDs are available; entries with unmapped effect/capacity metadata are marked Unverified. Accessory synthesis-group bonus abilities may also change when the accessory is transformed.	Serah obtient ces passifs via ses accessoires équipés. L'éditeur transforme un accessoire déjà équipé et conserve les références d'équipement vérifiées. Tous les ID d'accessoires connus sont disponibles ; ceux dont l'effet/la capacité ne sont pas cartographiés sont marqués Non vérifié. Les bonus de groupe de synthèse peuvent aussi changer quand l'accessoire est transformé.
+Simple (Recommended)	Simple (recommandé)
+Simple: ordinary stackable inventory only (recommended).	Simple : objets empilables ordinaires uniquement (recommandé).
+Skill	Aptitude
+Skills	Aptitudes
+Slot	Empl.
+Snow (Story Guest) is intentionally disabled until the exact APP.DAT guest-party field is verified.	Snow (invité de l'histoire) est volontairement désactivé tant que le champ exact dans APP.DAT n'est pas vérifié.
+Source cross-check: FFExodus recruitable-monster role tables and Final Fantasy Wiki Paradigm Pack DLC table. Reference-only means the max level is known, but the DLC monster's internal PS3 APP.DAT ID is not yet verified.	Sources croisées : tables de rôles de FFExodus et table DLC du Final Fantasy Wiki. « Référence » signifie que le niveau max est connu, mais pas encore l'ID interne PS3 du monstre DLC dans APP.DAT.
+Stats	Stats
+Status	État
+Story Guest slot is research-only.	L'emplacement d'invité est en cours d'étude.
+Strength	Force
+Strength: -	Force : -
+Synergist (SYN)	Tacticien (TAC)
+Tamed Monsters	Monstres apprivoisés
+The effect of the selected passive will appear here.	L'effet du passif sélectionné s'affichera ici.
+Tip: select a monster first, then choose Auto Role for the quickest recommended setup.	Astuce : sélectionnez d'abord un monstre, puis « Rôle auto » pour la configuration recommandée la plus rapide.
+Toggle Selected	Inverser la sélection
+Type	Type
+Undo Monster Edit	Annuler (monstre)
+Unlock All 14 (Verified)	Débloquer les 14 (vérifié)
+Unlocked	Débloqué
+Upgrade the same passive family. When the exact active/passive counters validate, this can add to an empty slot; otherwise select an occupied current slot for a count-neutral replacement.	Améliore la même famille de passifs. Si les compteurs actifs/passifs sont validés, peut ajouter dans un emplacement vide ; sinon, sélectionnez un emplacement occupé pour un remplacement.
+Use	Utiliser
+Use the Passives tab next door to review every passive, read its effect, and make manual replacements after applying a preset.	Utilisez l'onglet Passifs à côté pour revoir chaque passif, lire son effet et faire des remplacements manuels après un preset.
+VERIFIED ACTIONS	ACTIONS VÉRIFIÉES
+Value	Valeur
+Verified real-save target: APP.DAT + 0x17A56 = 0x0007FFFF. Unlock All sets all 19 known bits used by the 14 Fragment Skills while preserving any unknown/reserved bits outside that mask.	Cible vérifiée sur une vraie sauvegarde : APP.DAT + 0x17A56 = 0x0007FFFF. « Débloquer » active les 19 bits connus des 14 compétences de fragments et conserve les bits inconnus/réservés hors de ce masque.
+What it does	Effet
+Writes the selected catalog passive into the selected current passive slot.	Écrit le passif choisi dans le catalogue à l'emplacement de passif sélectionné.
+ - changes are in memory until you save.	 - modifications en mémoire jusqu'à l'enregistrement.
+ - changes are in memory. Use Encrypted Copy, then complete your normal PS3 resign/rebuild step.	 - modifications en mémoire. Utilisez « Copie chiffrée », puis re-signez la sauvegarde comme d'habitude pour la PS3.
+Modified - 	Modifié - 
+{*} • {*} monster slot(s) safely skipped	{0} • {1} emplacement(s) de monstre ignoré(s) par sécurité
+Add every missing named {*} weapon as a new unequipped instance?	Ajouter toutes les armes nommées manquantes de {0} comme nouvelles armes non équipées ?
+Add {*} as a new unequipped weapon instance?	Ajouter {0} comme nouvelle arme non équipée ?
+Added {*} (weapon slot {*})	{0} ajouté (emplacement d'arme {1})
+All Fragment Skills unlocked (verified known mask {*})	Toutes les compétences de fragments débloquées (masque vérifié {0})
+Apply the God Chocobo preset to {*}?\n\n{*}\n\nThis REPLACES all 10 current passive slots, so their normal battle effects are lost. It raises STR/MAG to at least 800 / 800 while preserving higher values and sets the direct Chocobo Racing RP value to 600.{*}\n\nThe entire change is one Monster Lab undo step.	Appliquer le preset Chocobo divin à {0} ?\n\n{1}\n\nCela REMPLACE les 10 emplacements de passifs actuels : leurs effets en combat sont perdus. FOR/MAG passent à 800 / 800 minimum (les valeurs supérieures sont conservées) et les PdC sont réglés à 600.{2}\n\nLe tout s'annule en une seule étape « Annuler (monstre) ».
+Apply the selected infusion from {*} to {*}?\n\nThis is a safe manual transfer: the donor remains owned and is not consumed.	Appliquer l'infusion de {0} vers {1} ?\n\nTransfert manuel sûr : le donneur reste possédé et n'est pas consommé.
+Apply {*} passive recommendations to {*}?{*}\n\n{*}\n\nExisting advanced awp_* slots are preserved, and this preset will not add new awp_* passives because their per-monster Red/Yellow Lock metadata is not mapped. Existing normal non-preset passives may be replaced. You can use Undo Monster Edit afterward.	Appliquer les passifs recommandés {0} à {1} ?{2}\n\n{3}\n\nLes emplacements avancés awp_* existants sont conservés et le preset n'en ajoute pas, car leur verrou rouge/jaune n'est pas cartographié. Des passifs normaux hors preset peuvent être remplacés. Vous pourrez utiliser « Annuler (monstre) ».
+Chocobo Racing RP changed from {*} to {*}	PdC : {0} → {1}
+Chocobo Racing RP is already {*}.	Les PdC valent déjà {0}.
+Chocobo race ability {*} added via {*}	Aptitude de course {0} ajoutée via {1}
+Chocobo race ability {*} removed	Aptitude de course {0} retirée
+Copied all {*} editable skill slots from {*}. Reserved raw entry 0 was not copied.	Les {0} emplacements d'aptitudes modifiables de {1} ont été copiés. L'entrée réservée 0 n'a pas été copiée.
+Cross-role ({*}) - use Skills tab	Autre rôle ({0}) - utilisez l'onglet Aptitudes
+God Chocobo applied to {*}: 10/10 preset abilities, direct RP 600, A-class race-stat caps.	Chocobo divin appliqué à {0} : 10/10 aptitudes, 600 PdC, stats de course au plafond.
+Magic: {*} • race value {*} / {*}	Magie : {0} • valeur de course {1} / {2}
+Manual infusion applied from {*} to {*}	Infusion manuelle appliquée de {0} vers {1}
+Mask: {*}  |  All 14 known Fragment Skills unlocked	Masque : {0}  |  Les 14 compétences de fragments sont débloquées
+Mask: {*}  |  Verified all-unlocked known bits: {*}	Masque : {0}  |  Bits connus (tout débloqué) : {1}
+Max Lv {*}	Niv. max {0}
+Maxed {*} safe inventory item(s)	{0} objet(s) mis au maximum
+Over capacity: {*}	Capacité dépassée : {0}
+Passive slot {*} replaced with {*}	Emplacement de passif {0} remplacé par {1}
+Recommended core owned: {*} / 3	Noyau recommandé possédé : {0} / 3
+Remove {*} from {*}?\n\nThis removes the granting passive(s): {*}. Their normal battle effects will also be removed.	Retirer {0} de {1} ?\n\nCela retire le(s) passif(s) correspondant(s) : {2}. Leurs effets en combat disparaissent aussi.
+Remove {*} from the selected monster?\n\nThe remaining active skills will be compacted to preserve a contiguous ability list.	Retirer {0} du monstre sélectionné ?\n\nLes aptitudes restantes seront regroupées pour garder une liste continue.
+Remove {*} mapped resistance passive(s) from this monster?	Retirer {0} passif(s) de résistance de ce monstre ?
+Replace {*} with {*}?\n\nThe existing equipment instance and save references are preserved.	Remplacer {0} par {1} ?\n\nL'équipement existant et les références de la sauvegarde sont conservés.
+Restore all six of {*}'s paradigm role levels to the exact values captured when this save was loaded?	Restaurer les six niveaux de rôle de {0} aux valeurs du chargement ?
+Restore complete • Serah fields: {*} • Noel fields: {*} • Monster fields: {*}	Restauration terminée • Serah : {0} champ(s) • Noel : {1} • Monstres : {2}
+Restored {*} monster(s) to loaded stat values	{0} monstre(s) restauré(s) aux stats du chargement
+Restored {*} monster(s), {*} stat field(s){*}.	{0} monstre(s) et {1} champ(s) restaurés{2}.
+Safe inventory max complete • {*} item(s) changed	Inventaire mis au maximum • {0} objet(s) modifié(s)
+Safe: total capacity {*}	Sûr : capacité totale {0}
+Save failed. Original APP.DAT was restored when possible.\n\n{*}\nBackup: {*}	Échec de l'enregistrement. L'APP.DAT d'origine a été restauré si possible.\n\n{0}\nCopie : {1}
+Save loaded successfully. {*}	Sauvegarde chargée. {0}
+Selected: {*} active skill(s), {*} passive(s)	Sélection : {0} aptitude(s) active(s), {1} passif(s)
+Set all six of {*}'s paradigm role levels to 99?\n\nThis changes role-level counters only. It does not synthesize missing Crystarium nodes, abilities, or stat gains.	Mettre les six niveaux de rôle de {0} à 99 ?\n\nSeuls les compteurs de niveau changent : les nœuds du Crystarium, aptitudes et gains de stats manquants ne sont pas créés.
+Slot {*} • {*} • Max Lv unknown	Empl. {0} • {1} • Niv. max inconnu
+Slot {*} • {*} • Max Lv {*}	Empl. {0} • {1} • Niv. max {2}
+Strength: {*} • race value {*} / {*}	Force : {0} • valeur de course {1} / {2}
+There are unsaved changes in the currently loaded save.\n\nDiscard those changes and {*}?	La sauvegarde chargée contient des modifications non enregistrées.\n\nLes abandonner et {0} ?
+Ultimate Pack: {*} ({*}) • {*}	Ultimate Pack : {0} ({1}) • {2}
+Undo Monster Edit ({*})	Annuler (monstre) ({0})
+Verified real species cap: {*}.	Plafond réel vérifié de l'espèce : {0}.
+{*} is already active for {*}.	{0} est déjà active pour {1}.
+{*} is not active.	{0} n'est pas active.
+{*} / {*} race abilities active • {*} / {*} passive slots used • God preset {*} / {*}	{0} / {1} aptitudes de course actives • {2} / {3} emplacements de passifs • Preset divin {4} / {5}
+{*} mapped stats and role levels restored to loaded values	{0} : stats et niveaux de rôle restaurés
+{*} paradigm role levels restored to loaded values	{0} : niveaux de rôle restaurés
+{*} paradigm role levels updated	{0} : niveaux de rôle mis à jour
+{*} passive/resistance changed to {*}	{0} : passif/résistance changé en {1}
+{*} role levels saved.	{0} : niveaux de rôle enregistrés.
+{*} role-level edit failed	{0} : échec de la modification des rôles
+{*}'s mapped stats already match the loaded save.	Les stats de {0} correspondent déjà à la sauvegarde chargée.
+{*}'s role levels already match the loaded save.	Les niveaux de rôle de {0} correspondent déjà à la sauvegarde chargée.
+{*}: restored {*} mapped stat field(s) to loaded values.	{0} : {1} champ(s) de stats restauré(s).
+{*}: restored {*} role level field(s).	{0} : {1} niveau(x) de rôle restauré(s).
+{*}: maximum is {*}	{0} : le maximum est {1}
+{*} monsters • 32 skill + 10 passive slots • counter validation failed	{0} monstres • 32 aptitudes + 10 passifs • validation des compteurs échouée
+{*} monsters • 32 skill + 10 passive slots • exact counters verified	{0} monstres • 32 aptitudes + 10 passifs • compteurs vérifiés
+{*} is not currently present in the loaded tamed-monster records.	{0} n'est pas présent parmi les monstres apprivoisés de cette sauvegarde.
+{*} changed to {*}	{0} changé en {1}
+{*} passive preset applied ({*} changed, {*} already present, {*} skipped)	Preset {0} appliqué ({1} modifié(s), {2} déjà présent(s), {3} ignoré(s))
+{*}: no passive changes were needed. {*} recommendation(s) already present; {*} could not be placed safely.	{0} : aucun changement nécessaire. {1} recommandation(s) déjà présente(s) ; {2} n'ont pas pu être placée(s) sans risque.
+{*} is not a chocobo. Select a tamed Chocobo, Gold, Silver, White, Black, Blue, Red, Green, or Purple Chocobo for Speed/Stamina and race abilities. RP is the separate current racing-profile value.	{0} n'est pas un chocobo. Sélectionnez un chocobo apprivoisé (Chocobo, doré, argenté, blanc, noir, bleu, rouge, vert ou violet) pour la vitesse/l'endurance et les aptitudes de course. Les PdC sont une valeur à part du profil de course.
+{*} • Speed/Stamina derive from Strength/Magic; RP is stored separately in the current Chocobo Racing profile.	{0} • Vitesse/endurance dépendent de Force/Magie ; les PdC sont stockés à part dans le profil de course.
+{*}: {*} / {*} • quantity editable	{0} : {1} / {2} • quantité modifiable
+{*} is already in passive slot {*}.	{0} est déjà dans l'emplacement de passif {1}.
+{*} is already present in passive slot {*}.	{0} est déjà présent dans l'emplacement de passif {1}.
+{*} added to active-skill slot {*}	{0} ajoutée à l'emplacement d'aptitude {1}
+{*} is already present in skill slot {*}.	{0} est déjà dans l'emplacement d'aptitude {1}.
+{*} written to active-skill slot {*}	{0} écrite dans l'emplacement d'aptitude {1}
+{*} already matches the God Chocobo preset, racing stat caps, and 600 RP.	{0} correspond déjà au preset Chocobo divin, aux plafonds de course et à 600 PdC.
+ is already owned.	 est déjà possédé.
+ quantity updated	 : quantité mise à jour
+ removed from active skills	 retirée des aptitudes actives
+ stats updated	 : stats mises à jour
+: enter a whole number	 : entrez un nombre entier
+A save is still loading. Close the editor anyway?	Une sauvegarde est en cours de chargement. Fermer quand même ?
+APP.DAT is listed as PARAM.PFD-protected. In-place saving is disabled because PARAM.PFD would need rebuilding.	APP.DAT est protégé par PARAM.PFD. L'enregistrement sur place est désactivé car PARAM.PFD devrait être reconstruit.
+APP.DAT saved safely and verified from disk.	APP.DAT enregistré et vérifié sur le disque.
+Active-skill add/remove is locked because the ability-count field could not be proven from this save.	L'ajout/la suppression d'aptitudes est verrouillé : le compteur d'aptitudes n'a pas pu être vérifié dans cette sauvegarde.
+Active-skill add/remove is locked because the ability-count field could not be proven from this save. Replacing existing slots is still available.	L'ajout/la suppression d'aptitudes est verrouillé : le compteur d'aptitudes n'a pas pu être vérifié. Le remplacement reste possible.
+Add Missing currently supports weapons only.	« Ajouter manquants » ne gère que les armes pour l'instant.
+Add skill failed	Échec de l'ajout d'aptitude
+Add weapon failed	Échec de l'ajout d'arme
+Add weapons failed	Échec de l'ajout des armes
+Adornment edit failed	Échec de la modification des ornements
+Adornment ownership updated and verified	Ornements mis à jour et vérifiés
+Advanced awp_* passive - lock state unknown; opt in manually	Passif avancé awp_* - verrou inconnu ; à activer manuellement
+Advanced: Key Items / OOPArts + Internal / Special are visible. Bulk max remains safe-only.	Avancé : objets clés / OOPArts + internes / spéciaux visibles. La mise au max groupée reste limitée aux objets sûrs.
+All 14 known Fragment Skills are already unlocked.	Les 14 compétences de fragments sont déjà débloquées.
+All known Fragment Skills are already clear.	Aucune compétence de fragment n'est débloquée.
+All known Fragment Skills cleared	Compétences de fragments effacées
+All matching monster stats already match the loaded save.	Les stats des monstres correspondent déjà à la sauvegarde chargée.
+All owned tamed monsters maxed using real species level caps	Tous les monstres apprivoisés sont au max (plafonds réels)
+Already learned	Déjà apprise
+Already present	Déjà présent
+At least one granting passive uses an advanced awp_* ID. Its actual Red/Yellow Lock state is not mapped. Remove it directly anyway?	Au moins un passif concerné est un passif avancé awp_*. Son verrou rouge/jaune n'est pas cartographié. Le retirer quand même ?
+Backup readback did not match original APP.DAT	La copie relue ne correspond pas à l'APP.DAT d'origine
+Blocked: capacity increase requires every equipped accessory capacity to be mapped	Bloqué : augmenter la capacité exige que tous les accessoires équipés soient cartographiés
+Blocked: selected accessory instance is no longer equipped by this character	Bloqué : cet accessoire n'est plus équipé par ce personnage
+Casino records updated	Casino mis à jour
+Character edit failed	Échec de la modification du personnage
+Character passive/resistance edit failed	Échec de la modification du passif/de la résistance
+Chichu • COM — not owned	Chichu • ATT — non possédé
+Chocobo Racing RP	PdC
+Chocobo race ability edit failed	Échec de la modification de l'aptitude de course
+Chocobo racing edit failed	Échec de la modification des courses
+Chocobo racing stats maxed: STR/MAG caps + RP 600	Stats de course au max : FOR/MAG au plafond + 600 PdC
+Choose a donor monster.	Choisissez un monstre donneur.
+Choose the PS3 save folder first.	Choisissez d'abord le dossier de sauvegarde PS3.
+Chronobind Games Played	Chronobind - parties jouées
+Chronobind Games Won	Chronobind - parties gagnées
+Chronobind Matches Won	Chronobind - matchs gagnés
+Clear all 14 known Fragment Skills? Unknown/reserved bits outside the verified mask will be preserved.	Effacer les 14 compétences de fragments ? Les bits inconnus/réservés hors du masque sont conservés.
+Cloudburst • RAV — not owned	Cloudburst • RAV — non possédé
+Confirm	Confirmation
+Confirm passive / resistance replacement	Confirmer le remplacement du passif / de la résistance
+Copied active-skill set pasted	Aptitudes copiées collées
+Copied all 10 passive slots from the selected monster.	Les 10 passifs du monstre sélectionné ont été copiés.
+Copied monster passives pasted	Passifs copiés collés
+Copy active skills from another monster first.	Copiez d'abord les aptitudes d'un autre monstre.
+Copy passive slots from another monster first.	Copiez d'abord les passifs d'un autre monstre.
+Correct monster levels failed	Échec de la correction des niveaux
+Created and verified:\n	Créé et vérifié :\n
+Created decrypted backup:\n	Copie déchiffrée créée :\n
+Current Chocobo Racing profile • verified direct save field	Profil de course actuel • champ vérifié
+Decrypted APP.DAT backup exported.	Copie déchiffrée d'APP.DAT exportée.
+Decrypted backup	Copie déchiffrée
+Effect/capacity not mapped in this safe catalog	Effet/capacité non cartographiés
+Enable Advanced Mode?	Activer le mode avancé ?
+Encrypted copy saved	Copie chiffrée enregistrée
+Encrypted edited copy saved and verified.	Copie chiffrée modifiée enregistrée et vérifiée.
+Equipment edit failed	Échec de la modification de l'équipement
+Equipment references could not be verified: 	Les références d'équipement n'ont pas pu être vérifiées : 
+Equipped accessory verification failed	Échec de la vérification de l'accessoire équipé
+Every mapped owned monster is already at or below its verified real species level cap. Unmapped/DLC IDs were left untouched.	Tous les monstres cartographiés sont déjà à leur plafond réel ou en dessous. Les ID non cartographiés/DLC n'ont pas été touchés.
+Export failed	Échec de l'export
+Fast stagger builder; Friendly Fire support	Choc rapide ; soutien Friendly Fire
+Feral Link cannot be added as a normal role ability.	Feral Link ne peut pas être ajouté comme aptitude de rôle.
+Feral Link cannot be inserted into another active-skill slot.	Feral Link ne peut pas être placé dans un autre emplacement.
+Feral Link is protected and cannot be removed in safe mode.	Feral Link est protégé et ne peut pas être retiré en mode sûr.
+Feral Link is protected and is never transferred.	Feral Link est protégé et n'est jamais transféré.
+Feral Link is protected in safe mode and cannot be replaced.	Feral Link est protégé en mode sûr et ne peut pas être remplacé.
+Feral Link stays in its existing slot in safe mode.	Feral Link reste à sa place en mode sûr.
+God Chocobo preset applied: best 10 race abilities + max racing stats + 600 RP	Preset Chocobo divin appliqué : 10 meilleures aptitudes + stats de course au max + 600 PdC
+God Chocobo preset could not resolve 10 unique passive sources against monster_traits.tsv. No changes were made.	Le preset Chocobo divin n'a pas trouvé 10 passifs sources distincts dans monster_traits.tsv. Aucune modification.
+God Chocobo preset failed	Échec du preset Chocobo divin
+Guest Party	Invité
+Image could not be loaded	Impossible de charger l'image
+In-Place Disabled (PFD)	Sur place désactivé (PFD)
+Infusion failed	Échec de l'infusion
+Invalid - repair on edit	Invalide - réparée à la modification
+Invalid Chocobo Racing RP	PdC invalides
+Invalid casino record	Valeur de casino invalide
+Invalid value	Valeur invalide
+Inventory edit failed	Échec de la modification de l'inventaire
+Last Monster Lab edit undone	Dernière modification de monstre annulée
+Level (max unknown)	Niveau (max inconnu)
+Load a save first.	Chargez d'abord une sauvegarde.
+Load failed	Échec du chargement
+Load failed. No save is active.	Échec du chargement. Aucune sauvegarde active.
+Load failed. The previously loaded save remains active.	Échec du chargement. La sauvegarde précédente reste active.
+Loading in progress	Chargement en cours
+Loading save...	Chargement de la sauvegarde...
+Main physical damage dealer	Principal attaquant physique
+Max monsters failed	Échec de la mise au max des monstres
+Max ordinary stackable inventory only?\n\nKey Items / OOPArts, Internal / Special, weapons, accessories and monster crystals are excluded.	Mettre au maximum uniquement les objets empilables ordinaires ?\n\nObjets clés / OOPArts, internes / spéciaux, armes, accessoires et cristaux de monstres sont exclus.
+Max safe inventory failed	Échec de la mise au max de l'inventaire
+Max the stats of every owned tamed monster? Each mapped species will use its verified real level cap. Unmapped/DLC monster levels are preserved rather than guessed.	Mettre au max tous les monstres apprivoisés ? Chaque espèce cartographiée utilise son plafond réel vérifié. Les niveaux des monstres non cartographiés/DLC sont conservés.
+Monster edit failed	Échec de la modification du monstre
+Monster image cache refreshed.	Cache d'images actualisé.
+Monster levels are valid	Niveaux des monstres valides
+Monster passive removed	Passif du monstre retiré
+Monster resistance passives cleared	Passifs de résistance retirés
+Move skill failed	Échec du déplacement
+No Monster Lab edits to undo.	Aucune modification de monstre à annuler.
+No equipped accessory slot is available to transform.	Aucun accessoire équipé à transformer.
+No image available	Pas d'image
+No mapped resistance passives are present on this monster.	Ce monstre n'a aucun passif de résistance cartographié.
+No mapped source	Aucune source cartographiée
+No monster selected	Aucun monstre sélectionné
+No save is loaded.	Aucune sauvegarde chargée.
+No story guest forced.	Aucun invité imposé.
+Normal Save	Sauvegarde normale
+Not mapped	Non cartographié
+Not owned	Non possédé
+Open image folder failed	Impossible d'ouvrir le dossier d'images
+Other Story Guest	Autre invité
+Over capacity	Capacité dépassée
+PARAM.PFD exists but could not be parsed reliably. The save was opened in read-only safety mode because APP.DAT/KEY.DAT protection state cannot be trusted.	PARAM.PFD existe mais n'a pas pu être lu correctement. La sauvegarde est ouverte en lecture seule, car l'état de protection d'APP.DAT/KEY.DAT n'est pas fiable.
+Passive edit failed	Échec de la modification du passif
+Passive preset failed	Échec du preset de passifs
+Paste passives failed	Échec du collage des passifs
+Paste skills failed	Échec du collage des aptitudes
+Please wait for the current load operation to finish.	Attendez la fin du chargement en cours.
+Poker Games Played	Poker - parties jouées
+Poker Games Won	Poker - parties gagnées
+Poker Matches Won	Poker - matchs gagnés
+Purple • SYN — not owned	Purple • TAC — non possédé
+Raw ID	ID brut
+Read-only / PFD unreadable	Lecture seule / PFD illisible
+Read-only safety mode	Lecture seule (sécurité)
+Real = your monster_real pack. Fallback = built-in icon. Missing = no matching local image.	Réelle = votre pack monster_real. Secours = icône intégrée. Manquante = aucune image locale.
+Real guest-party slot is not verified in APP.DAT yet. Writer intentionally disabled.	L'emplacement réel de l'invité n'est pas encore vérifié dans APP.DAT. Écriture désactivée volontairement.
+Real monster image • local pack	Image réelle • pack local
+Recovery required	Récupération nécessaire
+Reference only	Référence seule
+Mapped / enforced	Cartographié / appliqué
+Remove skill failed	Échec du retrait
+Replace all 10 passive slots on the selected monster with the copied set?	Remplacer les 10 passifs du monstre sélectionné par ceux copiés ?
+Replace the selected monster's editable active-skill list with the copied list?\n\nFeral Link stays in its exact current slot and reserved raw ability entry 0 is preserved.	Remplacer les aptitudes du monstre sélectionné par celles copiées ?\n\nFeral Link reste à sa place et l'entrée réservée 0 est conservée.
+Reserved for future verified guest entries.	Réservé à de futurs invités vérifiés.
+Restore Level, HP, Strength, Magic and ATB for every unchanged owned monster slot to the exact values from when this save was loaded?\n\nSkills, passives, infusion data, ownership and equipment are not changed.	Restaurer Niveau, PV, Force, Magie et ATB de chaque monstre aux valeurs du chargement ?\n\nAptitudes, passifs, infusions, possession et équipement ne changent pas.
+Restore Serah, Noel and all matching owned monsters to their mapped stat values from when this save was loaded?\n\nThis does not restore equipment, abilities, inventory, story progression, monster skills/passives or ownership.	Restaurer les stats de Serah, Noel et des monstres correspondants aux valeurs du chargement ?\n\nL'équipement, les aptitudes, l'inventaire, la progression et les passifs ne sont pas restaurés.
+Role-level editor supports Serah or Noel only.	Les niveaux de rôle ne concernent que Serah et Noel.
+Rollback readback did not match the original APP.DAT bytes	La restauration relue ne correspond pas à l'APP.DAT d'origine
+Safe inventory is already maxed.	L'inventaire est déjà au maximum.
+Safety: donor crystal is NOT consumed or deleted.	Sécurité : le cristal du donneur n'est NI consommé NI supprimé.
+Save In Place + Backup	Enregistrer sur place + copie
+Save changes directly to this PS3 save folder?\n\nAn external backup of the original APP.DAT will be created first.	Enregistrer directement dans ce dossier de sauvegarde PS3 ?\n\nUne copie de l'APP.DAT d'origine sera d'abord créée.
+Save complete	Enregistrement terminé
+Save failed	Échec de l'enregistrement
+Select APP.DAT from the Final Fantasy XIII-2 PS3 save folder	Sélectionnez APP.DAT dans le dossier de sauvegarde PS3 de Final Fantasy XIII-2
+Select a chocobo in the Monster Library. RP can still be edited because it belongs to the current racing profile.	Sélectionnez un chocobo dans la bibliothèque. Les PdC restent modifiables car ils appartiennent au profil de course.
+Select a current active-skill slot first.	Sélectionnez d'abord un emplacement d'aptitude.
+Select a current passive first.	Sélectionnez d'abord un passif.
+Select a fragment skill first.	Sélectionnez d'abord une compétence de fragment.
+Select a non-empty current active skill first.	Sélectionnez d'abord une aptitude non vide.
+Select a passive/resistance accessory from the catalog first.	Sélectionnez d'abord un accessoire passif/résistance dans le catalogue.
+Select a race ability first.	Sélectionnez d'abord une aptitude de course.
+Select a replacement equipment item.	Sélectionnez un équipement de remplacement.
+Select a tamed chocobo first.	Sélectionnez d'abord un chocobo apprivoisé.
+Select a target monster first.	Sélectionnez d'abord un monstre cible.
+Select a target monster, then choose a donor.	Sélectionnez un monstre cible, puis un donneur.
+Select a weapon from the catalog first.	Sélectionnez d'abord une arme dans le catalogue.
+Select an ability from the catalog first.	Sélectionnez d'abord une aptitude dans le catalogue.
+Select an available passive first.	Sélectionnez d'abord un passif disponible.
+Select an equipped accessory/passive slot first.	Sélectionnez d'abord un accessoire/passif équipé.
+Select an owned equipment instance first.	Sélectionnez d'abord un équipement possédé.
+Select at least one mapped skill or passive to transfer.	Sélectionnez au moins une aptitude ou un passif à transférer.
+Select one of the 10 current passive slots.	Sélectionnez un des 10 emplacements de passifs.
+Serah, Noel and monster mapped stats restored to loaded values	Stats de Serah, Noel et des monstres restaurées
+Skill edit failed	Échec de la modification de l'aptitude
+Skills are kept contiguous. Use Remove/Add rather than moving a skill across an empty slot.	Les aptitudes restent continues. Utilisez Retirer/Ajouter plutôt que de déplacer une aptitude au-delà d'un emplacement vide.
+Snow (Story Guest)	Snow (invité de l'histoire)
+Story Guest slot is research-only. No APP.DAT guest writer is enabled until the exact field and state dependencies are verified.	L'emplacement d'invité est en cours d'étude. Aucune écriture n'est activée tant que le champ exact n'est pas vérifié.
+Tamed monster stats updated	Stats du monstre mises à jour
+That equipped accessory changed since this row was selected. The list has been refreshed; select it again before applying a passive/resistance change.	Cet accessoire a changé depuis la sélection. La liste a été actualisée ; sélectionnez-le à nouveau.
+The copied passive set already matches this monster.	Les passifs copiés correspondent déjà à ce monstre.
+The original loaded-stat snapshot is unavailable. Reload the save to create a fresh baseline.	L'état d'origine n'est pas disponible. Rechargez la sauvegarde.
+The real XIII-2 story guest slot is not mapped yet. This button stays disabled until the save field is verified.	L'emplacement réel de l'invité n'est pas encore cartographié. Ce bouton reste désactivé.
+The selected preset could not be resolved against monster_traits.tsv.	Le preset choisi est introuvable dans monster_traits.tsv.
+There are unsaved changes. Close the editor without saving them?	Des modifications ne sont pas enregistrées. Fermer sans enregistrer ?
+This is an Advanced Mode inventory entry. Key Item / OOPArts and Internal / Special edits can create impossible progression states. Continue?	Objet du mode avancé. Modifier des objets clés / OOPArts ou internes / spéciaux peut rendre la progression incohérente. Continuer ?
+This is an advanced awp_* passive. Its actual Red/Yellow Lock state is not mapped. Remove it directly anyway?	Passif avancé awp_*. Son verrou rouge/jaune n'est pas cartographié. Le retirer quand même ?
+This item has duplicate stack records in the save. Editing is disabled because changing only one duplicate would be ambiguous.	Cet objet apparaît en double dans la sauvegarde. Modification désactivée pour éviter toute ambiguïté.
+This save does not match the verified BLES01269/BLUS30776 active/passive counter layout. Count-changing edits are locked; replacements that preserve occupied-slot counts remain available.	Cette sauvegarde ne correspond pas à la structure vérifiée des compteurs actifs/passifs. Les ajouts/suppressions sont verrouillés ; les remplacements restent possibles.
+This save is open in read-only safety mode. Only BLES01269 (EUR) and BLUS30776 (USA) with a trusted encryption key are enabled for writing in this build.	Sauvegarde ouverte en lecture seule. Seules BLES01269 (EUR) et BLUS30776 (USA) avec une clé fiable peuvent être modifiées dans cette version.
+This slot is empty, but the save's ability-count field was not confidently detected. Use Replace on a non-empty slot, or load a save where the counter can be verified.	Emplacement vide, mais le compteur d'aptitudes n'a pas été détecté avec certitude. Utilisez Remplacer sur un emplacement occupé.
+Ultimate Paradigm Pack	Ultimate Paradigm Pack
+Unknown / Unnamed Item	Objet inconnu
+Unknown ID - not auto-transferred	ID inconnu - non transféré
+Unknown ID - preserved only	ID inconnu - conservé
+Unsaved changes	Modifications non enregistrées
+Unverified: currently equipped accessory capacity is not mapped	Non vérifié : capacité de l'accessoire équipé non cartographiée
+Unverified: selected accessory capacity/effect is not mapped	Non vérifié : capacité/effet de l'accessoire choisi non cartographiés
+Validation: PASS - target buffer, slot capacity and checksum are valid.	Validation : OK - données, capacité et somme de contrôle valides.
+Writable / EUR layout (keep a backup)	Modifiable / structure EUR (gardez une copie)
+Writable / export + resign required	Modifiable / export + re-signature requis
+Writable / tested	Modifiable / testée
+Valid	Valide
+Unknown	Inconnue
+load another save	charger une autre sauvegarde
+add a new passive into an empty slot	ajouter un passif dans un emplacement vide
+paste a passive set with a different occupied-slot count	coller des passifs avec un nombre différent d'emplacements
+remove resistance passives	retirer les passifs de résistance
+replace the current passive set with the 10-slot God Chocobo preset	remplacer les passifs par le preset Chocobo divin
+write a passive into an empty slot	écrire un passif dans un emplacement vide
+add {*} into an empty passive slot	ajouter {0} dans un emplacement de passif vide
+remove the passive source for {*}	retirer le passif source de {0}
+Cannot {*} reliably on this save because the verified active/passive counter layout did not validate.\n\nYou can still upgrade/replace an occupied passive slot because that does not change the number of occupied passives.	Impossible de {0} de façon fiable : la structure des compteurs actifs/passifs n'a pas été validée.\n\nVous pouvez toujours améliorer/remplacer un passif occupé, car le nombre de passifs ne change pas.
+Role Preset (Auto)	Preset de rôle (auto)
+Adds the recommended active skills of the monster's role into empty slots. Nothing is removed.	Ajoute les aptitudes actives recommandées pour le rôle du monstre dans les emplacements vides. Rien n'est retiré.
+The monster's role could not be detected, so no active preset can be chosen.	Le rôle du monstre n'a pas pu être détecté : aucun preset actif ne peut être choisi.
+All 32 active skill slots are already used. Remove some skills first.	Les 32 emplacements d'aptitudes sont occupés. Retirez-en d'abord.
+{*} already has every recommended {*} active skill.	{0} possède déjà toutes les aptitudes recommandées ({1}).
+Add {*} recommended {*} active skill(s) to {*}?\n\n{*}{*}\n\nExisting skills are kept. You can use Undo Monster Edit afterward.	Ajouter {0} aptitude(s) recommandée(s) ({1}) à {2} ?\n\n{3}{4}\n\nLes aptitudes existantes sont conservées. Vous pourrez utiliser « Annuler (monstre) ».
+\n\n{*} lower-priority skill(s) do not fit and are skipped.	\n\n{0} aptitude(s) moins prioritaire(s) ne rentrent pas et sont ignorées.
+{*} active preset applied: {*} skill(s) added	Preset actif {0} appliqué : {1} aptitude(s) ajoutée(s)
+Active preset failed	Échec du preset actif
+Commando	Attaquant
+Ravager	Ravageur
+Medic	Soigneur
+Sentinel	Défenseur
+Saboteur	Saboteur
+Synergist	Tacticien
+Optimize Monster	Optimiser le monstre
+Passive preset + recommended active skills for the detected role, in one step. Stats are not changed.	Preset de passifs + aptitudes actives recommandées pour le rôle détecté, en une fois. Les stats ne changent pas.
+Optimize {*} ({*})?\n\nPassives ({*}):\n{*}\n\nActive skills to add:\n{*}\n\nStats are not changed. Existing skills are kept and awp_* passives are preserved. One Undo Monster Edit reverts everything.	Optimiser {0} ({1}) ?\n\nPassifs ({2}) :\n{3}\n\nAptitudes actives à ajouter :\n{4}\n\nLes stats ne changent pas. Les aptitudes existantes et les passifs awp_* sont conservés. Un seul « Annuler (monstre) » annule tout.
+  (locked: ability-count field not verified)	  (verrouillé : compteur d'aptitudes non vérifié)
+{*} is already optimized for {*}.	{0} est déjà optimisé pour le rôle {1}.
+{*} optimized: {*} passive(s), {*} active skill(s)	{0} optimisé : {1} passif(s), {2} aptitude(s) active(s)
+Optimize failed	Échec de l'optimisation
+Balanced	Équilibré
+Tank	Tank
+No change compared with the loaded save. Write anyway?	Aucune modification par rapport à la sauvegarde chargée. Écrire quand même ?
+Writable / PARAM.PFD re-signed on save	Modifiable / PARAM.PFD re-signé à l'enregistrement
+APP.DAT is listed as PARAM.PFD-protected and this region has no built-in secure-file ID, so PARAM.PFD cannot be re-signed.	APP.DAT est protégé par PARAM.PFD et cette région n'a pas d'identifiant intégré : PARAM.PFD ne peut pas être re-signé.
+Save changes directly to this PS3 save folder?\n\nAPP.DAT is protected by PARAM.PFD: PARAM.PFD will be re-signed automatically. External backups of the original APP.DAT and PARAM.PFD will be created first.	Enregistrer directement dans ce dossier de sauvegarde PS3 ?\n\nAPP.DAT est protégé par PARAM.PFD : PARAM.PFD sera re-signé automatiquement. Des copies d'APP.DAT et de PARAM.PFD d'origine seront d'abord créées.
+The current PARAM.PFD does not validate with the built-in keys; it was left untouched.	Le PARAM.PFD actuel n'est pas validé avec les clés intégrées ; il n'a pas été modifié.
+Re-signed PARAM.PFD failed self-validation; nothing was written.	Le PARAM.PFD re-signé n'a pas passé l'auto-vérification ; rien n'a été écrit.
+PARAM.PFD backup readback failed	Échec de la relecture de la copie de PARAM.PFD
+PARAM.PFD on disk does not validate after writing	Le PARAM.PFD écrit sur le disque n'est pas valide

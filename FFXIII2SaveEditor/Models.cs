@@ -73,6 +73,9 @@ public enum RegionSupport
 {
     Unknown,
     SupportedUnverified,
+    // Same APP.DAT layout as a Tested region (identical offsets in the reference Game Genie /
+    // Apollo save patches) and correct secure-file ID, but not yet confirmed on real hardware.
+    LayoutMatched,
     Tested
 }
 
@@ -87,6 +90,7 @@ public sealed class SaveLoadResult
     public bool PfdMetadataReliable { get; init; } = true;
     public IReadOnlyList<string> PfdNames { get; init; } = Array.Empty<string>();
     public int FragmentCount { get; init; } = -1;
+    public string Language { get; init; } = "";
 }
 
 public sealed class InventoryViewRow

@@ -95,6 +95,8 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        InitUiScaling();
+        InitLanguage();
         _data = GameData.Load();
         RefreshMonsterLevelReference();
     }
@@ -203,8 +205,9 @@ public partial class MainWindow : Window
             ClearMonsterImageCache();
             SaveFolderText.Text = result.Folder;
 
-            RegionSupport support = SaveCore.RegionSupportForTitle(result.TitleId);
-            _writeAllowed = support == RegionSupport.Tested && result.WorkingKey != 0 && result.PfdMetadataReliable;
+            _writeAllowed = SaveCore.RegionAllowsWrite(result.TitleId) && result.WorkingKey != 0 && result.PfdMetadataReliable;
+            Lang.Resolve(result.Language);
+            SyncLanguageCombo();
             UpdateSaveInfo();
             RefreshSelectedTab();
             Status($"Save loaded successfully. {result.Mode}");
@@ -326,9 +329,11 @@ private void SetLoading(bool loading)
         RegionText.Text = region;
         ChecksumText.Text = SaveCore.StoredChecksum(_plain) == SaveCore.CalculateChecksum(_plain) ? "Valid" : "Invalid - repair on edit";
         AccessText.Text = _writeAllowed
-            ? (AppIsPfdProtected ? "Writable / export + resign required" : "Writable / tested")
+            ? (AppIsPfdProtected ? "Writable / PARAM.PFD re-signed on save"
+                : SaveCore.RegionSupportForTitle(_session.TitleId) == RegionSupport.Tested ? "Writable / tested" : "Writable / EUR layout (keep a backup)")
             : (_session.PfdMetadataReliable ? "Read-only safety mode" : "Read-only / PFD unreadable");
         LoadedText.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+        ApplyLanguage();
     }
 
     private void UpdateActionButtons()
@@ -336,8 +341,8 @@ private void SetLoading(bool loading)
         bool loaded = _plain is not null;
         ExportDecryptedButton.IsEnabled = loaded && !_loading;
         SaveEncryptedButton.IsEnabled = loaded && _writeAllowed && !_loading;
-        SaveInPlaceButton.IsEnabled = loaded && _writeAllowed && !_loading && !AppIsPfdProtected;
-        SaveInPlaceButton.Content = AppIsPfdProtected ? "In-Place Disabled (PFD)" : "Save In Place + Backup";
+        SaveInPlaceButton.IsEnabled = loaded && _writeAllowed && !_loading;
+        SaveInPlaceButton.Content = "Save In Place + Backup";
         bool chocoboEditable = loaded && _writeAllowed && !_loading
             && _selectedMonster is not null
             && SaveCore.IsChocoboMonster(_selectedMonster.Id, _selectedMonster.Name);
@@ -359,7 +364,7 @@ private void SetLoading(bool loading)
     {
         if (!RequireLoaded()) return false;
         if (_writeAllowed) return true;
-        Warn("This save is open in read-only safety mode. Only BLES01269 (EUR) with a trusted encryption key is enabled for writing in this build.");
+        Warn("This save is open in read-only safety mode. Only BLES01269 (EUR) and BLUS30776 (USA) with a trusted encryption key are enabled for writing in this build.");
         return false;
     }
 
@@ -368,9 +373,7 @@ private void SetLoading(bool loading)
         _plain = SaveCore.RepairChecksum(Plain);
         _dirty = true;
         UpdateSaveInfo();
-        Status(AppIsPfdProtected
-            ? message + " - changes are in memory. Use Encrypted Copy, then complete your normal PS3 resign/rebuild step."
-            : message + " - changes are in memory until you save.");
+        Status(message + " - changes are in memory until you save.");
     }
 
     private void RefreshSelectedTab()
@@ -851,7 +854,7 @@ private void SetLoading(bool loading)
             ? "\n\nWARNING: This accessory ID is valid, but its capacity/effect metadata is not yet mapped in the editor. The save reference can be changed, but accessory-capacity safety cannot be guaranteed for this choice."
             : "";
         string message = $"Replace {character}'s equipped {current.Name} ({current.Effect}) with {selected.Name} ({selected.Effect})?\n\n{reason}{verificationWarning}\n\nThis transforms the existing equipped accessory instance; it does not create a direct character passive slot. Accessory synthesis-group bonus abilities can also change when the accessory ID changes.";
-        if (MessageBox.Show(message, "Confirm passive / resistance replacement", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes) return;
+        if (MessageBox.Show(Lang.T(message), Lang.T("Confirm passive / resistance replacement"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes) return;
         try
         {
             _plain = SaveCore.ReplaceCharacterAccessory(Plain, character, current.ManagerSlot, selected.EffectInfo.Id);
@@ -1374,7 +1377,7 @@ private void SetLoading(bool loading)
         else
         {
             AbilityLayoutStatusText.Text = $"{mapped} monsters • 32 skill + 10 passive slots • counter validation failed";
-            AbilityLayoutStatusText.ToolTip = "This save does not match the verified BLES01269 active/passive counter layout. Count-changing edits are locked; replacements that preserve occupied-slot counts remain available.";
+            AbilityLayoutStatusText.ToolTip = "This save does not match the verified BLES01269/BLUS30776 active/passive counter layout. Count-changing edits are locked; replacements that preserve occupied-slot counts remain available.";
         }
     }
 
@@ -2631,92 +2634,7 @@ private void SetLoading(bool loading)
         {
             byte[] before = (byte[])Plain.Clone();
             byte[] work = (byte[])Plain.Clone();
-            string[] current = SaveCore.MonsterPassiveIds(work, _selectedMonster.Slot);
-            var protectedSlots = Enumerable.Range(0, current.Length)
-                .Where(i => current[i].StartsWith("awp_", StringComparison.OrdinalIgnoreCase))
-                .ToHashSet();
-
-            // awp_* is an advanced/role-passive namespace, not a proven lock flag. Presets preserve
-            // existing awp_* slots conservatively because the per-monster Red/Yellow Lock state is unmapped.
-            var protectedFamilies = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            var protectedIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            foreach (int index in protectedSlots)
-            {
-                string id = current[index];
-                protectedIds.Add(id);
-                if (_data.TraitsById.TryGetValue(id, out Trait? lockedTrait) && !string.IsNullOrWhiteSpace(lockedTrait.Family))
-                    protectedFamilies.Add(lockedTrait.Family);
-            }
-            desired = desired
-                .Where(trait => !protectedIds.Contains(trait.Id)
-                    && (string.IsNullOrWhiteSpace(trait.Family) || !protectedFamilies.Contains(trait.Family)))
-                .ToList();
-
-            var usedTargets = new HashSet<int>();
-            int changed = 0;
-            int added = 0;
-            int satisfied = 0;
-            int skipped = 0;
-
-            foreach (Trait trait in desired)
-            {
-                current = SaveCore.MonsterPassiveIds(work, _selectedMonster.Slot);
-
-                int exact = Array.FindIndex(current, id => string.Equals(id, trait.Id, StringComparison.OrdinalIgnoreCase));
-                if (exact >= 0)
-                {
-                    satisfied++;
-                    usedTargets.Add(exact);
-                    continue;
-                }
-
-                // Upgrade/replace the same passive family first, preserving protected slots.
-                int target = -1;
-                if (!string.IsNullOrWhiteSpace(trait.Family))
-                {
-                    for (int i = 0; i < current.Length; i++)
-                    {
-                        if (protectedSlots.Contains(i) || usedTargets.Contains(i) || string.IsNullOrEmpty(current[i])) continue;
-                        if (_data.TraitsById.TryGetValue(current[i], out Trait? existingTrait)
-                            && string.Equals(existingTrait.Family, trait.Family, StringComparison.OrdinalIgnoreCase))
-                        {
-                            target = i;
-                            break;
-                        }
-                    }
-                }
-
-                // When total ability count is verified, prefer an empty slot before replacing an
-                // unrelated passive. Otherwise only occupied writable slots are eligible.
-                if (target < 0 && PassiveCountChangesVerified)
-                {
-                    target = Enumerable.Range(0, current.Length)
-                        .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && string.IsNullOrEmpty(current[i]), -1);
-                }
-                if (target < 0)
-                {
-                    target = Enumerable.Range(0, current.Length)
-                        .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && !string.IsNullOrEmpty(current[i]), -1);
-                }
-
-                if (target < 0)
-                {
-                    skipped++;
-                    continue;
-                }
-
-                bool wasEmpty = string.IsNullOrEmpty(current[target]);
-                if (wasEmpty && !PassiveCountChangesVerified)
-                {
-                    skipped++;
-                    continue;
-                }
-
-                SaveCore.WriteMonsterPassive(work, _selectedMonster.Slot, target, trait.Id);
-                usedTargets.Add(target);
-                changed++;
-                if (wasEmpty) added++;
-            }
+            var (changed, added, satisfied, skipped) = ApplyPassivePresetTo(work, _selectedMonster.Slot, desired);
 
             if (changed == 0)
             {
@@ -2739,6 +2657,99 @@ private void SetLoading(bool loading)
         {
             Error(ex.Message, "Passive preset failed");
         }
+    }
+
+    // Shared by the passive preset buttons and "Optimize this monster". Writes into `work` only.
+    private (int Changed, int Added, int Satisfied, int Skipped) ApplyPassivePresetTo(byte[] work, int slot, List<Trait> desired)
+    {
+        string[] current = SaveCore.MonsterPassiveIds(work, slot);
+        var protectedSlots = Enumerable.Range(0, current.Length)
+            .Where(i => current[i].StartsWith("awp_", StringComparison.OrdinalIgnoreCase))
+            .ToHashSet();
+
+        // awp_* is an advanced/role-passive namespace, not a proven lock flag. Presets preserve
+        // existing awp_* slots conservatively because the per-monster Red/Yellow Lock state is unmapped.
+        var protectedFamilies = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var protectedIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (int index in protectedSlots)
+        {
+            string id = current[index];
+            protectedIds.Add(id);
+            if (_data.TraitsById.TryGetValue(id, out Trait? lockedTrait) && !string.IsNullOrWhiteSpace(lockedTrait.Family))
+                protectedFamilies.Add(lockedTrait.Family);
+        }
+        desired = desired
+            .Where(trait => !protectedIds.Contains(trait.Id)
+                && (string.IsNullOrWhiteSpace(trait.Family) || !protectedFamilies.Contains(trait.Family)))
+            .ToList();
+
+        var usedTargets = new HashSet<int>();
+        int changed = 0;
+        int added = 0;
+        int satisfied = 0;
+        int skipped = 0;
+
+        foreach (Trait trait in desired)
+        {
+            current = SaveCore.MonsterPassiveIds(work, slot);
+
+            int exact = Array.FindIndex(current, id => string.Equals(id, trait.Id, StringComparison.OrdinalIgnoreCase));
+            if (exact >= 0)
+            {
+                satisfied++;
+                usedTargets.Add(exact);
+                continue;
+            }
+
+            // Upgrade/replace the same passive family first, preserving protected slots.
+            int target = -1;
+            if (!string.IsNullOrWhiteSpace(trait.Family))
+            {
+                for (int i = 0; i < current.Length; i++)
+                {
+                    if (protectedSlots.Contains(i) || usedTargets.Contains(i) || string.IsNullOrEmpty(current[i])) continue;
+                    if (_data.TraitsById.TryGetValue(current[i], out Trait? existingTrait)
+                        && string.Equals(existingTrait.Family, trait.Family, StringComparison.OrdinalIgnoreCase))
+                    {
+                        target = i;
+                        break;
+                    }
+                }
+            }
+
+            // When total ability count is verified, prefer an empty slot before replacing an
+            // unrelated passive. Otherwise only occupied writable slots are eligible.
+            if (target < 0 && PassiveCountChangesVerified)
+            {
+                target = Enumerable.Range(0, current.Length)
+                    .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && string.IsNullOrEmpty(current[i]), -1);
+            }
+            if (target < 0)
+            {
+                target = Enumerable.Range(0, current.Length)
+                    .FirstOrDefault(i => !protectedSlots.Contains(i) && !usedTargets.Contains(i) && !string.IsNullOrEmpty(current[i]), -1);
+            }
+
+            if (target < 0)
+            {
+                skipped++;
+                continue;
+            }
+
+            bool wasEmpty = string.IsNullOrEmpty(current[target]);
+            if (wasEmpty && !PassiveCountChangesVerified)
+            {
+                skipped++;
+                continue;
+            }
+
+            SaveCore.WriteMonsterPassive(work, slot, target, trait.Id);
+            usedTargets.Add(target);
+            changed++;
+            if (wasEmpty) added++;
+        }
+
+        return (changed, added, satisfied, skipped);
     }
 
     private void AddTrait_Click(object sender, RoutedEventArgs e)
@@ -3247,9 +3258,26 @@ private void SetLoading(bool loading)
         catch (Exception ex) { Error(ex.Message, "Export failed"); }
     }
 
+    // Shows what will be written compared with the save as loaded. Returns false if the user cancels.
+    private bool ConfirmChangeSummary()
+    {
+        if (_loadedBaselinePlain is null) return true;
+        List<string> lines;
+        try { lines = ChangeSummary.Describe(_loadedBaselinePlain, Plain, _data, Lang.French); }
+        catch { return true; }
+        if (lines.Count == 0)
+            return Confirm("No change compared with the loaded save. Write anyway?");
+        const int max = 40;
+        string body = string.Join("\n", lines.Take(max)) + (lines.Count > max ? "\n…" : "");
+        string header = Lang.French ? "Modifications qui vont être écrites :" : "Changes that will be written:";
+        string footer = Lang.French ? "Continuer ?" : "Continue?";
+        return MessageBox.Show(this, $"{header}\n\n{body}\n\n{footer}", Lang.T("Confirm"), MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+    }
+
     private void SaveEncryptedCopy_Click(object sender, RoutedEventArgs e)
     {
         if (!RequireEditable() || _session is null) return;
+        if (!ConfirmChangeSummary()) return;
         try
         {
             byte[] encrypted = EncryptedBytes();
@@ -3267,21 +3295,45 @@ private void SetLoading(bool loading)
     private void SaveInPlace_Click(object sender, RoutedEventArgs e)
     {
         if (!RequireEditable() || _session is null) return;
-        if (_session.PfdNames.Any(n => n.Equals("APP.DAT", StringComparison.OrdinalIgnoreCase)))
+        bool resign = AppIsPfdProtected;
+        byte[]? secureFileId = SaveCore.SecureFileIdFor(_session.TitleId);
+        if (resign && secureFileId is null)
         {
-            Warn("APP.DAT is listed as PARAM.PFD-protected. In-place saving is disabled because PARAM.PFD would need rebuilding.");
+            Warn("APP.DAT is listed as PARAM.PFD-protected and this region has no built-in secure-file ID, so PARAM.PFD cannot be re-signed.");
             return;
         }
-        if (!Confirm("Save changes directly to this PS3 save folder?\n\nAn external backup of the original APP.DAT will be created first.")) return;
+        if (!ConfirmChangeSummary()) return;
+        if (!Confirm(resign
+            ? "Save changes directly to this PS3 save folder?\n\nAPP.DAT is protected by PARAM.PFD: PARAM.PFD will be re-signed automatically. External backups of the original APP.DAT and PARAM.PFD will be created first."
+            : "Save changes directly to this PS3 save folder?\n\nAn external backup of the original APP.DAT will be created first.")) return;
 
         string original = Path.Combine(_session.Folder, "APP.DAT");
+        string pfdPath = Path.Combine(_session.Folder, "PARAM.PFD");
         string? backup = null;
         byte[]? originalBytes = null;
+        byte[]? originalPfd = null;
         try
         {
             byte[] encrypted = EncryptedBytes();
             SaveCore.VerifyEncryptedRoundtrip(encrypted, _session.WorkingKey, Plain);
             originalBytes = File.ReadAllBytes(original);
+            byte[]? newPfd = null;
+            if (resign)
+            {
+                originalPfd = File.ReadAllBytes(pfdPath);
+                var originalFiles = new Dictionary<string, byte[]> { ["APP.DAT"] = originalBytes };
+                string keyPath = Path.Combine(_session.Folder, "KEY.DAT");
+                if (File.Exists(keyPath)) originalFiles["KEY.DAT"] = File.ReadAllBytes(keyPath);
+                // Refuse to touch a PARAM.PFD that this signer cannot reproduce: the original must validate first.
+                if (!PfdSigner.Validate(originalPfd, originalFiles, secureFileId!).AllValid)
+                    throw new IOException("The current PARAM.PFD does not validate with the built-in keys; it was left untouched.");
+                newPfd = PfdSigner.Resign(originalPfd, new Dictionary<string, byte[]> { ["APP.DAT"] = encrypted }, secureFileId!);
+                if (!PfdSigner.Validate(newPfd, new Dictionary<string, byte[]> { ["APP.DAT"] = encrypted }, secureFileId!).AllValid)
+                    throw new IOException("Re-signed PARAM.PFD failed self-validation; nothing was written.");
+                string pfdBackup = Path.Combine(EditorOutputDir("Backups"), $"PARAM_{Stamp()}.PFD");
+                WriteFlushed(pfdBackup, originalPfd);
+                if (!File.ReadAllBytes(pfdBackup).SequenceEqual(originalPfd)) throw new IOException("PARAM.PFD backup readback failed");
+            }
             string backupDir = EditorOutputDir("Backups");
             backup = Path.Combine(backupDir, $"APP_{Stamp()}.DAT");
             WriteFlushed(backup, originalBytes);
@@ -3294,7 +3346,14 @@ private void SetLoading(bool loading)
 
             AtomicReplace(original, encrypted);
             SaveCore.VerifyEncryptedFile(original, _session.WorkingKey, Plain);
+            if (newPfd is not null)
+            {
+                AtomicReplace(pfdPath, newPfd);
+                if (!PfdSigner.Validate(File.ReadAllBytes(pfdPath), new Dictionary<string, byte[]> { ["APP.DAT"] = File.ReadAllBytes(original) }, secureFileId!).AllValid)
+                    throw new IOException("PARAM.PFD on disk does not validate after writing");
+            }
             _plain = SaveCore.RepairChecksum(Plain);
+            _loadedBaselinePlain = (byte[])Plain.Clone();
             _dirty = false;
             Info("APP.DAT updated and verified.\nBackup:\n" + backup, "Save complete");
             Status("APP.DAT saved safely and verified from disk.");
@@ -3305,6 +3364,7 @@ private void SetLoading(bool loading)
             {
                 try
                 {
+                    if (originalPfd is not null) AtomicReplace(pfdPath, originalPfd);
                     AtomicReplace(original, originalBytes);
                     byte[] restored = File.ReadAllBytes(original);
                     if (!restored.SequenceEqual(originalBytes))
@@ -3393,8 +3453,8 @@ private void SetLoading(bool loading)
     {
         if (!_dirty) return true;
         return MessageBox.Show(this,
-            $"There are unsaved changes in the currently loaded save.\n\nDiscard those changes and {action}?",
-            "Unsaved changes",
+            Lang.T($"There are unsaved changes in the currently loaded save.\n\nDiscard those changes and {action}?"),
+            Lang.T("Unsaved changes"),
             MessageBoxButton.YesNo,
             MessageBoxImage.Warning) == MessageBoxResult.Yes;
     }
@@ -3404,8 +3464,8 @@ private void SetLoading(bool loading)
         if (_loading)
         {
             if (MessageBox.Show(this,
-                "A save is still loading. Close the editor anyway?",
-                "Loading in progress",
+                Lang.T("A save is still loading. Close the editor anyway?"),
+                Lang.T("Loading in progress"),
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning) != MessageBoxResult.Yes)
             {
@@ -3414,8 +3474,8 @@ private void SetLoading(bool loading)
             }
         }
         else if (_dirty && MessageBox.Show(this,
-            "There are unsaved changes. Close the editor without saving them?",
-            "Unsaved changes",
+            Lang.T("There are unsaved changes. Close the editor without saving them?"),
+            Lang.T("Unsaved changes"),
             MessageBoxButton.YesNo,
             MessageBoxImage.Warning) != MessageBoxResult.Yes)
         {
@@ -3425,9 +3485,13 @@ private void SetLoading(bool loading)
         base.OnClosing(e);
     }
 
-    private void Status(string message) => StatusText.Text = (_dirty ? "Modified - " : "") + message;
-    private void Warn(string message) => MessageBox.Show(this, message, "FFXIII-2 Save Editor", MessageBoxButton.OK, MessageBoxImage.Warning);
-    private void Error(string message, string title) => MessageBox.Show(this, message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-    private void Info(string message, string title) => MessageBox.Show(this, message, title, MessageBoxButton.OK, MessageBoxImage.Information);
-    private bool Confirm(string message) => MessageBox.Show(this, message, "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes;
+    private void Status(string message)
+    {
+        StatusText.Text = (_dirty ? Lang.T("Modified - ") : "") + Lang.T(message);
+        ApplyLanguage();
+    }
+    private void Warn(string message) => MessageBox.Show(this, Lang.T(message), "FFXIII-2 Save Editor", MessageBoxButton.OK, MessageBoxImage.Warning);
+    private void Error(string message, string title) => MessageBox.Show(this, Lang.T(message), Lang.T(title), MessageBoxButton.OK, MessageBoxImage.Error);
+    private void Info(string message, string title) => MessageBox.Show(this, Lang.T(message), Lang.T(title), MessageBoxButton.OK, MessageBoxImage.Information);
+    private bool Confirm(string message) => MessageBox.Show(this, Lang.T(message), Lang.T("Confirm"), MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes;
 }

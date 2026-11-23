@@ -1,0 +1,316 @@
+# English (game data name)<TAB>Français — display only; editor logic keeps the English names.
+# Sources: final-fantasy.ch (FR) cross-checked with Final Fantasy Wiki (EN) by learn level / role / max level.
+# roles
+Commando	Attaquant
+Ravager	Ravageur
+Sentinel	Défenseur
+Saboteur	Saboteur
+Synergist	Tacticien
+Medic	Soigneur
+Special	Spécial
+# categories
+Attack	Attaque
+Chaser	Brise
+Feeder	Rival
+Role Ability	Aptitude de rôle
+Hidden Role Ability	Aptitude cachée
+Magic	Magie
+Blitz	Explosion
+Strike	Impact
+Healing	Soin
+Guard	Garde
+Debuff	Altération
+Buff	Renfort
+# abilities
+Ruin	Ruine
+Ruinga	Ruine³
+Area Sweep	Table rase
+Launch	Catapultage
+Powerchain	Impulsion
+Ravage	Ravage
+Blindside	Coup surprise
+Scourge	Choc tardif
+Smite	Choc aérien
+Lifesiphon	Férocité
+Faultsiphon	Persécution
+Adrenaline	Vigueur
+Bloodthirsty	Soif de sang
+Armor Breaker	Perce-armures
+Stagger: Wound	Chocs blessants
+Stagger: Drain	Chocs vampiriques
+Deprotect Chaser	Brise-fragilité
+Deshell Chaser	Brise-défaillance
+Imperil Chaser	Brise-vulnérabilité
+Poison Chaser	Brise-poison
+Slow Chaser	Brise-lenteur
+Curse Chaser	Brise-malédiction
+Pain Chaser	Brise-supplice
+Fog Chaser	Brise-oubli
+Bravery Feeder	Bravoure rivale
+Faith Feeder	Foi rivale
+Haste Feeder	Célérité rivale
+Protect Feeder	Bouclier rival
+Shell Feeder	Barrière rivale
+Vigilance Feeder	Volonté rivale
+Fire	Feu
+Fira	Feu²
+Firaga	Feu³
+Blizzard	Glace
+Blizzara	Glace²
+Blizzaga	Glace³
+Thunder	Foudre
+Thundara	Foudre²
+Thundaga	Foudre³
+Aero	Air
+Aerora	Air²
+Aeroga	Air³
+Flamestrike	Pyro-impact
+Froststrike	Cryo-impact
+Sparkstrike	Électro-impact
+Galestrike	Aéro-impact
+Heat Blitz	Pyro-explosion
+Ice Blitz	Cryo-explosion
+Electric Blitz	Électro-explosion
+Aero Blitz	Aéro-explosion
+Overwhelm	Synergie
+Fearsiphon	Exaltation
+Cure	Soin
+Cura	Soin²
+Curasa	Régénération
+Esuna	Guérison
+Esunada	Guérison²
+Raise	Vie
+Cheer	Encourager
+Provoke	Provocation
+Challenge	Défi
+Steelguard	Garde d'acier
+Mediguard	Garde vitale
+Element Guard	Garde prisme
+Entrench	Contre chargé
+Vendetta	Contre vengeur
+Elude	Esquive
+Deathward	Rempart d'urgence
+Fringeward	Rempart circulaire
+Reprieve	Survie
+Bravery	Bravoure
+Bravega	Bravoure²
+Faith	Foi
+Faithga	Foi²
+Protect	Bouclier
+Protectga	Bouclier²
+Shell	Barrière
+Shellga	Barrière²
+Veil	Voile
+Veilga	Voile²
+Vigilance	Volonté
+Vigilaga	Volonté²
+Haste	Célérité
+Enfire	Endo-Feu
+Enfrost	Endo-Glace
+Enthunder	Endo-Foudre
+Enaero	Endo-Air
+Endless Blessings	Bonheur prolongé
+Endless Knightmare	Cauchemar prolongé
+Endless Nightmare	Cauchemar prolongé
+Deprotect	Fragilité
+Deprotect II	Fragilité P
+Deprotega	Fragilité²
+Heavy Deprotega	Fragilité² P
+Deshell	Défaillance
+Deshell II	Défaillance P
+Deshellga	Défaillance²
+Heavy Deshellga	Défaillance² P
+Imperil	Vulnérabilité
+Imperil II	Vulnérabilité P
+Imperilga	Vulnérabilité²
+Heavy Imperilga	Vulnérabilité² P
+Poison	Poison
+Poison II	Poison P
+Poisonga	Poison²
+Heavy Poisonga	Poison² P
+Dispel	Dissipation
+Dispel II	Dissipation P
+Dispelga	Dissipation²
+Heavy Dispelga	Dissipation² P
+Curse	Malédiction
+Curse II	Malédiction P
+Cursega	Malédiction²
+Heavy Cursega	Malédiction² P
+Pain	Supplice
+Pain II	Supplice P
+Painga	Supplice²
+Heavy Painga	Supplice² P
+Fog	Oubli
+Fog II	Oubli P
+Fogga	Oubli²
+Heavy Fogga	Oubli² P
+Wound	Lésion
+Wound II	Lésion P
+Woundga	Lésion²
+Heavy Woundga	Lésion² P
+# monsters
+Amodar	Amodar
+Apkallu	Apkallu
+Behemoth	Béhémoth
+Chocobo	Chocobo
+Golden Chocobo	Chocobo Or
+Red Chocobo	Chocobo Rouge
+Chunerpeton	Chunerpeton
+Dreadnought	Cuirassé
+Don Tonberry	Don Tomberry
+Dragoon	Dragonier
+Gandayaks	Gandayak
+Garganzola	Garganzola
+Gilgamesh	Gilgamesh
+Goblin	Gobelin
+Gorgonopsid	Gorgonopside
+Vouivre	Guivre
+Hoplite	Hoplite
+Lightning	Lightning (déesse)
+Lucidon	Lucidon
+Mánagarmr	Managarmr
+Mandrake	Mandragore
+Moblin	Mobelin
+Munchkin	Munchkin
+Narasimha	Narasimha
+Twilight Odin	Odin Crépuscule
+Omega	Oméga
+Orion	Orion
+Cactuar	Pampa
+Metallicactuar	Pampa Métallique
+Cactuaroni	Pampino
+Chichu	Petiotyugh
+Proto-behemoth	Proto-Béhémoth
+Sarracenia	Sarracénie
+Scutari	Scutarion
+Shaguma	Shaguma
+Vespid Soldier	Soldat Vespidé
+Svarog	Svarog
+Thermadon	Thermadon
+Tonberry	Tomberry
+Typhon	Typhon
+Uridimmu	Uridimmu
+Vodianoi	Vodianoï
+Yaksha	Yaksha
+Seeping Brie	Brie
+Miniflan	Habanero
+Crawler	Helminthe
+Flanborg	Flan Mécanique
+Frag Leech	Sangsue
+Yeoman	Lansquenet
+Meonekton	Méiobenthos
+Reaver	Apanda
+Flangonzola	Boule-de-neige
+Ahriman	Ahriman
+Bamapama	Bamapama
+Ceratosaur	Cératosaure
+Chelicerata	Chélicérate
+Black Chocobo	Chocobo Noir
+Clematis	Clématite
+Breshan Bass	Crapaud Breshan
+Dendrobium	Dendrobium
+Gancanagh	Gancanagh
+Hedge Frog	Grenouille Épines
+Illuyankas	Illuyankas
+Kanna Kamuy	Kanna Kamuy
+Garuda	Karura
+Silver Lobo	Loup Argenté
+Mimi	Mimi
+Deathgaze	Mortalis
+Nabaat	Nabaat
+Forked Cat	Nekomata
+Pantopoda	Pantopode
+Pitterpatter	Pipa Pipa
+Rangda	Rangda
+Samovira	Samovira
+Necrosis	Sluagh
+Barbed Specter	Spectre Barbelé
+Schrodinger	Tigriffeur
+Unsaganashi	Unsaaganashi
+Viking	Viking
+Amanojaku	Amanojaku
+Gancanagh Ace	Chef Gancanagh
+Purple Chocobo	Chocobo Violet
+Clione	Clione
+Imp	Diablotin
+Fachan	Fachan
+Gahongas	Gahonga
+Leyak	Leyak
+Mewmao	Miaoumao
+Microchu	Microtyugh
+Miquiztli	Miquiztli
+Oannes	Oannès
+Ultros	Orthros
+Gigantuar	Pampa Jumbo
+Nanochu	Picotyugh
+Sahagin Prince	Prince Sahuagin
+Luminous Puma	Puma Lumineux
+Sazh	Sazh
+Testudo	Testudo
+Thexteron	Thexteron
+Triffid	Triffide
+Yakshini	Yakshini
+Apotamkin	Apotamkin
+Bloodfang Bass	Bar Sanglant
+Bomb	Bombo
+Buccaboo	Bucca-Boo
+Buccaboo Ace	Chef Bucca-Boo
+Ceratoraptor	Cératoraptor
+Blue Chocobo	Chocobo Bleu
+Circuitron	Circuitron
+Mud Frog	Crapaud Boueux
+Tabasco Toad	Crapaud Piment
+Spiceacilian	Crapaud Wasabi
+Cryohedron	Cryoblaste
+Cloudburst	Cryobombe
+Debris	Débris
+Fencer	Escrimeur
+Flanbanero	Flambanero
+Garchimacera	Galkimasera
+Pink Lily	Gentiana
+Grand Behemoth	Grand Béhémoth
+Gremlin	Gremlin
+Grenade	Grenade
+Tempest	Gustnado
+Koboldroid Yin	Kobold Alpha
+Koboldroid Yang	Kobold Bêta
+Lightning (Ravager)	Lightning (Ravageur)
+Albino Lobo	Loup Albinos
+Zwerg Metro	Mini Droïde
+Zwerg Scandroid	Mini Droïde Garde
+Swampmonk	Moine des Marais
+Munchkin Boss	Munchkin Maître
+Nekton	Necton
+Notsugo	Notsugo
+Pleuston	Pleuston
+Valfodr	Valfodr
+Vespid	Vespidé
+Zaghnal	Zaghnal
+Bunkerbeast	Bête-Bunker
+Silver Chocobo	Chocobo Argent
+Pulse Gladiator	Gladiateur
+Lancer	Lancier
+Calautidon	Panochthus
+Metalligantuar	Señor Pampa
+Tezcatlipoca	Tezcatlipoca
+Xolotl	Xolotl
+Snow	Snow
+PuPu	Koyo K
+Haguma	Haguma
+Cait Sith	Cait Sith
+Cactuarina	Pampina
+# passives
+Role Resonance	Résonance de rôles
+Feral Surge	Puissance synchro
+Defense Maintenance II	Défenses prolongées II
+Pack Mentality	Esprit de groupe
+Improved Cure	Soins améliorés
+Improved Cure II	Soins améliorés II
+# passive patterns (regex => template)
+~^HP \+(\d+)%$	PV +$1%
+~^Strength \+(\d+)%$	Force +$1%
+~^Magic \+(\d+)%$	Magie +$1%
+~^Resist Physical (\d+)%$	Résistance physique +$1%
+~^Resist Magic (\d+)%$	Résistance magique +$1%
+~^Resist (Fire|Ice|Lightning|Wind) (?:\+)?(\d+)%$	Résistance {$1} +$2%
+~^Resist (Deprotect|Deshell|Imperil|Poison|Dispel|Curse|Pain|Fog|Slow|Daze) (?:\+)?(\d+)%$	Résistance {$1} +$2%

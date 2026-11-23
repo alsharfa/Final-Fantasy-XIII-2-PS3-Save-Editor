@@ -18,6 +18,7 @@ k043	Zwerg Scandroid	RAV	40
 k045	Leyak	SYN	70
 k048	Garuda	SAB	40
 k053	Goblin	COM	20
+k094	Goblin	COM	20
 k054	Munchkin	COM	20
 k056	Goblin Chieftain	SEN	40
 k057	Munchkin Boss	RAV	40
@@ -152,16 +153,21 @@ k872	Purple Chocobo	SYN	99
 k882	Chocobo	COM	99
 k895	Twilight Odin	COM	99
 # v1.9.32 DLC / episode recruit reference rows
-# m790 and m890 are mapped internal IDs. dlc_ref_* rows are reference-only until their real APP.DAT IDs are verified.
+# m790 and m890 are mapped internal IDs.
+# k951/k952/k954/k959/k969 verified on a real BLUS30776 save: level-1 HP/STR/MAG within game variance
+# of the published DLC recruit stats, plus matching initial abilities/passives (Lightning RAV at Lv13).
+# k950/k953/k961/k962/k973/k974 from the BtEtta FFXIII-2 save editor ID table, which also confirms k951/k952/k954/k959. dlc_ref_* rows are reference-only until their real APP.DAT IDs are verified.
 m790	Valfodr	RAV	99
+k959	Valfodr (recruit)	RAV	99
 m890	Snow	SEN	13
-dlc_ref_amodar	Amodar	COM	13
-dlc_ref_gilgamesh	Gilgamesh	COM	13
+k973	Snow (recruit)	SEN	13
+k962	Amodar	COM	13
+k953	Gilgamesh	COM	13
 dlc_ref_lightning_com	Lightning	COM	13
-dlc_ref_omega	Omega	COM	99
-dlc_ref_typhon	Typhon	COM	13
-dlc_ref_lightning_rav	Lightning	RAV	13
-dlc_ref_nabaat	Nabaat	SAB	13
-dlc_ref_sazh	Sazh	SYN	45
-dlc_ref_ultros	Ultros	SYN	13
-dlc_ref_pupu	Pupu	MED	13
+k952	Omega	COM	99
+k950	Typhon	COM	13
+k969	Lightning (Ravager)	RAV	13
+k961	Nabaat	SAB	13
+k974	Sazh	SYN	45
+k951	Ultros	SYN	13
+k954	PuPu	MED	13
