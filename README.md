@@ -61,6 +61,18 @@ dotnet publish FFXIII2SaveEditor\FFXIII2SaveEditor.csproj -c Release -r win-x64 
 - `0x10CDC` contained BE16 `00 19`, which is decimal 25.
 - The editor is intended for decrypted save data supported by its existing save-loading workflow.
 
+## Supported regions
+
+| Title ID | Region | Load | Write |
+|---|---|---|---|
+| BLES01269 | Europe | Yes | Yes (tested) |
+| BLUS30776 | USA | Yes | Yes (same APP.DAT layout as EUR) |
+| BCAS20224 | Asia | Yes | Read-only |
+
+BLUS30776 uses its own secure-file ID (`20CCC79F1C3B8B2491475351C486B447`, same as Apollo's `games.conf`) to decrypt KEY.DAT, and every APP.DAT offset in the reference BLUS30776 / BLES01269 save patches is identical, so the EUR field mapping applies unchanged.
+
+The region is read from `PARAM.SFO` first, then from the folder name. If neither identifies it, every built-in key is tried and the one that correctly decrypts APP.DAT sets the region.
+
 ## Version history
 
 ### v1.9.33

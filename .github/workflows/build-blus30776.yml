@@ -1,0 +1,28 @@
+name: Build BLUS30776 editor
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [blus30776-support]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish Windows x64
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $out = Join-Path $env:GITHUB_WORKSPACE 'FFXIII2SaveEditor-BLUS30776-win-x64'
+          dotnet publish FFXIII2SaveEditor\FFXIII2SaveEditor.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishReadyToRun=false -o $out
+          if ($LASTEXITCODE -ne 0) { throw 'dotnet publish failed.' }
+          if (-not (Test-Path (Join-Path $out 'FFXIII2SaveEditor.exe'))) { throw 'EXE missing.' }
+          "@echo off`r`ncd /d `"%~dp0`"`r`nstart `"`" FFXIII2SaveEditor.exe" | Set-Content (Join-Path $out 'RUN_EDITOR.bat') -Encoding ascii
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FFXIII2SaveEditor-BLUS30776-win-x64
+          path: FFXIII2SaveEditor-BLUS30776-win-x64

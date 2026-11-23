@@ -73,6 +73,9 @@ public enum RegionSupport
 {
     Unknown,
     SupportedUnverified,
+    // Same APP.DAT layout as a Tested region (identical offsets in the reference Game Genie /
+    // Apollo save patches) and correct secure-file ID, but not yet confirmed on real hardware.
+    LayoutMatched,
     Tested
 }
 

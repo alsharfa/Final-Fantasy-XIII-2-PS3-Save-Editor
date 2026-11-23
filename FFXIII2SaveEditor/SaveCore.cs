@@ -1578,25 +1578,40 @@ public static class SaveCore
     public static string DetectTitleId(string folder)
     {
         var regex = new Regex("(?i)(BLES|BLUS|BLJM|BCAS)\\d{5}", RegexOptions.Compiled);
-        Match match = regex.Match(Path.GetFileName(folder));
-        if (match.Success) return match.Value.ToUpperInvariant();
+        // PARAM.SFO is authoritative; the folder name may have been renamed by the user or a tool.
         string sfo = Path.Combine(folder, "PARAM.SFO");
         if (File.Exists(sfo))
         {
-            string raw = Encoding.Latin1.GetString(File.ReadAllBytes(sfo));
-            match = regex.Match(raw);
-            if (match.Success) return match.Value.ToUpperInvariant();
+            try
+            {
+                string raw = Encoding.Latin1.GetString(File.ReadAllBytes(sfo));
+                foreach (Match m in regex.Matches(raw))
+                {
+                    string id = m.Value.ToUpperInvariant();
+                    if (SecureFileIds.ContainsKey(id)) return id;
+                }
+                Match any = regex.Match(raw);
+                if (any.Success) return any.Value.ToUpperInvariant();
+            }
+            catch (IOException) { }
         }
+        Match match = regex.Match(Path.GetFileName(folder));
+        if (match.Success) return match.Value.ToUpperInvariant();
         return "";
     }
 
     public static List<string> PfdEntryNamesFromFolder(string folder)
         => ParsePfdEntries(File.ReadAllBytes(Path.Combine(folder, "PARAM.PFD"))).Select(e => e.Name).ToList();
 
+    public static bool RegionAllowsWrite(string title)
+        => RegionSupportForTitle(title) is RegionSupport.Tested or RegionSupport.LayoutMatched;
+
     public static RegionSupport RegionSupportForTitle(string title) => title.ToUpperInvariant() switch
     {
         "BLES01269" => RegionSupport.Tested,
-        "BLUS30776" => RegionSupport.SupportedUnverified,
+        // BLUS30776 (USA): secure-file ID matches Apollo games.conf and every APP.DAT offset in the
+        // reference BLUS30776/BLES01269 save patches is identical, so the EUR layout applies.
+        "BLUS30776" => RegionSupport.LayoutMatched,
         "BCAS20224" => RegionSupport.SupportedUnverified,
         _ => RegionSupport.Unknown,
     };
@@ -1606,16 +1621,39 @@ public static class SaveCore
         byte[] pfd = File.ReadAllBytes(Path.Combine(folder, "PARAM.PFD"));
         byte[] keyDat = File.ReadAllBytes(Path.Combine(folder, "KEY.DAT"));
         string title = DetectTitleId(folder);
-        if (!SecureFileIds.TryGetValue(title, out byte[]? secureFileId)) throw new InvalidDataException($"Secure-file ID for {title} not built in");
         List<PfdEntry> entries = ParsePfdEntries(pfd);
         List<string> names = entries.Select(e => e.Name).ToList();
         PfdEntry? entry = entries.FirstOrDefault(e => e.Name.Equals("KEY.DAT", StringComparison.OrdinalIgnoreCase));
         if (entry is null) throw new InvalidDataException("KEY.DAT not listed in PARAM.PFD");
+        if (keyDat.Length != 16) throw new InvalidDataException($"KEY.DAT is {keyDat.Length} bytes");
+        if (SecureFileIds.TryGetValue(title, out byte[]? secureFileId))
+            return (DecryptKeyDatWith(secureFileId, entry, keyDat), title, names);
+        throw new InvalidDataException($"Secure-file ID for {(string.IsNullOrEmpty(title) ? "unknown region" : title)} not built in");
+    }
+
+    private static byte[] DecryptKeyDatWith(byte[] secureFileId, PfdEntry entry, byte[] keyDat)
+    {
         byte[] hash = GenerateHashKeyForSecureFileId(secureFileId);
         byte[] entryKey = AesCbcDecrypt(SysconManagerKey, hash[..16], entry.Key);
         byte[] plain = DecryptSecureFile(keyDat, entryKey);
         if (plain.Length != 16) throw new InvalidDataException($"Decrypted KEY.DAT is {plain.Length} bytes");
-        return (plain, title, names);
+        return plain;
+    }
+
+    // When the region cannot be read from PARAM.SFO or the folder name, try every built-in
+    // secure-file ID. A wrong ID yields a wrong key, which is rejected by the APP.DAT marker check.
+    public static IEnumerable<(byte[] Key, string Title)> DecryptKeyDatAllRegions(string folder)
+    {
+        byte[] pfd = File.ReadAllBytes(Path.Combine(folder, "PARAM.PFD"));
+        byte[] keyDat = File.ReadAllBytes(Path.Combine(folder, "KEY.DAT"));
+        PfdEntry? entry = ParsePfdEntries(pfd).FirstOrDefault(e => e.Name.Equals("KEY.DAT", StringComparison.OrdinalIgnoreCase));
+        if (entry is null || keyDat.Length != 16) yield break;
+        foreach (var pair in SecureFileIds)
+        {
+            byte[]? plain = null;
+            try { plain = DecryptKeyDatWith(pair.Value, entry, keyDat); } catch { }
+            if (plain is not null) yield return (plain, pair.Key);
+        }
     }
 
     public static SaveLoadResult LoadSaveFolder(string folder)
@@ -1648,14 +1686,33 @@ public static class SaveCore
         bool keyProtected = pfdMetadataReliable && pfdNames.Any(n => n.Equals("KEY.DAT", StringComparison.OrdinalIgnoreCase));
         byte[] rawKey = File.Exists(keyPath) ? File.ReadAllBytes(keyPath) : Array.Empty<byte>();
         var candidates = new List<(byte[] Key, string Label, bool TrustedForPlain)>();
+        // Region inferred from a successful brute-force KEY.DAT decryption, keyed by label.
+        var inferredTitles = new Dictionary<string, string>();
         if (keyProtected)
         {
+            bool known = false;
             try
             {
                 var decrypted = DecryptKeyDatFromFolder(folder);
                 candidates.Add((decrypted.Key, "KEY.DAT auto-decrypted via PARAM.PFD", true));
+                known = true;
             }
             catch { }
+            if (!known)
+            {
+                try
+                {
+                    foreach (var guess in DecryptKeyDatAllRegions(folder))
+                    {
+                        if (guess.Title.Equals(title, StringComparison.OrdinalIgnoreCase)) continue;
+                        string label = $"KEY.DAT auto-decrypted via PARAM.PFD ({guess.Title} key, region inferred)";
+                        // Not trusted for plaintext APP: only a successful APP.DAT decryption proves the region.
+                        candidates.Add((guess.Key, label, false));
+                        inferredTitles[label] = guess.Title;
+                    }
+                }
+                catch { }
+            }
         }
         else if (rawKey.Length == 16 && pfdMetadataReliable)
         {
@@ -1718,7 +1775,7 @@ public static class SaveCore
                         Plain = decrypted,
                         WorkingKey = key,
                         Mode = "Encrypted APP.DAT | " + candidate.Label,
-                        TitleId = title,
+                        TitleId = inferredTitles.TryGetValue(candidate.Label, out string? inferred) ? inferred : title,
                         PfdProtected = keyProtected,
                         PfdMetadataReliable = pfdMetadataReliable,
                         PfdNames = pfdNames,

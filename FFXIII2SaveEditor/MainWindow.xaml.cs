@@ -203,8 +203,7 @@ public partial class MainWindow : Window
             ClearMonsterImageCache();
             SaveFolderText.Text = result.Folder;
 
-            RegionSupport support = SaveCore.RegionSupportForTitle(result.TitleId);
-            _writeAllowed = support == RegionSupport.Tested && result.WorkingKey != 0 && result.PfdMetadataReliable;
+            _writeAllowed = SaveCore.RegionAllowsWrite(result.TitleId) && result.WorkingKey != 0 && result.PfdMetadataReliable;
             UpdateSaveInfo();
             RefreshSelectedTab();
             Status($"Save loaded successfully. {result.Mode}");
@@ -326,7 +325,8 @@ private void SetLoading(bool loading)
         RegionText.Text = region;
         ChecksumText.Text = SaveCore.StoredChecksum(_plain) == SaveCore.CalculateChecksum(_plain) ? "Valid" : "Invalid - repair on edit";
         AccessText.Text = _writeAllowed
-            ? (AppIsPfdProtected ? "Writable / export + resign required" : "Writable / tested")
+            ? (AppIsPfdProtected ? "Writable / export + resign required"
+                : SaveCore.RegionSupportForTitle(_session.TitleId) == RegionSupport.Tested ? "Writable / tested" : "Writable / EUR layout (keep a backup)")
             : (_session.PfdMetadataReliable ? "Read-only safety mode" : "Read-only / PFD unreadable");
         LoadedText.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
     }
@@ -359,7 +359,7 @@ private void SetLoading(bool loading)
     {
         if (!RequireLoaded()) return false;
         if (_writeAllowed) return true;
-        Warn("This save is open in read-only safety mode. Only BLES01269 (EUR) with a trusted encryption key is enabled for writing in this build.");
+        Warn("This save is open in read-only safety mode. Only BLES01269 (EUR) and BLUS30776 (USA) with a trusted encryption key are enabled for writing in this build.");
         return false;
     }
 
@@ -1374,7 +1374,7 @@ private void SetLoading(bool loading)
         else
         {
             AbilityLayoutStatusText.Text = $"{mapped} monsters • 32 skill + 10 passive slots • counter validation failed";
-            AbilityLayoutStatusText.ToolTip = "This save does not match the verified BLES01269 active/passive counter layout. Count-changing edits are locked; replacements that preserve occupied-slot counts remain available.";
+            AbilityLayoutStatusText.ToolTip = "This save does not match the verified BLES01269/BLUS30776 active/passive counter layout. Count-changing edits are locked; replacements that preserve occupied-slot counts remain available.";
         }
     }
 
